@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>真实案例 | 暗投</title>
+    <title>仿牌包包独立站案例 | FB广告帮手</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --bg-primary: #0a0a0f;
-            --bg-secondary: #12121a;
-            --bg-card: #1a1a24;
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0a0;
-            --accent-gold: #d4af37;
-            --accent-red: #dc2626;
-            --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f4e5b2 100%);
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --blue: #0066ff;
         }
         body {
-            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-900);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
         nav {
             position: fixed;
@@ -31,163 +36,315 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(10, 10, 15, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 0 2rem;
+            height: 52px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gray-900);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--blue) 0%, #00c6ff 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
         }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--accent-gold); }
-        .container { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 3rem; }
-        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); text-decoration: none; margin-bottom: 2rem; transition: color 0.3s; }
-        .back-link:hover { color: var(--accent-gold); }
-        .article-header { margin-bottom: 3rem; }
-        .category-tag { display: inline-block; padding: 0.25rem 0.75rem; background: var(--accent-red); color: white; border-radius: 4px; font-size: 0.75rem; font-weight: 500; margin-bottom: 1rem; }
-        h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
-        .meta { color: var(--text-secondary); font-size: 0.9rem; }
-        .content { font-size: 1.1rem; line-height: 1.8; }
-        .content h2 { font-size: 1.8rem; margin: 2.5rem 0 1rem; padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
-        .content h3 { font-size: 1.3rem; margin: 1.5rem 0 0.75rem; color: var(--accent-gold); }
-        .content p { margin-bottom: 1.5rem; color: var(--text-secondary); }
-        .content ul, .content ol { margin: 1rem 0 1.5rem 1.5rem; color: var(--text-secondary); }
-        .content li { margin-bottom: 0.5rem; }
-        .highlight-box { background: var(--bg-card); border-left: 3px solid var(--accent-gold); padding: 1.5rem; margin: 2rem 0; border-radius: 8px; }
-        .highlight-box strong { color: var(--accent-gold); }
-        .metrics-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; }
-        .metric { background: var(--bg-card); padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.05); }
-        .metric-value { font-size: 2rem; font-weight: 700; background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .metric-label { font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.5rem; }
-        .cta-section { background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%); padding: 2rem; border-radius: 12px; text-align: center; margin: 3rem 0; }
-        .cta-section h3 { color: var(--text-primary); margin-bottom: 1rem; }
-        .cta-button { display: inline-block; padding: 1rem 2rem; background: var(--gradient-gold); color: var(--bg-primary); text-decoration: none; border-radius: 8px; font-weight: 500; margin-top: 1rem; transition: transform 0.3s, box-shadow 0.3s; }
-        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3); }
-        @media (max-width: 768px) { h1 { font-size: 2rem; } .nav-links { display: none; } }
+        .nav-links a { color: var(--gray-600); text-decoration: none; font-size: 0.875rem; font-weight: 500; }
+        .nav-links a:hover { color: var(--gray-900); }
+        .container { max-width: 800px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+        .case-header { text-align: center; margin-bottom: 3rem; }
+        .case-category {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: white;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; line-height: 1.2; }
+        .case-intro { color: var(--gray-600); font-size: 1.125rem; }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--gray-200);
+        }
+        .metric-value { font-size: 1.75rem; font-weight: 700; color: var(--blue); }
+        .metric-label { font-size: 0.8rem; color: var(--gray-500); margin-top: 0.25rem; }
+        .content-section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--gray-200);
+        }
+        .content-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+        .content-section p { color: var(--gray-700); margin-bottom: 1rem; }
+        .content-section ul { color: var(--gray-700); margin-left: 1.5rem; margin-bottom: 1rem; }
+        .content-section li { margin-bottom: 0.5rem; }
+        .highlight-box {
+            background: var(--gray-100);
+            border-left: 3px solid var(--blue);
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box p { margin: 0; color: var(--gray-800); }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .comparison-table th {
+            background: var(--gray-100);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .comparison-table td { font-size: 0.9rem; }
+        .comparison-table .bad { color: #ef4444; }
+        .comparison-table .good { color: #10b981; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--blue) 0%, #00c6ff 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            margin: 2rem 0;
+        }
+        .cta-box h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .cta-box p { opacity: 0.9; margin-bottom: 1rem; }
+        .cta-btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: white;
+            color: var(--blue);
+            border-radius: 100px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .cta-btn:hover { transform: scale(1.05); }
+        @media (max-width: 768px) {
+            h1 { font-size: 1.75rem; }
+            .nav-links { display: none; }
+            .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">暗投</a>
+        <a href="index.html" class="logo">
+            <div class="logo-icon">F</div>
+            FB广告帮手
+        </a>
         <ul class="nav-links">
-            <li><a href="index.html#services">服务</a></li>
-            <li><a href="cases.html">案例</a></li>
-            <li><a href="secrets.html">揭秘</a></li>
-            <li><a href="index.html#contact">联系</a></li>
+            <li><a href="cases.html">实战案例</a></li>
+            <li><a href="articles.html">过审技巧</a></li>
+            <li><a href="index.html#contact">联系咨询</a></li>
         </ul>
     </nav>
     
     <div class="container">
-        <a href="cases.html" class="back-link">← 返回案例库</a>
+        <div class="case-header">
+            <span class="case-category">仿牌</span>
+            <h1>仿牌包包独立站：ROI从0.8做到3.2</h1>
+            <p class="case-intro">文案去品牌化+LOGO处理+Tier-2国家策略</p>
+        </div>
         
-        <article class="article-header">
-            <span class="category-tag">仿牌</span>
-            <h1>仿牌包包独立站：从CPC $1.5降到$0.6，ROI从0.8做到3.2</h1>
-            <p class="meta">更新时间: 2026-08-27 · 阅读时间: 6分钟</p>
-        </article>
-        
-        <div class="content">
-            <div class="metrics-box">
-                <div class="metric">
-                    <div class="metric-value">3.2</div>
-                    <div class="metric-label">ROI</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">$0.6</div>
-                    <div class="metric-label">CPC</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">65%</div>
-                    <div class="metric-label">过审率</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">$30k</div>
-                    <div class="metric-label">月销售额</div>
-                </div>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">3.2</div>
+                <div class="metric-label">ROI</div>
             </div>
-            
-            <h2>客户背景</h2>
-            <p>李总，做LV、Gucci同款包包的独立站，Shopify建站，主要市场在欧美。之前自己投Facebook广告，CPC一直降不下来，审核经常被拒，ROI只有0.8，基本在亏钱。</p>
-            
-            <h2>核心问题</h2>
+            <div class="metric-card">
+                <div class="metric-value">$0.6</div>
+                <div class="metric-label">CPC</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">65%</div>
+                <div class="metric-label">过审率</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">1.8%</div>
+                <div class="metric-label">CTR</div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>项目背景</h2>
+            <p>客户是广州做仿牌包包的，主要仿LV、Gucci、Chanel。通过Shopify建了独立站，想用Facebook广告引流到独立站成交。</p>
+            <p>遇到的问题：</p>
             <ul>
-                <li><strong>品牌词被识别</strong>：文案写"Gucci同款""LV风格"，直接被Meta拒绝</li>
-                <li><strong>LOGO露出来</strong>：素材图里有品牌LOGO，审核秒拒</li>
-                <li><strong>定价太低</strong>：$49卖"Gucci包"，一看就是假的，用户不敢买</li>
-                <li><strong>转化率差</strong>：点击了但不下单，因为信任度不够</li>
+                <li>广告文案写"Gucci同款"、"LV风格"，直接被拒审</li>
+                <li>图片带品牌LOGO，Meta CVS 3.0能识别98.6%的变体LOGO</li>
+                <li>偶尔过审的，CPC要$1.5以上，ROI只有0.8，亏钱</li>
+                <li>账户经常被封，每次损失几千刀余额</li>
             </ul>
-            
-            <h2>解决方案</h2>
-            
-            <h3>1. 文案去品牌化</h3>
-            <p>把"Gucci同款"改成"轻奢设计风"，把"LV风格"改成"复古邮差包"。</p>
-            
+        </div>
+        
+        <div class="content-section">
+            <h2>核心策略：文案去品牌化</h2>
             <div class="highlight-box">
-                <strong>技巧：</strong>用材质、风格、场景代替品牌词。比如"头层牛皮""手工缝线""法式优雅""通勤首选"，用户看了懂是啥，Meta审核也过。
+                <p><strong>核心原则：</strong>用户看了懂是啥，Facebook审核也过。</p>
             </div>
-            
-            <h3>2. 素材LOGO处理</h3>
-            <p>把产品图里的LOGO用PS去掉，或者拍角度图避开LOGO位置。保留包包的整体设计感，但不露出品牌标识。</p>
-            
-            <p>Meta的CVS 3.0视觉识别系统能识别98.6%的变体LOGO，所以不要抱侥幸心理，老老实实去LOGO。</p>
-            
-            <h3>3. 价格策略调整</h3>
-            <p>把价格从$49提到$129-$199。为什么？</p>
-            
+            <p>把品牌词全部替换成材质、风格、设计语言：</p>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>原来写法</th>
+                        <th>合规写法</th>
+                        <th>效果</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="bad">"Gucci同款手提包"</td>
+                        <td class="good">"轻奢设计风托特包"</td>
+                        <td>过审率提升50%</td>
+                    </tr>
+                    <tr>
+                        <td class="bad">"LV风格邮差包"</td>
+                        <td class="good">"复古邮差包 精选牛皮"</td>
+                        <td>CTR不变，过审率提升</td>
+                    </tr>
+                    <tr>
+                        <td class="bad">"Chanel经典款"</td>
+                        <td class="good">"菱格纹链条包 撞色设计"</td>
+                        <td>用户一眼懂</td>
+                    </tr>
+                    <tr>
+                        <td class="bad">"爱马仕铂金包"</td>
+                        <td class="good">"铂金包型 大容量手提"</td>
+                        <td>搜索词保留，品牌词去掉</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>关键是要保留"搜索词"，让用户通过形状、材质、风格能联想到品牌，但文案本身不出现品牌名。</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>图片处理：LOGO隐形化</h2>
+            <p>Meta CVS 3.0视觉识别系统非常强大，能识别：</p>
             <ul>
-                <li>价格太低，用户觉得"肯定是假的，质量不行"</li>
-                <li>价格适中，用户觉得"应该是高仿，质量应该还可以"</li>
-                <li>高价位提升利润空间，容错率更高</li>
+                <li>标准LOGO（100%识别）</li>
+                <li>变形LOGO、局部LOGO（98.6%识别）</li>
+                <li>相似图案、配色组合（识别率也在提升）</li>
             </ul>
-            
-            <p>调整后转化率从0.8%提升到2.3%，虽然点击量少了点，但订单多了。</p>
-            
-            <h3>4. 落地页优化</h3>
-            <p>之前是直接跳产品页，现在改成中间页：</p>
-            
+            <p><strong>我们的处理方法：</strong></p>
             <ul>
-                <li>广告页：展示产品细节、材质、工艺（不提品牌）</li>
-                <li>中间页：用户评价、质量承诺、退换政策</li>
-                <li>购买页：Stripe收款，支持信用卡</li>
+                <li><strong>完全去除LOGO：</strong>拍摄时用角度遮挡，后期用PS去掉</li>
+                <li><strong>替换成自有品牌：</strong>在产品上印一个简单的自有商标</li>
+                <li><strong>用场景图代替产品图：</strong>包包放在咖啡店、街拍的场景中，不要特写LOGO位置</li>
             </ul>
-            
-            <p>增加信任元素后，转化率提升2倍。</p>
-            
-            <h2>Tier-2国家策略</h2>
-            <p>发现欧美审核严格，但墨西哥、土耳其等Tier-2国家审核宽松很多：</p>
-            
-            <ul>
-                <li>墨西哥CPC $0.3，CTR 2.8%</li>
-                <li>土耳其CPC $0.4，CTR 2.5%</li>
-                <li>审核通过率比美国高30%</li>
-            </ul>
-            
-            <p>现在80%预算投Tier-2国家，20%投欧美测试，整体ROI稳定在3.2。</p>
-            
-            <h2>结果</h2>
-            <ul>
-                <li>CPC从$1.5降到$0.6</li>
-                <li>过审率从20%提升到65%</li>
-                <li>ROI从0.8提升到3.2</li>
-                <li>月销售额$30k，利润$15k</li>
-            </ul>
-            
-            <div class="cta-section">
-                <h3>做仿牌被审核卡住？</h3>
-                <p style="color: var(--text-secondary);">加微信 zhangcha909，发你一份"仿牌过审 Checklist"</p>
-                <a href="index.html#contact" class="cta-button">免费领取</a>
+            <div class="highlight-box">
+                <p><strong>注意：</strong>不要想着"蒙混过关"，Meta的视觉识别能力会越来越强。最安全的是完全去除LOGO，用设计细节说话。</p>
             </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>市场策略：Tier-2国家蓝海</h2>
+            <p>欧美审核最严，CPC最高，但很多人还在往欧美砸钱。其实Tier-2国家（墨西哥、土耳其、俄罗斯、东南亚）机会更大：</p>
+            <ul>
+                <li><strong>CPC更低：</strong>$0.3-0.6 vs 欧美$1.2-2.0</li>
+                <li><strong>审核更松：</strong>过审率比欧美高20-30%</li>
+                <li><strong>消费能力不差：</strong>墨西哥、土耳其中产也有购买力</li>
+                <li><strong>竞争更少：</strong>很多卖家忽视这些市场</li>
+            </ul>
+            <p><strong>这个客户80%预算投Tier-2，20%测欧美。</strong></p>
+            <p>结果：</p>
+            <ul>
+                <li>墨西哥市场CTR 2.2%，CPC $0.35</li>
+                <li>土耳其市场CTR 2.8%，CPC $0.42</li>
+                <li>整体ROI从0.8提升到3.2</li>
+            </ul>
+        </div>
+        
+        <div class="content-section">
+            <h2>账户策略：三不限户+BM养号</h2>
+            <p>仿牌类广告，账户稳定性是关键。</p>
+            <p><strong>1. 开户选择：</strong></p>
+            <ul>
+                <li>用海外三不限户（不限主页、不限域名、不限额度）</li>
+                <li>正常开户费$50-100，如果服务商要$500+，就是黑你的</li>
+                <li>单户月预算不超过$5000，超过$300/天封号概率增加</li>
+            </ul>
+            <p><strong>2. BM养号：</strong></p>
+            <ul>
+                <li>每个账户配独立BM，不要多账户共用BM</li>
+                <li>BM不要关联已被封的账户</li>
+                <li>定期检查BM状态，有预警马上处理</li>
+            </ul>
+            <p><strong>3. 资金管理：</strong></p>
+            <ul>
+                <li>账户余额不要超过单日预算5倍</li>
+                <li>定期提现，不要留大额在账户</li>
+                <li>被封后余额基本拿不回来</li>
+            </ul>
+        </div>
+        
+        <div class="content-section">
+            <h2>投放效果</h2>
+            <p>优化3个月后：</p>
+            <ul>
+                <li><strong>过审率：</strong>从不到30%提升到65%+</li>
+                <li><strong>CPC：</strong>从$1.5降到$0.6（主要靠Tier-2市场）</li>
+                <li><strong>CTR：</strong>稳定1.8-2.2%</li>
+                <li><strong>ROI：</strong>从0.8提升到3.2</li>
+                <li><strong>账户稳定性：</strong>单个账户平均存活2-3个月</li>
+            </ul>
+        </div>
+        
+        <div class="content-section">
+            <h2>踩过的坑</h2>
+            <p><strong>1. 早期用斗篷技术被识别</strong></p>
+            <p>一开始也想用跳转技术，结果Facebook识别后直接封BM。仿牌不像菠菜那么敏感，不如把精力放在文案和图片合规化上。</p>
+            <p><strong>2. LOGO处理不彻底</strong></p>
+            <p>有次想着"LOGO小一点应该没问题"，结果照样被识别。教训：要么完全去除，要么换自有品牌，不要抱侥幸心理。</p>
+            <p><strong>3. 欧美市场死磕</strong></p>
+            <p>一开始觉得欧美消费能力强，80%预算投欧美，结果ROI只有0.8。后来把重心转到Tier-2，ROI直接翻4倍。</p>
+        </div>
+        
+        <div class="cta-box">
+            <h3>你的仿牌广告也一直被拒审？</h3>
+            <p>加微信聊聊，看看你的文案和图片怎么改</p>
+            <a href="index.html#contact" class="cta-btn">免费诊断</a>
         </div>
     </div>
 </body>

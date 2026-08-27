@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过审技巧 | FB广告帮手</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --blue: #0066ff;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-900);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 0 2rem;
+            height: 52px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--blue) 0%, #00c6ff 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--gray-600); text-decoration: none; font-size: 0.875rem; font-weight: 500; }
+        .nav-links a:hover { color: var(--gray-900); }
+        .container { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+        .page-header { text-align: center; margin-bottom: 3rem; }
+        h1 { font-size: 3rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
+        h1 span { background: linear-gradient(135deg, var(--blue) 0%, #00c6ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .subtitle { color: var(--gray-600); font-size: 1.125rem; }
+        .articles { max-width: 800px; margin: 0 auto; }
+        .article-item {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--gray-200);
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s;
+        }
+        .article-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--blue);
+        }
+        .article-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--gray-100);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--gray-600);
+            margin-bottom: 0.75rem;
+        }
+        .article-title { font-size: 1.25rem; font-weight: 600; color: var(--gray-900); margin-bottom: 0.75rem; }
+        .article-excerpt { color: var(--gray-600); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; }
+        .article-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--gray-400);
+        }
+        .article-meta span { display: flex; align-items: center; gap: 0.25rem; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-icon">F</div>
+            FB广告帮手
+        </a>
+        <ul class="nav-links">
+            <li><a href="cases.html">实战案例</a></li>
+            <li><a href="articles.html">过审技巧</a></li>
+            <li><a href="index.html#contact">联系咨询</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1>过审<span>技巧</span></h1>
+            <p class="subtitle">这些方法，我们都在实战中验证过</p>
+        </div>
+        
+        <div class="articles">
+            <a href="#" class="article-item">
+                <span class="article-category">核心技术</span>
+                <h3 class="article-title">黑五类广告过审核心：落地页跳转隔离技术详解</h3>
+                <p class="article-excerpt">通过三层跳转系统（广告页→中间页→真实页），让Facebook审核看到合规页面，用户看到真实产品。这套技术能让过审率从20%提升到65%以上，是敏感品类投放的基础。</p>
+                <div class="article-meta">
+                    <span>📖 阅读时间: 5分钟</span>
+                    <span>✅ 已验证有效</span>
+                    <span>🔥 核心必读</span>
+                </div>
+            </a>
+            
+            <a href="#" class="article-item">
+                <span class="article-category">账户风控</span>
+                <h3 class="article-title">Facebook账户被封12次后总结的8条铁律</h3>
+                <p class="article-excerpt">账户余额不超过单日预算5倍、每个账户独立环境（IP/设备/付款方式）、每天检查账户状态、不要等账户封了才发现问题。这些细节决定了账户能活多久。</p>
+                <div class="article-meta">
+                    <span>📖 阅读时间: 6分钟</span>
+                    <span>💡 经验总结</span>
+                </div>
+            </a>
+            
+            <a href="#" class="article-item">
+                <span class="article-category">文案技巧</span>
+                <h3 class="article-title">仿牌文案怎么写？用材质风格代替品牌词</h3>
+                <p class="article-excerpt">"Gucci同款"改成"轻奢设计风"，"LV风格"改成"复古邮差包"。用户看了懂是啥，Facebook审核也过。同时要完全去除LOGO，Meta CVS 3.0能识别98.6%的变体LOGO。</p>
+                <div class="article-meta">
+                    <span>📖 阅读时间: 4分钟</span>
+                    <span>📝 实操技巧</span>
+                </div>
+            </a>
+            
+            <a href="#" class="article-item">
+                <span class="article-category">市场策略</span>
+                <h3 class="article-title">Tier-2国家蓝海：墨西哥、土耳其投放策略</h3>
+                <p class="article-excerpt">欧美审核严格，但墨西哥、土耳其等Tier-2国家CPC只要$0.3-0.4，过审率高30%，ROI反而更好。80%预算投Tier-2，20%测欧美，是很多成功案例的共同策略。</p>
+                <div class="article-meta">
+                    <span>📖 阅读时间: 5分钟</span>
+                    <span>🌍 市场机会</span>
+                </div>
+            </a>
+            
+            <a href="#" class="article-item">
+                <span class="article-category">账户开户</span>
+                <h3 class="article-title">海外三不限户：敏感品类投放必备</h3>
+                <p class="article-excerpt">不限主页、不限域名、不限额度。这类账户权重高，稳定性强，适合多品类投放、A/B测试、大额投放。但要避免服务商黑幕，正常开户费$50-100，不是$500。</p>
+                <div class="article-meta">
+                    <span>📖 阅读时间: 4分钟</span>
+                    <span>🔧 工具资源</span>
+                </div>
+            </a>
+            
+            <a href="#" class="article-item">
+                <span class="article-category">封号解封</span>
+                <h3 class="article-title">账户被封后如何申诉？成功率40%的实操方法</h3>
+                <p class="article-excerpt">被拒登可申诉说明已整改、BM禁用建议重新开户、公司黑名单基本无解。申诉前先读拒审通知，修改违规内容后再提交，不要频繁申诉导致账户被封。</p>
+                <div class="article-meta">
+                    <span>📖 阅读时间: 5分钟</span>
+                    <span>⚠️ 风险处理</span>
+                </div>
+            </a>
+            
+            <a href="#" class="article-item">
+                <span class="article-category">收款风控</span>
+                <h3 class="article-title">跨境收款方案：USDT收款与多通道分散风险</h3>
+                <p class="article-excerpt">黑产收款最大的风险是资金冻结。USDT收款即时到账最安全，第三方支付通道要分散，每天定时结算不留大额在平台。不要用同一个支付方式绑定多个账户。</p>
+                <div class="article-meta">
+                    <span>📖 阅读时间: 4分钟</span>
+                    <span>💰 资金安全</span>
+                </div>
+            </a>
+            
+            <a href="#" class="article-item">
+                <span class="article-category">素材制作</span>
+                <h3 class="article-title">敏感品类素材制作：规避审核的7个要点</h3>
+                <p class="article-excerpt">不露品牌LOGO、不用前后对比图、不写夸张效果承诺、不制造负面情绪、不暗示用户有病/穷/丑。用场景化表达、科学数据、真实案例代替。</p>
+                <div class="article-meta">
+                    <span>📖 阅读时间: 5分钟</span>
+                    <span>🎨 创意指南</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

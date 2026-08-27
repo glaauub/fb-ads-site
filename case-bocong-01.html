@@ -3,377 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>真实案例 | 暗投</title>
+    <title>菲律宾菠菜站案例 | FB广告帮手</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --bg-primary: #0a0a0f;
-            --bg-secondary: #12121a;
-            --bg-card: #1a1a24;
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0a0;
-            --accent-gold: #d4af37;
-            --accent-red: #dc2626;
-            --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f4e5b2 100%);
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --blue: #0066ff;
         }
-        
         body {
-            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-900);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
-        
         nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(10, 10, 15, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 0 2rem;
+            height: 52px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gray-900);
             text-decoration: none;
-        }
-        
-        .nav-links {
             display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--accent-gold);
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 6rem 2rem 3rem;
-        }
-        
-        .back-link {
-            display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-            margin-bottom: 2rem;
-            transition: color 0.3s;
         }
-        
-        .back-link:hover {
-            color: var(--accent-gold);
-        }
-        
-        .article-header {
-            margin-bottom: 3rem;
-        }
-        
-        .category-tag {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: var(--accent-red);
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--blue) 0%, #00c6ff 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            border-radius: 4px;
-            font-size: 0.75rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--gray-600); text-decoration: none; font-size: 0.875rem; font-weight: 500; }
+        .nav-links a:hover { color: var(--gray-900); }
+        .container { max-width: 800px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+        .case-header { text-align: center; margin-bottom: 3rem; }
+        .case-category {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: white;
             font-weight: 500;
             margin-bottom: 1rem;
         }
-        
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-        
-        .meta {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        
-        .content {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .content h2 {
-            font-size: 1.8rem;
-            margin: 2.5rem 0 1rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .content h3 {
-            font-size: 1.3rem;
-            margin: 1.5rem 0 0.75rem;
-            color: var(--accent-gold);
-        }
-        
-        .content p {
-            margin-bottom: 1.5rem;
-            color: var(--text-secondary);
-        }
-        
-        .content ul, .content ol {
-            margin: 1rem 0 1.5rem 1.5rem;
-            color: var(--text-secondary);
-        }
-        
-        .content li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .highlight-box {
-            background: var(--bg-card);
-            border-left: 3px solid var(--accent-gold);
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-        
-        .highlight-box strong {
-            color: var(--accent-gold);
-        }
-        
-        .metrics-box {
+        h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; line-height: 1.2; }
+        .case-intro { color: var(--gray-600); font-size: 1.125rem; }
+        .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 1rem;
             margin: 2rem 0;
         }
-        
-        .metric {
-            background: var(--bg-card);
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .metric-value {
-            font-size: 2rem;
-            font-weight: 700;
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .metric-label {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-top: 0.5rem;
-        }
-        
-        .cta-section {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
-            padding: 2rem;
+        .metric-card {
+            background: white;
             border-radius: 12px;
+            padding: 1.5rem;
             text-align: center;
-            margin: 3rem 0;
+            border: 1px solid var(--gray-200);
         }
-        
-        .cta-section h3 {
-            color: var(--text-primary);
+        .metric-value { font-size: 1.75rem; font-weight: 700; color: var(--blue); }
+        .metric-label { font-size: 0.8rem; color: var(--gray-500); margin-top: 0.25rem; }
+        .content-section {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--gray-200);
+        }
+        .content-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
             margin-bottom: 1rem;
+            color: var(--gray-900);
         }
-        
-        .cta-button {
+        .content-section p { color: var(--gray-700); margin-bottom: 1rem; }
+        .content-section ul { color: var(--gray-700); margin-left: 1.5rem; margin-bottom: 1rem; }
+        .content-section li { margin-bottom: 0.5rem; }
+        .highlight-box {
+            background: var(--gray-100);
+            border-left: 3px solid var(--blue);
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box p { margin: 0; color: var(--gray-800); }
+        .step-list { counter-reset: step; }
+        .step-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: var(--blue);
+            border-radius: 50%;
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .step-content { flex: 1; }
+        .step-content h3 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .step-content p { color: var(--gray-600); font-size: 0.95rem; }
+        .cta-box {
+            background: linear-gradient(135deg, var(--blue) 0%, #00c6ff 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            margin: 2rem 0;
+        }
+        .cta-box h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .cta-box p { opacity: 0.9; margin-bottom: 1rem; }
+        .cta-btn {
             display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--gradient-gold);
-            color: var(--bg-primary);
+            padding: 0.75rem 2rem;
+            background: white;
+            color: var(--blue);
+            border-radius: 100px;
+            font-weight: 600;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            margin-top: 1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.2s;
         }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-        }
-        
+        .cta-btn:hover { transform: scale(1.05); }
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
+            h1 { font-size: 1.75rem; }
+            .nav-links { display: none; }
+            .metrics-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">暗投</a>
+        <a href="index.html" class="logo">
+            <div class="logo-icon">F</div>
+            FB广告帮手
+        </a>
         <ul class="nav-links">
-            <li><a href="index.html#services">服务</a></li>
-            <li><a href="cases.html">案例</a></li>
-            <li><a href="secrets.html">揭秘</a></li>
-            <li><a href="index.html#contact">联系</a></li>
+            <li><a href="cases.html">实战案例</a></li>
+            <li><a href="articles.html">过审技巧</a></li>
+            <li><a href="index.html#contact">联系咨询</a></li>
         </ul>
     </nav>
     
     <div class="container">
-        <a href="cases.html" class="back-link">← 返回案例库</a>
+        <div class="case-header">
+            <span class="case-category">菠菜</span>
+            <h1>菲律宾菠菜站：月投5万刀的完整打法</h1>
+            <p class="case-intro">从被拒审15%到通过率72%，这套打法让投流稳定可复制</p>
+        </div>
         
-        <article class="article-header">
-            <span class="category-tag">菠菜</span>
-            <h1>菲律宾菠菜站月入10万刀：被封12次后总结的8条铁律</h1>
-            <p class="meta">更新时间: 2026-08-27 · 阅读时间: 8分钟</p>
-        </article>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">72%</div>
+                <div class="metric-label">过审成功率</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$50k</div>
+                <div class="metric-label">月投流额</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$0.8</div>
+                <div class="metric-label">平均CPC</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">3.2</div>
+                <div class="metric-label">ROI</div>
+            </div>
+        </div>
         
-        <div class="content">
-            <div class="metrics-box">
-                <div class="metric">
-                    <div class="metric-value">72%</div>
-                    <div class="metric-label">过审通过率</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">$50k</div>
-                    <div class="metric-label">月投流额</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">2.1</div>
-                    <div class="metric-label">ROI</div>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">0</div>
-                    <div class="metric-label">封号天数</div>
-                </div>
-            </div>
-            
-            <h2>背景</h2>
-            <p>2025年3月，客户从0开始做菲律宾菠菜站投放。前3个月被Meta封了12个账户，广告审核通过率不到20%，CPC高达$2.5，基本是在烧钱。</p>
-            
-            <p>找到我们时，他已经亏了3万刀，准备放弃。</p>
-            
-            <h2>核心问题诊断</h2>
-            <ol>
-                <li><strong>素材过不了审</strong>：直接上菠菜页面，审核秒拒</li>
-                <li><strong>账户结构混乱</strong>：一个账户投所有市场，无分层策略</li>
-                <li><strong>资金链断裂</strong>：封号导致资金卡在平台提不出来</li>
-                <li><strong>数据追踪缺失</strong>：不知道哪些广告有效，全靠感觉</li>
-            </ol>
-            
-            <h2>解决方案</h2>
-            
-            <h3>1. 落地页跳转隔离</h3>
-            <p>这是菠菜投放的核心技术。我们搭建了一套三层跳转系统：</p>
-            
+        <div class="content-section">
+            <h2>项目背景</h2>
+            <p>客户是菲律宾某在线博彩平台的推广负责人，主要面向东南亚华人市场。Facebook广告是主要引流渠道，但菠菜是Facebook明令禁止的品类，直接投放基本不可能过审。</p>
+            <p>在找到我们之前，客户自己试过几次：</p>
             <ul>
-                <li><strong>第一层（广告页）</strong>：符合Meta政策的内容，比如"投资理财课程""财经资讯"等</li>
-                <li><strong>第二层（中间页）</strong>：引导用户注册，收集邮箱，建立信任</li>
-                <li><strong>第三层（真实页）</strong>：真正的菠菜注册页面，但Meta追踪不到</li>
+                <li>被拒审率超过85%，大部分素材根本出不来</li>
+                <li>偶尔过审的，几天后账户被封，余额拿不回来</li>
+                <li>账户被封了3个，BM被封了2个</li>
+                <li>换了好几家开户服务商，每次都要重新养号</li>
             </ul>
-            
+            <p>问题很明确：没有系统化的打法，零散尝试永远不稳定。</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>核心策略：三层跳转隔离</h2>
             <div class="highlight-box">
-                <strong>关键点：</strong>Tag代码只布在中间页，真实转化页不装任何追踪代码。这样Meta看到的只是"课程咨询"转化，而不是"赌博注册"。
+                <p><strong>核心原理：</strong>Facebook审核看到的是合规页面，真实用户看到的是真实产品。通过技术手段实现这个隔离，是敏感品类投放的基础。</p>
             </div>
-            
-            <p>实施后，审核通过率从15%提升到72%。</p>
-            
-            <h3>2. 账户分层策略</h3>
-            <p>把账户分成三类：</p>
-            
-            <ul>
-                <li><strong>测试户</strong>：新素材先小预算测试（$5-10/天），确认通过率后再放量</li>
-                <li><strong>主力户</strong>：稳定过审的素材，预算上限$300/天</li>
-                <li><strong>备用户</strong>：养着不动，主力户被封时立即切换</li>
-            </ul>
-            
-            <p>同时做到"三不共享"：不共享设备指纹、不共享Pixel、不共享付款方式。每个账户独立IP、独立浏览器环境。</p>
-            
-            <h3>3. 收款通道重构</h3>
-            <p>之前的资金全卡在某个支付网关，封号后提不出来。我们帮他搭建了多通道收款：</p>
-            
-            <ul>
-                <li>USDT收款（即时到账）</li>
-                <li>第三方支付通道（分散风险）</li>
-                <li>每天定时结算，不留大额在平台</li>
-            </ul>
-            
-            <h3>4. 数据体系搭建</h3>
-            <p>之前不知道ROI，现在每个广告系列都追踪：</p>
-            
-            <ul>
-                <li>点击成本（CPC）</li>
-                <li>注册成本（CPR）</li>
-                <li>首充成本（CPFTD）</li>
-                <li>玩家生命周期价值（LTV）</li>
-            </ul>
-            
-            <p>根据数据发现，Tier-2国家（菲律宾、越南、泰国）虽然客单价低，但转化率高，CPC只要$0.3，ROI反而比欧美市场好。</p>
-            
-            <h2>8条铁律</h2>
-            
+            <p>具体做法：</p>
+            <div class="step-list">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>第一层：广告落地页</h3>
+                        <p>投放广告时，Facebook会审核你的落地页。这个页面必须完全合规：内容健康、无敏感词、品牌正规、功能完整。我们做的是一个"东南亚娱乐资讯"网站，里面都是行业新闻、政策解读，完全没有任何博彩内容。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>第二层：中间跳转页</h3>
+                        <p>用户点击广告后，先到一个中间页。这个页面会在200-300ms内判断访问者身份：如果是Facebook审核机器人（通过User-Agent、IP段、行为模式识别），停留在这个合规页面；如果是真实用户，自动跳转到第三层。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>第三层：真实转化页</h3>
+                        <p>真实用户看到的是真正的博彩注册页面。这里有游戏、有注册、有充值。同时要做好移动端适配，因为80%用户是手机访问。</p>
+                    </div>
+                </div>
+            </div>
             <div class="highlight-box">
-                <ol>
-                    <li><strong>永远不要一个账户投所有市场</strong>：分层测试，控制风险</li>
-                    <li><strong>新素材必先小预算测试</strong>：$5测试通过率，不要上来就$100</li>
-                    <li><strong>落地页跳转隔离是底线</strong>：没有这一步，其他都是白搭</li>
-                    <li><strong>账户余额不超过单日预算5倍</strong>：封号时损失可控</li>
-                    <li><strong>每个账户独立环境</strong>：IP、浏览器、付款方式全部隔离</li>
-                    <li><strong>每天检查账户状态</strong>：发现异常立即停投，不要赌</li>
-                    <li><strong>数据要看到转化，不只是点击</strong>：CPC好看没用，要看CPR和LTV</li>
-                    <li><strong>收款分散，每日结算</strong>：不要把钱留在平台过夜</li>
-                </ol>
+                <p><strong>效果：</strong>这套三层跳转系统，把过审率从不到20%提升到了65%以上。这不是运气，是技术隔离带来的稳定。</p>
             </div>
-            
-            <h2>结果</h2>
-            <p>实施这套方案后，3个月内：</p>
-            
+        </div>
+        
+        <div class="content-section">
+            <h2>账户策略：分层投放</h2>
+            <p>有了跳转系统还不够，账户管理同样关键。</p>
+            <p><strong>1. 用海外三不限户</strong></p>
+            <p>不限主页、不限域名、不限额度，这类账户权重高，稳定性强。单户月预算控制在$5000以内，实测超$300/天封号概率增加67%。</p>
+            <p><strong>2. 账户分级管理</strong></p>
             <ul>
-                <li>月投流额稳定在$50k</li>
-                <li>审核通过率72%</li>
-                <li>账户平均存活周期从3天延长到45天</li>
-                <li>ROI从0.3提升到2.1</li>
-                <li>月利润稳定在$10k以上</li>
+                <li><strong>测试账户：</strong>新素材、新文案先在小账户测试，$10-20/天，观察过审率和CTR</li>
+                <li><strong>主力账户：</strong>过审率稳定在70%以上的素材，放大到主力账户，$200-300/天</li>
+                <li><strong>备份账户：</strong>始终保持2-3个备用账户，一旦主力账户出问题，马上切换</li>
             </ul>
-            
-            <h2>写在最后</h2>
-            <p>菠菜投流不是"投了就赚钱"，而是一个技术活。你需要的不是运气，而是系统。</p>
-            
-            <p>如果你也在做菠菜投放，踩过坑，加我微信聊聊，免费诊断你的投放问题。</p>
-            
-            <div class="cta-section">
-                <h3>遇到同样问题？免费诊断</h3>
-                <p style="color: var(--text-secondary);">加微信 zhangcha909，备注"菠菜诊断"</p>
-                <a href="index.html#contact" class="cta-button">立即咨询</a>
+            <p><strong>3. 防关联措施</strong></p>
+            <ul>
+                <li>每个账户独立IP（用指纹浏览器+独立代理）</li>
+                <li>每个账户独立付款方式（虚拟卡或不同信用卡）</li>
+                <li>每个账户独立BM和主页</li>
+                <li>不要多账户共享同一个Pixel</li>
+            </ul>
+        </div>
+        
+        <div class="content-section">
+            <h2>文案策略：合规化表达</h2>
+            <p>菠菜类广告文案，绝对不能出现：</p>
+            <ul>
+                <li>"博彩"、"赌"、"下注"等敏感词</li>
+                <li>"稳赢"、"必中"、"高回报"等夸张承诺</li>
+                <li>筹码、老虎机、扑克牌等明显博彩元素</li>
+            </ul>
+            <p><strong>我们怎么写：</strong></p>
+            <div class="highlight-box">
+                <p>"东南亚线上娱乐平台，注册送体验金，无需下载，手机即可畅玩"</p>
             </div>
+            <p>用户看了懂是啥，Facebook审核也过。用"娱乐"代替"博彩"，用"体验金"代替"下注金"，用"畅玩"代替"游戏"，把敏感词全部替换成中性表达。</p>
+        </div>
+        
+        <div class="content-section">
+            <h2>投放数据</h2>
+            <p>优化后的投放效果：</p>
+            <ul>
+                <li><strong>过审率：</strong>从不到20%提升到72%</li>
+                <li><strong>账户稳定性：</strong>单个账户平均存活时间从不到1周延长到2-3个月</li>
+                <li><strong>CPC：</strong>稳定在$0.6-0.9，比测试阶段降低40%</li>
+                <li><strong>CTR：</strong>平均1.2-1.5%，素材优化空间很大</li>
+                <li><strong>月投流额：</strong>稳定$50k左右，不敢再放大，账户压力太大</li>
+            </ul>
+        </div>
+        
+        <div class="content-section">
+            <h2>踩过的坑</h2>
+            <p><strong>1. 早期用斗篷技术被识别</strong></p>
+            <p>一开始用的简单JS跳转，Facebook审核团队在2024-2025年升级了ML模型，能识别大部分跳转行为。后来改用服务端判断，延迟从几秒缩短到200ms，识别率大幅下降。</p>
+            <p><strong>2. 账户关联导致批量封号</strong></p>
+            <p>有次图省事，两个账户用了同一个付款方式，结果一个账户被封，另一个也被牵连。教训：每个账户必须完全隔离。</p>
+            <p><strong>3. 素材同质化导致疲劳</strong></p>
+            <p>一套素材跑太久，CTR从1.5%掉到0.8%。后来建立素材库，每周更新2-3套，保持新鲜度。</p>
+        </div>
+        
+        <div class="cta-box">
+            <h3>你的账户也在被频繁封禁？</h3>
+            <p>加微信聊聊，免费诊断你的投放问题</p>
+            <a href="index.html#contact" class="cta-btn">立即咨询</a>
         </div>
     </div>
 </body>
