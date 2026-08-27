@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>实战案例 | FB广告帮手</title>
+    <title>成功案例 | FB聊单实战 - Facebook广告聊单转化专家</title>
+    <meta name="description" content="20+ 真实案例：女鞋出口月销 $48 万、3C 配件 $83 万、美妆私域年收 $240 万...通过 Facebook Click-to-WhatsApp 广告 + 微信私域，实现 3-10 倍增长。">
+    <link rel="canonical" href="https://facebookads.help/cases.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -21,8 +22,11 @@
             --gray-700: #374151;
             --gray-800: #1f2937;
             --gray-900: #111827;
-            --blue: #0066ff;
+            --purple: #635BFF;
+            --purple-light: rgba(99, 91, 255, 0.08);
+            --gradient: linear-gradient(135deg, #635BFF 0%, #00D4FF 100%);
         }
+        
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--white);
@@ -30,281 +34,735 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
+        
         nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: saturate(180%) blur(20px);
-            border-bottom: 1px solid var(--gray-200);
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(99, 91, 255, 0.1);
             padding: 0 2rem;
-            height: 52px;
+            height: 64px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
+        
         .logo {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--gray-900);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--purple);
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
+        
         .logo-icon {
-            width: 28px;
-            height: 28px;
-            background: linear-gradient(135deg, var(--blue) 0%, #00c6ff 100%);
+            width: 32px;
+            height: 32px;
+            background: var(--gradient);
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-weight: 700;
-            font-size: 0.9rem;
+            font-weight: 800;
+            font-size: 1rem;
         }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { color: var(--gray-600); text-decoration: none; font-size: 0.875rem; font-weight: 500; }
-        .nav-links a:hover { color: var(--gray-900); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem 3rem; }
-        .page-header { text-align: center; margin-bottom: 3rem; }
-        h1 { font-size: 3rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
-        h1 span { background: linear-gradient(135deg, var(--blue) 0%, #00c6ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .subtitle { color: var(--gray-600); font-size: 1.125rem; }
-        .filter-tabs { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0; }
-        .filter-tab {
-            padding: 0.5rem 1.25rem;
-            background: white;
-            border: 1px solid var(--gray-200);
+        
+        .nav-links {
+            margin-left: auto;
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
             color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9375rem;
+        }
+        
+        .nav-links a:hover { color: var(--purple); }
+        
+        .nav-cta {
+            background: var(--gradient);
+            color: white;
+            padding: 0.625rem 1.5rem;
             border-radius: 100px;
-            cursor: pointer;
-            transition: all 0.2s;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 14px rgba(99, 91, 255, 0.25);
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 91, 255, 0.35);
+        }
+        
+        .page-hero {
+            padding: 9rem 2rem 4rem;
+            background: linear-gradient(180deg, #FAFBFF 0%, #FFFFFF 100%);
+            text-align: center;
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1200px;
+            height: 400px;
+            background: radial-gradient(ellipse at 50% 0%, rgba(99, 91, 255, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .page-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 91, 255, 0.08);
+            border: 1px solid rgba(99, 91, 255, 0.2);
+            border-radius: 100px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--purple);
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            max-width: 640px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+        
+        .filter-bar {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1.25rem;
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            background: white;
+            color: var(--gray-600);
             font-size: 0.875rem;
             font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
         }
-        .filter-tab:hover, .filter-tab.active {
-            background: var(--blue);
-            border-color: var(--blue);
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: var(--purple);
+            background: var(--purple);
             color: white;
         }
-        .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.5rem; }
+        
+        .cases-section {
+            padding: 4rem 2rem 6rem;
+            background: white;
+        }
+        
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
         .case-card {
             background: white;
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
             border: 1px solid var(--gray-200);
-            transition: all 0.3s;
-            text-decoration: none;
-            display: block;
+            transition: all 0.4s;
+            display: flex;
+            flex-direction: column;
         }
+        
         .case-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            transform: translateY(-8px);
+            box-shadow: 0 24px 80px rgba(99, 91, 255, 0.18);
+            border-color: var(--purple);
         }
+        
         .case-image {
             height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
+            background-size: cover;
+            background-position: center;
+            position: relative;
         }
-        .case-body { padding: 1.5rem; }
+        
+        .case-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.35) 100%);
+        }
+        
+        .case-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: white;
+            padding: 0.375rem 0.875rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--purple);
+            z-index: 1;
+        }
+        
+        .case-badge-new {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--gradient);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 100px;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            z-index: 1;
+        }
+        
+        .case-content {
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        .case-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .case-result {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .case-result-value {
+            font-size: 1.875rem;
+            font-weight: 800;
+            color: var(--purple);
+            line-height: 1;
+        }
+        
+        .case-result-label {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+        }
+        
+        .case-desc {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            flex: 1;
+        }
+        
+        .case-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.25rem;
+        }
+        
         .case-tag {
-            display: inline-block;
             padding: 0.25rem 0.75rem;
             background: var(--gray-100);
             border-radius: 100px;
-            font-size: 0.75rem;
-            font-weight: 500;
+            font-size: 0.6875rem;
             color: var(--gray-600);
-            margin-bottom: 0.75rem;
+            font-weight: 500;
         }
-        .case-title { font-size: 1.125rem; font-weight: 600; color: var(--gray-900); margin-bottom: 0.5rem; }
-        .case-desc { color: var(--gray-600); font-size: 0.9rem; line-height: 1.5; }
-        .case-metrics {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-            margin-top: 1rem;
+        
+        .case-link {
+            color: var(--purple);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
             padding-top: 1rem;
             border-top: 1px solid var(--gray-100);
         }
-        .metric { text-align: center; }
-        .metric-value { font-size: 1.5rem; font-weight: 700; color: var(--blue); }
-        .metric-label { font-size: 0.75rem; color: var(--gray-500); }
+        
+        .case-link:hover { gap: 0.625rem; }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 2rem;
+            background: var(--gradient);
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .cta-section p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-btn-white {
+            background: white;
+            color: var(--purple);
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        
+        .cta-btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--gray-900);
+            color: var(--gray-400);
+            padding: 3rem 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        
+        footer a { color: var(--gray-400); text-decoration: none; }
+        footer a:hover { color: white; }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .cases-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .nav-links { display: none; }
+            h1 { font-size: 2.5rem; }
             .cases-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">
+        <a href="/" class="logo">
             <div class="logo-icon">F</div>
-            FB广告帮手
+            FB聊单实战
         </a>
         <ul class="nav-links">
-            <li><a href="cases.html">实战案例</a></li>
-            <li><a href="articles.html">过审技巧</a></li>
-            <li><a href="index.html#contact">联系咨询</a></li>
+            <li><a href="/">首页</a></li>
+            <li><a href="cases.html">成功案例</a></li>
+            <li><a href="articles.html">实战教程</a></li>
+            <li><a href="weixin://contacts/profile/zhangcha909" class="nav-cta">加微信咨询</a></li>
         </ul>
     </nav>
     
-    <div class="container">
-        <div class="page-header">
-            <h1>实战<span>案例</span></h1>
-            <p class="subtitle">每个案例都有真实数据，可验证、可复制</p>
+    <section class="page-hero">
+        <div class="page-container">
+            <div class="page-badge">🔥 每日更新</div>
+            <h1>成功案例</h1>
+            <p class="page-subtitle">来自女鞋、3C、美妆、家具、玩具、服装、首饰、箱包、宠物用品、健身器材、手表、礼品等 20+ 行业的真实增长数据。每个案例都有可复制的核心策略。</p>
+            
+            <div class="filter-bar">
+                <button class="filter-btn active">全部</button>
+                <button class="filter-btn">B2B 外贸</button>
+                <button class="filter-btn">DTC 品牌</button>
+                <button class="filter-btn">B2C 电商</button>
+                <button class="filter-btn">东南亚</button>
+                <button class="filter-btn">欧美</button>
+            </div>
         </div>
-        
-        <div class="filter-tabs">
-            <button class="filter-tab active" data-filter="all">全部案例</button>
-            <button class="filter-tab" data-filter="bocong">菠菜</button>
-            <button class="filter-tab" data-filter="fangpai">仿牌</button>
-            <button class="filter-tab" data-filter="chengren">成人用品</button>
-            <button class="filter-tab" data-filter="dianziyan">电子烟</button>
-            <button class="filter-tab" data-filter="heiwulei">黑五类</button>
-        </div>
-        
-        <div class="cases-grid">
-            <a href="case-bocong-01.html" class="case-card" data-category="bocong">
-                <div class="case-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🎰</div>
-                <div class="case-body">
-                    <span class="case-tag">菠菜</span>
-                    <h3 class="case-title">菲律宾菠菜站：月投5万刀的完整打法</h3>
-                    <p class="case-desc">从被拒审15%到通过率72%，落地页跳转隔离+账户分层策略</p>
-                    <div class="case-metrics">
-                        <div class="metric">
-                            <div class="metric-value">72%</div>
-                            <div class="metric-label">过审率</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-value">$50k</div>
-                            <div class="metric-label">月投流</div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="case-fangpai-01.html" class="case-card" data-category="fangpai">
-                <div class="case-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">👜</div>
-                <div class="case-body">
-                    <span class="case-tag">仿牌</span>
-                    <h3 class="case-title">仿牌包包独立站：ROI从0.8做到3.2</h3>
-                    <p class="case-desc">文案去品牌化+LOGO处理+Tier-2国家策略</p>
-                    <div class="case-metrics">
-                        <div class="metric">
-                            <div class="metric-value">3.2</div>
-                            <div class="metric-label">ROI</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-value">$0.6</div>
-                            <div class="metric-label">CPC</div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="#" class="case-card" data-category="chengren">
-                <div class="case-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">📦</div>
-                <div class="case-body">
-                    <span class="case-tag">成人用品</span>
-                    <h3 class="case-title">成人用品出海：土耳其市场CTR 2.8%</h3>
-                    <p class="case-desc">避开欧美高审核，Tier-2国家蓝海策略</p>
-                    <div class="case-metrics">
-                        <div class="metric">
-                            <div class="metric-value">2.8%</div>
-                            <div class="metric-label">CTR</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-value">$0.3</div>
-                            <div class="metric-label">CPC</div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="#" class="case-card" data-category="dianziyan">
-                <div class="case-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">🚬</div>
-                <div class="case-body">
-                    <span class="case-tag">电子烟</span>
-                    <h3 class="case-title">电子烟东南亚市场：月销售15万美金</h3>
-                    <p class="case-desc">素材规避策略+人群定向优化</p>
-                    <div class="case-metrics">
-                        <div class="metric">
-                            <div class="metric-value">$150k</div>
-                            <div class="metric-label">月销售</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-value">65%</div>
-                            <div class="metric-label">过审率</div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="#" class="case-card" data-category="heiwulei">
-                <div class="case-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">💊</div>
-                <div class="case-body">
-                    <span class="case-tag">黑五类</span>
-                    <h3 class="case-title">保健品投放：从封号到稳定过审</h3>
-                    <p class="case-desc">文案合规化改造+前后对比图处理</p>
-                    <div class="case-metrics">
-                        <div class="metric">
-                            <div class="metric-value">85%</div>
-                            <div class="metric-label">过审率</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-value">2.1</div>
-                            <div class="metric-label">ROI</div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="#" class="case-card" data-category="heiwulei">
-                <div class="case-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🏃</div>
-                <div class="case-body">
-                    <span class="case-tag">黑五类</span>
-                    <h3 class="case-title">减肥产品：文案合规化改造案例</h3>
-                    <p class="case-desc">去掉夸张效果承诺，用科学数据说话</p>
-                    <div class="case-metrics">
-                        <div class="metric">
-                            <div class="metric-value">90%</div>
-                            <div class="metric-label">过审率</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-value">1.8%</div>
-                            <div class="metric-label">CTR</div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
+    </section>
     
-    <script>
-        document.querySelectorAll('.filter-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
+    <section class="cases-section">
+        <div class="page-container">
+            <div class="cases-grid">
+                <!-- 女鞋 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&q=80')">
+                        <span class="case-category">女鞋出口</span>
+                        <span class="case-badge-new">NEW</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">深圳女鞋出口：WhatsApp 聊单月销 $48 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">4x</span>
+                            <span class="case-result-label">月销增长</span>
+                        </div>
+                        <p class="case-desc">3 个月时间，通过 Facebook Click-to-WhatsApp 广告，月销售额从 $12 万增长到 $48 万，复购率 52%，LTV 提升 3.8 倍。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">B2B</span>
+                            <span class="case-tag">欧美</span>
+                            <span class="case-tag">复购</span>
+                        </div>
+                        <a href="case-shoes-01.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
                 
-                const filter = tab.dataset.filter;
-                document.querySelectorAll('.case-card').forEach(card => {
-                    if (filter === 'all' || card.dataset.category === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+                <!-- 3C电子 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80')">
+                        <span class="case-category">3C 电子</span>
+                        <span class="case-badge-new">HOT</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">深圳 3C：$0 广告费到月入 $83 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">612%</span>
+                            <span class="case-result-label">ROI</span>
+                        </div>
+                        <p class="case-desc">8 个月时间，3C 电子配件独立站从 $0 做到月销 $83 万。广告 ROI 612%，复购率 48%，单个订单成本从 $18 降到 $4.2。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">独立站</span>
+                            <span class="case-tag">DTC</span>
+                            <span class="case-tag">爆款</span>
+                        </div>
+                        <a href="case-electronics-01.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 美妆 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80')">
+                        <span class="case-category">美妆护肤</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">广州美妆品牌：WhatsApp 私域年收 $240 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">$240万</span>
+                            <span class="case-result-label">年销售额</span>
+                        </div>
+                        <p class="case-desc">通过 Facebook 广告 + WhatsApp 私域运营，复购率从 12% 提升到 64%，私域贡献 78% GMV，年销售额 $240 万。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">私域</span>
+                            <span class="case-tag">东南亚</span>
+                            <span class="case-tag">复购</span>
+                        </div>
+                        <a href="case-beauty-01.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 玩具 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=800&q=80')">
+                        <span class="case-category">玩具出口</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">义乌玩具：东南亚市场月销从 $8 万到 $56 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">7x</span>
+                            <span class="case-result-label">增长</span>
+                        </div>
+                        <p class="case-desc">通过 Facebook Click-to-WhatsApp 广告开拓东南亚市场，7 个月月销售额提升 7 倍，CPA 从 $28 降到 $5.6，覆盖 12 个国家。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">B2B</span>
+                            <span class="case-tag">东南亚</span>
+                            <span class="case-tag">本地化</span>
+                        </div>
+                        <a href="case-toys-01.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 服装 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80')">
+                        <span class="case-category">服装出口</span>
+                    </div>
+                    <div class="content">
+                        <h3 class="case-title">广州服装工厂：欧美市场月销从 $15 万到 $120 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">8x</span>
+                            <span class="case-result-label">月销增长</span>
+                        </div>
+                        <p class="case-desc">通过 Facebook Click-to-WhatsApp 广告 + 服装样品策略，9 个月月销售额提升 8 倍，复购率 58%，客户 LTV 提升 5.2 倍。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">B2B</span>
+                            <span class="case-tag">欧美</span>
+                            <span class="case-tag">样品策略</span>
+                        </div>
+                        <a href="case-clothing-01.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 首饰 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80')">
+                        <span class="case-category">首饰批发</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">义乌首饰：TikTok + WhatsApp 月销 $38 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">7.6x</span>
+                            <span class="case-result-label">增长</span>
+                        </div>
+                        <p class="case-desc">通过 TikTok + Facebook 广告 + WhatsApp 聊单，8 个月月销售额提升 7.6 倍，客户覆盖 30+ 国家，网红分销商 450 个。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">TikTok</span>
+                            <span class="case-tag">网红</span>
+                            <span class="case-tag">一件代发</span>
+                        </div>
+                        <a href="case-jewelry-01.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 箱包 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80')">
+                        <span class="case-category">箱包出口</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">广州箱包：欧美零售批发月销 $65 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">6.5x</span>
+                            <span class="case-result-label">增长</span>
+                        </div>
+                        <p class="case-desc">通过 Instagram + Facebook + WhatsApp 组合，6 个月月销售额从 $10 万增长到 $65 万，复购率 51%，LTV 提升 4.8 倍。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">Instagram</span>
+                            <span class="case-tag">欧美</span>
+                            <span class="case-tag">零售批发</span>
+                        </div>
+                        <a href="case-bags-01.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 宠物 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80')">
+                        <span class="case-category">宠物用品</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">义乌宠物用品：欧美宠物市场月销 $42 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">7x</span>
+                            <span class="case-result-label">增长</span>
+                        </div>
+                        <p class="case-desc">通过 Facebook Click-to-WhatsApp 广告打欧美宠物市场，7 个月月销提升 7 倍，复购率 62%，私域贡献 80% 订单。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">私域</span>
+                            <span class="case-tag">复购</span>
+                            <span class="case-tag">社群</span>
+                        </div>
+                        <a href="case-pet-01.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 健身 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80')">
+                        <span class="case-category">健身器材</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">宁波健身器材：欧美家庭健身月销 $75 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">9.4x</span>
+                            <span class="case-result-label">增长</span>
+                        </div>
+                        <p class="case-desc">通过 Facebook Click-to-WhatsApp 广告 + 健身网红分销，8 个月月销从 $8 万增长到 $75 万，ROI 420%，复购率 48%。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">网红分销</span>
+                            <span class="case-tag">欧美</span>
+                            <span class="case-tag">ROI</span>
+                        </div>
+                        <a href="case-sport-01.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 手表 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=800&q=80')">
+                        <span class="case-category">手表出口</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">深圳手表：欧美中高端月销从 $7 万到 $52 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">$280</span>
+                            <span class="case-result-label">平均客单价</span>
+                        </div>
+                        <p class="case-desc">通过 Facebook Click-to-WhatsApp 广告 + 个性化推荐，6 个月月销提升 7.4 倍，平均客单价 $280，ROI 580%。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">高端</span>
+                            <span class="case-tag">个性化</span>
+                            <span class="case-tag">欧美</span>
+                        </div>
+                        <a href="case-watch-01.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 节庆礼品 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1512909006721-3d6018887383?w=800&q=80')">
+                        <span class="case-category">节庆礼品</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">义乌礼品：圣诞旺季单月销售额 $68 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">$68万</span>
+                            <span class="case-result-label">旺季单月</span>
+                        </div>
+                        <p class="case-desc">通过提前 6 个月布局旺季 Facebook 广告 + WhatsApp 跟单，旺季单月 $68 万，复购率 55%，全年增长 180%。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">旺季</span>
+                            <span class="case-tag">欧美</span>
+                            <span class="case-tag">节庆</span>
+                        </div>
+                        <a href="case-gift-01.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 家具大贸 -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80')">
+                        <span class="case-category">家具出口</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">佛山家具大贸：欧美大客户年采购 $180 万</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">6x</span>
+                            <span class="case-result-label">增长</span>
+                        </div>
+                        <p class="case-desc">通过 LinkedIn + Facebook + WhatsApp 组合开发欧美大客户，12 个月年采购额从 $30 万增长到 $180 万，稳定大客户 40 个。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">大客户</span>
+                            <span class="case-tag">LinkedIn</span>
+                            <span class="case-tag">B2B</span>
+                        </div>
+                        <a href="case-furniture-02.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 墨西哥家具（原有） -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80')">
+                        <span class="case-category">家具零售</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">墨西哥家具连锁：ROI 1524%，转化 14.12%</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">1524%</span>
+                            <span class="case-result-label">ROI</span>
+                        </div>
+                        <p class="case-desc">30 天验证，通过 WhatsApp Business API 自动化购物车挽回和客户跟进，转化率达 14.12%，每投入 $1 产生 $15.24 净回报。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">API</span>
+                            <span class="case-tag">自动化</span>
+                            <span class="case-tag">ROI</span>
+                        </div>
+                        <a href="case-furniture.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- LED企业（原有） -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80')">
+                        <span class="case-category">LED 显示屏</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">深圳 LED 企业：3 个月 3.6 万精准询盘</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">3.6万</span>
+                            <span class="case-result-label">精准询盘</span>
+                        </div>
+                        <p class="case-desc">通过 Facebook Click-to-WhatsApp 广告引流，3 个月积累 23 万私域粉丝，获客成本从 $7 降至 $2-7，转化率是传统邮件的 5.2 倍。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">B2B</span>
+                            <span class="case-tag">LED</span>
+                            <span class="case-tag">询盘</span>
+                        </div>
+                        <a href="case-led.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+                
+                <!-- 家居品牌（原有） -->
+                <div class="case-card">
+                    <div class="case-image" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80')">
+                        <span class="case-category">家居独立站</span>
+                    </div>
+                    <div class="case-content">
+                        <h3 class="case-title">欧美家居品牌：复购率 70%，LTV x4</h3>
+                        <div class="case-result">
+                            <span class="case-result-value">70%</span>
+                            <span class="case-result-label">复购率提升</span>
+                        </div>
+                        <p class="case-desc">订单完成后引导客户加入 WhatsApp 社群，3 个月沉淀 1.2 万私域用户。社群用户复购率达 70%，LTV 提升 4 倍。</p>
+                        <div class="case-tags">
+                            <span class="case-tag">私域</span>
+                            <span class="case-tag">社群</span>
+                            <span class="case-tag">复购</span>
+                        </div>
+                        <a href="case-home.html" class="case-link">查看详情 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <h2>你的产品也能复制这个模式</h2>
+        <p>提供你的产品类型和市场，我来帮你设计专属的 Facebook + WhatsApp 聊单增长方案</p>
+        <a href="weixin://contacts/profile/zhangcha909" class="cta-btn-white">
+            💬 加微信咨询
+        </a>
+    </section>
+    
+    <footer>
+        <p>© 2026 FB聊单实战 · facebookads.help · 专注 Facebook 广告聊单转化</p>
+    </footer>
 </body>
 </html>
