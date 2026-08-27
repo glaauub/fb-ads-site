@@ -128,6 +128,21 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://facebookads.help/case-outdoor-01.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://facebookads.help/case-food-01.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://facebookads.help/case-decor-01.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://facebookads.help/secrets.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
