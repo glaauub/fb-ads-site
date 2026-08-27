@@ -143,6 +143,31 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://facebookads.help/case-hair-01.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://facebookads.help/case-baby-01.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://facebookads.help/case-sneaker-01.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://facebookads.help/case-tool-01.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://facebookads.help/case-glass-01.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://facebookads.help/secrets.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
