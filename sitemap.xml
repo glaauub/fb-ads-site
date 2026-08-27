@@ -16,6 +16,9 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://facebookads.help/404.html</loc>
+  </url>
+  <url>
     <loc>https://facebookads.help/resources.html</loc>
     <priority>0.7</priority>
     <changefreq>weekly</changefreq>
@@ -216,6 +219,9 @@
     <loc>https://facebookads.help/tracking-code.html</loc>
     <priority>0.1</priority>
     <changefreq>never</changefreq>
+  </url>
+  <url>
+    <loc>https://facebookads.help/404.html</loc>
   </url>
   <url>
     <loc>https://facebookads.help/resources.html</loc>
