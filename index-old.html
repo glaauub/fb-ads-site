@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB广告帮手 | Facebook广告全品类知识平台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --blue: #0066ff;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-900);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 0 2rem;
+            height: 52px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, var(--blue) 0%, #00c6ff 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--gray-600); text-decoration: none; font-size: 0.875rem; font-weight: 500; }
+        .nav-links a:hover { color: var(--gray-900); }
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            background: linear-gradient(180deg, white 0%, var(--gray-50) 100%);
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        h1 span {
+            background: linear-gradient(135deg, var(--blue) 0%, #00c6ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .hero-cta {
+            display: inline-flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .btn-primary {
+            padding: 0.875rem 2rem;
+            background: var(--blue);
+            color: white;
+            border-radius: 100px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
+        }
+        .btn-secondary {
+            padding: 0.875rem 2rem;
+            background: white;
+            color: var(--gray-700);
+            border: 1px solid var(--gray-300);
+            border-radius: 100px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+        .btn-secondary:hover {
+            border-color: var(--gray-400);
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--gray-200);
+        }
+        .stat-item { text-align: center; }
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--blue);
+        }
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            margin-top: 0.25rem;
+        }
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gray-100);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .service-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .service-desc {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .case-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .case-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+        }
+        .case-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        .case-content { padding: 1.5rem; }
+        .case-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--gray-100);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            color: var(--gray-600);
+            margin-bottom: 0.75rem;
+        }
+        .case-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .case-excerpt {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+        }
+        .case-metrics {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        .metric { text-align: center; flex: 1; }
+        .metric-value {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--blue);
+        }
+        .metric-label {
+            font-size: 0.7rem;
+            color: var(--gray-400);
+        }
+        .articles-section {
+            background: white;
+            padding: 4rem 2rem;
+            border-top: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .articles-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .article-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+        }
+        .article-item:hover { background: var(--gray-50); margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+        .article-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--gray-300);
+            width: 48px;
+            flex-shrink: 0;
+        }
+        .article-content { flex: 1; }
+        .article-category {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: var(--gray-100);
+            border-radius: 100px;
+            font-size: 0.7rem;
+            color: var(--gray-600);
+            margin-bottom: 0.5rem;
+        }
+        .article-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .article-excerpt {
+            color: var(--gray-600);
+            font-size: 0.85rem;
+        }
+        .contact-section {
+            background: linear-gradient(135deg, var(--blue) 0%, #00c6ff 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        .contact-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .contact-section p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            max-width: 500px;
+            margin: 0 auto;
+            color: var(--gray-900);
+            text-align: left;
+        }
+        .contact-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .price-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .price-item {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+        .price-label {
+            font-size: 0.8rem;
+            color: var(--gray-600);
+            margin-bottom: 0.25rem;
+        }
+        .price-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--blue);
+        }
+        .qr-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        .qr-container img {
+            width: 180px;
+            height: 180px;
+            border-radius: 12px;
+        }
+        .qr-label {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-top: 0.5rem;
+        }
+        .service-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        .service-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            font-size: 0.9rem;
+            color: var(--gray-700);
+        }
+        .service-list li:before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        footer {
+            background: var(--gray-900);
+            color: var(--gray-400);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.25rem; }
+            .hero p { font-size: 1rem; }
+            .nav-links { display: none; }
+            .stats { flex-direction: column; gap: 2rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .cases-grid { grid-template-columns: 1fr; }
+            .price-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-icon">F</div>
+            FB广告帮手
+        </a>
+        <ul class="nav-links">
+            <li><a href="cases.html">实战案例</a></li>
+            <li><a href="articles.html">知识库</a></li>
+            <li><a href="#contact">联系咨询</a></li>
+        </ul>
+    </nav>
+    
+    <section class="hero">
+        <h1>Facebook广告<span>全品类</span><br>知识平台</h1>
+        <p>从账户开户到WhatsApp聊单，从普通产品到敏感品类，从收款风控到物流发货。一站式掌握Facebook广告全链路打法。</p>
+        <div class="hero-cta">
+            <a href="#contact" class="btn-primary">立即咨询</a>
+            <a href="cases.html" class="btn-secondary">查看案例</a>
+        </div>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value">50+</div>
+                <div class="stat-label">实战文章</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">20+</div>
+                <div class="stat-label">真实案例</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">4</div>
+                <div class="stat-label">目标市场</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2 class="section-title">覆盖全品类</h2>
+        <p class="section-subtitle">不只是敏感品类，而是Facebook广告全链路知识</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3 class="service-title">Facebook广告投放</h3>
+                <p class="service-desc">账户开户、受众定向、素材制作、数据分析。从入门到高阶，从普通产品到敏感品类。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💬</div>
+                <h3 class="service-title">WhatsApp聊单</h3>
+                <p class="service-desc">多开防封、养号策略、引流方法、话术体系。让转化率提升3-5倍的私域打法。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💳</div>
+                <h3 class="service-title">跨境收款方案</h3>
+                <p class="service-desc">PayPal、Wise、USDT、西联。多通道分散、风控规避、冻结解封。</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚚</div>
+                <h3 class="service-title">物流发货</h3>
+                <p class="service-desc">货源渠道、物流方案、地区攻略。美国、亚洲、COD市场全覆盖。</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2 class="section-title">实战案例</h2>
+        <p class="section-subtitle">每个案例都有完整数据和可复制的打法</p>
+        <div class="cases-grid">
+            <a href="case-fangpai-01.html" class="case-card">
+                <div class="case-image">👜</div>
+                <div class="case-content">
+                    <span class="case-category">仿牌</span>
+                    <h3 class="case-title">仿牌包包独立站：ROI从0.8到3.2</h3>
+                    <p class="case-excerpt">文案去品牌化+LOGO处理+Tier-2国家策略</p>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">3.2x</div>
+                            <div class="metric-label">ROI</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">$0.6</div>
+                            <div class="metric-label">CPC</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">65%</div>
+                            <div class="metric-label">过审率</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="case-bocong-01.html" class="case-card">
+                <div class="case-image">🎰</div>
+                <div class="case-content">
+                    <span class="case-category">菠菜</span>
+                    <h3 class="case-title">菲律宾菠菜站：月投5万刀的完整打法</h3>
+                    <p class="case-excerpt">三层跳转隔离+账户分层+文案策略</p>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">72%</div>
+                            <div class="metric-label">过审率</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">$50k</div>
+                            <div class="metric-label">月投流</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3.2x</div>
+                            <div class="metric-label">ROI</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="case-card">
+                <div class="case-image">👗</div>
+                <div class="case-content">
+                    <span class="case-category">聊单</span>
+                    <h3 class="case-title">服装聊单：月入3万刀的完整打法</h3>
+                    <p class="case-excerpt">FB广告引流+WhatsApp话术+收款发货</p>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">$30k</div>
+                            <div class="metric-label">月收入</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">4.2%</div>
+                            <div class="metric-label">转化率</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">0封</div>
+                            <div class="metric-label">封号</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <section class="articles-section">
+        <h2 class="section-title">最新文章</h2>
+        <p class="section-subtitle">每天更新，覆盖所有品类和环节</p>
+        <div class="articles-list">
+            <a href="#" class="article-item">
+                <div class="article-number">01</div>
+                <div class="article-content">
+                    <span class="article-category">WhatsApp防封</span>
+                    <h3 class="article-title">WhatsApp养号日历：15天从0到稳定</h3>
+                    <p class="article-excerpt">新号前7天只做被动回复和正向互动，第二周逐步增加到日均50条，保持30%以上互动率。</p>
+                </div>
+            </a>
+            <a href="#" class="article-item">
+                <div class="article-number">02</div>
+                <div class="article-content">
+                    <span class="article-category">收款风控</span>
+                    <h3 class="article-title">PayPal账户被冻结180天？这些材料能解封</h3>
+                    <p class="article-excerpt">身份证明、地址证明、资金来源证明、交易目的证明。准备齐全，解封成功率40%。</p>
+                </div>
+            </a>
+            <a href="#" class="article-item">
+                <div class="article-number">03</div>
+                <div class="article-content">
+                    <span class="article-category">敏感品类</span>
+                    <h3 class="article-title">黑五类广告过审：落地页跳转隔离技术详解</h3>
+                    <p class="article-excerpt">通过三层跳转系统，让Facebook审核看到合规页面，用户看到真实产品。过审率从20%提升到65%。</p>
+                </div>
+            </a>
+            <a href="#" class="article-item">
+                <div class="article-number">04</div>
+                <div class="article-content">
+                    <span class="article-category">聊单话术</span>
+                    <h3 class="article-title">WhatsApp聊单话术：从开场到成交的完整模板</h3>
+                    <p class="article-excerpt">开场问候→需求挖掘→产品推荐→逼单→售后。每个环节都有模板，直接复制使用。</p>
+                </div>
+            </a>
+            <a href="#" class="article-item">
+                <div class="article-number">05</div>
+                <div class="article-content">
+                    <span class="article-category">广告投放</span>
+                    <h3 class="article-title">Facebook广告拒审处理：申诉成功率40%的流程</h3>
+                    <p class="article-excerpt">先读拒审通知定位违规点→修改→重新提交→未通过再人工复审。同一账户短期频繁申诉会被封。</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    
+    <section class="contact-section" id="contact">
+        <h2>一对一咨询</h2>
+        <p>从账户开户到收款发货，全链路指导。手把手搭建你的Facebook广告体系。</p>
+        <div class="contact-card">
+            <h3>培训服务</h3>
+            <div class="price-grid">
+                <div class="price-item">
+                    <div class="price-label">线上远程版</div>
+                    <div class="price-value">¥6,588</div>
+                </div>
+                <div class="price-item">
+                    <div class="price-label">线下实战版</div>
+                    <div class="price-value">¥9,888</div>
+                </div>
+            </div>
+            <ul class="service-list">
+                <li>一对一远程教学（向日葵+语音）</li>
+                <li>账户开户、BM配置、主页养号</li>
+                <li>广告投放全链路指导</li>
+                <li>WhatsApp聊单话术+防封策略</li>
+                <li>收款方案对接（PayPal/Wise/USDT）</li>
+                <li>物流渠道推荐</li>
+                <li>配套资料包（话术/钩子/选品清单）</li>
+                <li>永久答疑</li>
+            </ul>
+            <div class="qr-container">
+                <img src="assets/wechat-qr.jpg" alt="微信二维码">
+                <div class="qr-label">扫码加微信咨询</div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2026 FB广告帮手 | facebookads.help</p>
+    </footer>
+</body>
+</html>
