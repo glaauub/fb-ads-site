@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>真实案例库 | 暗投</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent-gold: #d4af37;
+            --accent-red: #dc2626;
+            --accent-blue: #3b82f6;
+            --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f4e5b2 100%);
+        }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--accent-gold); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+        .page-header { text-align: center; margin-bottom: 3rem; }
+        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+        h1 span { background: var(--gradient-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .subtitle { color: var(--text-secondary); font-size: 1.1rem; }
+        .filter-tabs { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0; }
+        .filter-tab {
+            padding: 0.5rem 1.5rem;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        .filter-tab:hover, .filter-tab.active {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+        .cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
+        .case-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        .case-header { padding: 1.5rem; background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%); }
+        .case-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--accent-red);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .case-tag.bocong { background: var(--accent-red); }
+        .case-tag.fangpai { background: var(--accent-gold); color: var(--bg-primary); }
+        .case-tag.chengren { background: #ec4899; }
+        .case-tag.dianziyan { background: var(--accent-blue); }
+        .case-title { font-size: 1.2rem; margin: 0.75rem 0 0.5rem; color: var(--text-primary); }
+        .case-body { padding: 1.5rem; }
+        .case-desc { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem; }
+        .case-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .metric { text-align: center; padding: 1rem; background: rgba(0, 0, 0, 0.2); border-radius: 8px; }
+        .metric-value { font-size: 1.5rem; font-weight: 700; color: var(--accent-gold); }
+        .metric-label { font-size: 0.8rem; color: var(--text-secondary); }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .cases-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">暗投</a>
+        <ul class="nav-links">
+            <li><a href="index.html#services">服务</a></li>
+            <li><a href="cases.html">案例</a></li>
+            <li><a href="secrets.html">揭秘</a></li>
+            <li><a href="index.html#contact">联系</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="page-header">
+            <h1>真实<span>案例库</span></h1>
+            <p class="subtitle">每一个案例都是真实投放经验，可验证、可复制</p>
+        </div>
+        
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">全部</button>
+            <button class="filter-tab" data-filter="bocong">菠菜</button>
+            <button class="filter-tab" data-filter="fangpai">仿牌</button>
+            <button class="filter-tab" data-filter="chengren">成人</button>
+            <button class="filter-tab" data-filter="dianziyan">电子烟</button>
+        </div>
+        
+        <div class="cases-grid">
+            <!-- 菠菜案例 -->
+            <a href="case-bocong-01.html" class="case-card" data-category="bocong">
+                <div class="case-header">
+                    <span class="case-tag bocong">菠菜</span>
+                    <h3 class="case-title">菲律宾菠菜站月入10万刀：被封12次后总结的8条铁律</h3>
+                </div>
+                <div class="case-body">
+                    <p class="case-desc">从0到月投5万刀，通过率从15%提升到72%，被封12次后总结出一套稳定过审方法</p>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">72%</div>
+                            <div class="metric-label">通过率</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">$50k</div>
+                            <div class="metric-label">月投流额</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 仿牌案例 -->
+            <a href="case-fangpai-01.html" class="case-card" data-category="fangpai">
+                <div class="case-header">
+                    <span class="case-tag fangpai">仿牌</span>
+                    <h3 class="case-title">仿牌包包独立站：从CPC $1.5降到$0.6，ROI从0.8做到3.2</h3>
+                </div>
+                <div class="case-body">
+                    <p class="case-desc">落地页跳转隔离方案，文案去品牌化，Tier-2国家策略，3个月稳定盈利</p>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">3.2</div>
+                            <div class="metric-label">ROI</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">$0.6</div>
+                            <div class="metric-label">CPC</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 成人案例 -->
+            <a href="#" class="case-card" data-category="chengren">
+                <div class="case-header">
+                    <span class="case-tag chengren">成人</span>
+                    <h3 class="case-title">成人用品品牌出海：土耳其、墨西哥CTR达到2.8%</h3>
+                </div>
+                <div class="case-body">
+                    <p class="case-desc">Tier-2国家投放策略，避开欧美高审核，月销售额从0做到15万美金</p>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">2.8%</div>
+                            <div class="metric-label">CTR</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">$0.3</div>
+                            <div class="metric-label">CPC</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 电子烟案例 -->
+            <a href="#" class="case-card" data-category="dianziyan">
+                <div class="case-header">
+                    <span class="case-tag dianziyan">电子烟</span>
+                    <h3 class="case-title">电子烟品牌东南亚市场：月销售额15万美金</h3>
+                </div>
+                <div class="case-body">
+                    <p class="case-desc">素材规避策略+人群定向优化，避开欧美禁令，东南亚市场蓝海</p>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">$150k</div>
+                            <div class="metric-label">月销售额</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">65%</div>
+                            <div class="metric-label">过审率</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- 更多案例占位 -->
+            <a href="#" class="case-card" data-category="bocong">
+                <div class="case-header">
+                    <span class="case-tag bocong">菠菜</span>
+                    <h3 class="case-title">菠菜账户解封实操：从拒登到成功申诉的完整流程</h3>
+                </div>
+                <div class="case-body">
+                    <p class="case-desc">账户被Meta封禁后如何申诉，成功率40%的申诉技巧，避免再次被封</p>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">40%</div>
+                            <div class="metric-label">申诉成功率</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">7天</div>
+                            <div class="metric-label">平均解封时间</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="case-card" data-category="fangpai">
+                <div class="case-header">
+                    <span class="case-tag fangpai">仿牌</span>
+                    <h3 class="case-title">仿牌手表独立站：白牌注册USDT商标，通过率98%</h3>
+                </div>
+                <div class="case-body">
+                    <p class="case-desc">USPTO注册自有商标，从黑产转白牌，长期稳定运营</p>
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">98%</div>
+                            <div class="metric-label">通过率</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">$225</div>
+                            <div class="metric-label">商标注册费</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const filter = tab.dataset.filter;
+                document.querySelectorAll('.case-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
