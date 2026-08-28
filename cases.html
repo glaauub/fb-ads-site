@@ -413,7 +413,8 @@
         background: rgba(10, 10, 26, 0.85);
         backdrop-filter: blur(20px) saturate(180%);
         -webkit-backdrop-filter: blur(20px) saturate(180%);
-        border-bottom: 1px solid rgba(255,255,255,0.08);
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+        box-shadow: 0 1px 0 rgba(99,91,255,0.3);;
     }
     .header-inner {
         max-width: 1200px;
@@ -497,6 +498,13 @@
         margin-left: auto;
         flex-shrink: 0;
     }
+
+        .menu-text {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: white;
+            margin-left: 0.375rem;
+        }
     .mobile-menu-btn span {
         display: block;
         height: 2px;
@@ -584,7 +592,7 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                 加微信
             </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单"><span class="menu-text">菜单</span>
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -1225,5 +1233,24 @@
     <footer>
         <p>© 2026 FB聊单实战 · facebookads.help · 专注 Facebook 广告聊单转化</p>
     </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var btn = document.getElementById("mobileMenuBtn");
+  var nav = document.getElementById("mobileNav");
+  if (btn && nav) {
+    btn.addEventListener("click", function() {
+      nav.classList.toggle("open");
+      btn.classList.toggle("open");
+    });
+    document.addEventListener("click", function(e) {
+      if (!btn.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove("open");
+        btn.classList.remove("open");
+      }
+    });
+  }
+});
+</script>
 </body>
 </html>
