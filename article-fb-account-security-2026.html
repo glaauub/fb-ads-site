@@ -33,8 +33,9 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; line-height: 1.8; background: #fff; }
         .nav { background: rgba(255,255,255,0.95); }
-        .nav-logo { font-size: 1.125rem; font-weight: 800; background: linear-gradient(135deg, #635BFF, #00D4FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
-        .nav-links a:hover { color: #635BFF; }
+
+        
+
         .hero { background: linear-gradient(135deg, #1a0a0a 0%, #2d1010 100%); padding: 5rem 2rem 4rem; text-align: center; }
         .hero-badge { display: inline-block; background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #fca5a5; padding: 0.375rem 1rem; border-radius: 100px; font-size: 0.8125rem; font-weight: 700; margin-bottom: 1.5rem; }
         .hero h1 { font-size: 2.5rem; font-weight: 800; color: white; max-width: 850px; margin: 0 auto 1.25rem; line-height: 1.25; }
@@ -89,68 +90,106 @@
     
 
 <style>
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+}
+</style>
+
+<style>
+
 /* ===== NAVIGATION ===== */
 .site-header {
-    position: fixed;
-    top: 0; left: 0; right: 0;
+    position: fixed; top: 0; left: 0; right: 0;
     z-index: 1000;
     background: #ffffff;
-    border-bottom: 1px solid rgba(0,0,0,0.07);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 .header-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    height: 52px;
-    display: flex; align-items: center; gap: 2rem;
+    max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+    height: 54px;
+    display: flex; align-items: center; gap: 1.5rem;
 }
-.header-logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; flex-shrink: 0; }
+.header-logo {
+    display: flex; align-items: center; gap: 0.5rem;
+    text-decoration: none; flex-shrink: 0;
+}
 .logo-icon {
-    width: 28px; height: 28px;
+    width: 30px; height: 30px;
     background: linear-gradient(135deg, #4F46E5, #7C3AED);
-    border-radius: 7px;
+    border-radius: 8px;
     display: flex; align-items: center; justify-content: center;
-    color: white; font-weight: 700; font-size: 0.8125rem; flex-shrink: 0;
+    color: white; font-weight: 700; font-size: 0.8rem; flex-shrink: 0;
 }
-.logo-text { font-size: 1rem; font-weight: 600; color: #1a1a2e; letter-spacing: -0.015em; }
-.header-nav { display: flex; align-items: center; gap: 0.125rem; margin-left: auto; }
+.logo-text {
+    font-size: 1rem; font-weight: 600; color: #1a1a2e;
+    letter-spacing: -0.02em;
+}
+.header-nav {
+    display: flex; align-items: center; gap: 0.125rem; margin-left: auto;
+}
 .nav-link {
     color: #555; text-decoration: none; font-size: 0.875rem; font-weight: 500;
-    padding: 0.375rem 0.875rem; border-radius: 6px;
+    padding: 0.4rem 0.8rem; border-radius: 6px;
     transition: color 0.15s, background 0.15s, transform 0.15s;
-    white-space: nowrap; letter-spacing: 0.005em; position: relative;
+    white-space: nowrap; letter-spacing: 0.005em;
 }
 .nav-link:hover {
-    color: #1a1a2e; background: rgba(79,70,229,0.06); transform: scale(1.04);
+    color: #1a1a2e; background: rgba(79,70,229,0.07);
+    transform: scale(1.05);
 }
-.nav-link.active { color: #4F46E5; background: rgba(79,70,229,0.08); font-weight: 600; }
+.nav-link.active { color: #4F46E5; background: rgba(79,70,229,0.09); font-weight: 600; }
+
+.header-cta-group {
+    display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0;
+    margin-left: 0.5rem;
+}
 .header-cta {
-    display: flex; align-items: center; gap: 0.375rem;
+    display: flex; align-items: center; gap: 0.35rem;
     background: #1a1a2e; color: white; text-decoration: none;
-    font-size: 0.8125rem; font-weight: 600; padding: 0.4375rem 1rem;
+    font-size: 0.8rem; font-weight: 600; padding: 0.4rem 0.9rem;
     border-radius: 100px; flex-shrink: 0;
     transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    letter-spacing: 0.01em; box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    letter-spacing: 0.01em; box-shadow: 0 1px 3px rgba(0,0,0,0.12);
 }
 .header-cta:hover {
-    background: #4F46E5; transform: scale(1.04);
-    box-shadow: 0 3px 10px rgba(79,70,229,0.35);
+    background: #4F46E5; transform: scale(1.05);
+    box-shadow: 0 3px 12px rgba(79,70,229,0.35);
 }
 .header-cta:active { transform: scale(0.97); }
+.header-cta-secondary {
+    background: #f4f4f7; color: #1a1a2e;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+.header-cta-secondary:hover { background: #4F46E5; color: white; }
+
 .mobile-menu-btn {
     display: none; flex-direction: row; align-items: center;
     width: auto; height: 32px; background: #f4f4f7; border: none;
-    border-radius: 7px; cursor: pointer; padding: 0 10px;
+    border-radius: 8px; cursor: pointer; padding: 0 12px;
     margin-left: auto; flex-shrink: 0;
-    font-size: 0.8125rem; font-weight: 600; color: #1a1a2e;
+    font-size: 0.8rem; font-weight: 600; color: #1a1a2e;
     letter-spacing: 0.01em; transition: background 0.15s;
 }
 .mobile-menu-btn:hover { background: #e8e8ed; }
 .menu-text { font-weight: 600; }
+
 .mobile-nav {
     display: none; flex-direction: column; background: #ffffff;
-    border-top: 1px solid rgba(0,0,0,0.06);
+    border-top: 1px solid rgba(0,0,0,0.07);
     box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 0.5rem 0;
 }
 .mobile-nav.open { display: flex; }
@@ -160,13 +199,15 @@
     transition: color 0.15s, background 0.15s;
 }
 .mobile-nav-link:last-child { border-bottom: none; }
-.mobile-nav-link:hover { color: #4F46E5; background: rgba(79,70,229,0.04); }
-.mobile-nav-link.accent { color: #4F46E5; font-weight: 600; border-bottom: none; }
+.mobile-nav-link:hover { color: #4F46E5; background: rgba(79,70,229,0.05); }
+.mobile-nav-divider { height: 1px; background: rgba(0,0,0,0.07); margin: 0.25rem 0; }
+
 @media (max-width: 768px) {
-    .header-nav, .header-cta { display: none; }
+    .header-nav, .header-cta-group { display: none; }
     .mobile-menu-btn { display: flex; }
     .site-header { border-bottom: 1px solid rgba(0,0,0,0.06); }
 }
+
 </style>
 </head>
 <body>
@@ -184,10 +225,16 @@
                 <a href="faq.html" class="nav-link">FAQ</a>
                 <a href="about.html" class="nav-link">关于</a>
             </nav>
-            <a href="weixin://contacts/profile/zhangcha909" class="header-cta">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                加微信
-            </a>
+            <div class="header-cta-group">
+                <a href="weixin://contacts/profile/zhangcha909" class="header-cta">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    张老师
+                </a>
+                <a href="weixin://contacts/profile/samtoo168" class="header-cta header-cta-secondary">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Sam
+                </a>
+            </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单"><span class="menu-text">菜单</span><span></span><span></span><span></span></button>
         </div>
         <div class="mobile-nav" id="mobileNav">
@@ -197,7 +244,9 @@
             <a href="tools.html" class="mobile-nav-link">工具</a>
             <a href="faq.html" class="mobile-nav-link">FAQ</a>
             <a href="about.html" class="mobile-nav-link">关于</a>
-            <a href="weixin://contacts/profile/zhangcha909" class="mobile-nav-link accent">加微信咨询</a>
+            <div class="mobile-nav-divider"></div>
+            <a href="weixin://contacts/profile/zhangcha909" class="mobile-nav-link">📱 张老师（主客服）</a>
+            <a href="weixin://contacts/profile/samtoo168" class="mobile-nav-link">📱 Sam（客服经理）</a>
         </div>
     </header>
 <header class="hero">
