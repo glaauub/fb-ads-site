@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年Facebook广告账户防封完整指南：4层隔离+BM架构+养号SOP | FB聊单实战</title>
+    <meta name="description" content="2026年Meta风控全面升级，连坐式封号已成常态。本文详解4层资产隔离架构、BM防封布局、7天养号SOP、老号激活与申诉技巧，让你的广告账户稳定跑量。">
+    <meta name="keywords" content="Facebook广告防封, BM架构, 账户隔离, Facebook养号, 广告账户被封">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="CN-GD">
+    <meta name="geo.placename" content="深圳">
+    <meta name="geo.position" content="22.543096;114.057865">
+    <meta name="ICBM" content="22.543096, 114.057865">
+    <link rel="canonical" href="https://facebookads.help/article-fb-account-security-2026.html">
+    <meta property="og:title" content="2026年Facebook广告账户防封完整指南">
+    <meta property="og:description" content="4层资产隔离+BM架构+7天养号SOP，附真实防封数据">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://facebookads.help/article-fb-account-security-2026.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "2026年Facebook广告账户防封完整指南",
+        "description": "4层资产隔离+BM架构+7天养号SOP",
+        "author": {"@type": "Organization", "name": "FB聊单实战"},
+        "datePublished": "2026-08-28",
+        "dateModified": "2026-08-28"
+    }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a2e; line-height: 1.8; background: #fff; }
+        .nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid #eee; padding: 0 2rem; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+        .nav-logo { font-size: 1.125rem; font-weight: 800; background: linear-gradient(135deg, #635BFF, #00D4FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { color: #6b7280; text-decoration: none; font-size: 0.9375rem; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: #635BFF; }
+        .nav-cta { background: linear-gradient(135deg, #635BFF, #00D4FF); color: white; padding: 0.5rem 1.25rem; border-radius: 100px; text-decoration: none; font-weight: 600; font-size: 0.875rem; }
+        .hero { background: linear-gradient(135deg, #1a0a0a 0%, #2d1010 100%); padding: 5rem 2rem 4rem; text-align: center; }
+        .hero-badge { display: inline-block; background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3); color: #fca5a5; padding: 0.375rem 1rem; border-radius: 100px; font-size: 0.8125rem; font-weight: 700; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: 2.5rem; font-weight: 800; color: white; max-width: 850px; margin: 0 auto 1.25rem; line-height: 1.25; }
+        .hero-subtitle { color: rgba(255,255,255,0.65); font-size: 1.125rem; max-width: 600px; margin: 0 auto 2.5rem; }
+        .hero-stats { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .hero-stat { text-align: center; }
+        .hero-stat-num { font-size: 2rem; font-weight: 800; color: #fca5a5; }
+        .hero-stat-label { color: rgba(255,255,255,0.5); font-size: 0.8125rem; margin-top: 0.25rem; }
+        .article-body { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+        .article-meta { display: flex; gap: 1.5rem; align-items: center; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #f0f0f0; flex-wrap: wrap; }
+        .article-tag { background: rgba(239,68,68,0.1); color: #dc2626; padding: 0.25rem 0.875rem; border-radius: 100px; font-size: 0.8125rem; font-weight: 600; }
+        .article-tag2 { background: rgba(99,91,255,0.1); color: #635BFF; padding: 0.25rem 0.875rem; border-radius: 100px; font-size: 0.8125rem; font-weight: 600; }
+        .article-date, .article-reading { color: #9ca3af; font-size: 0.875rem; }
+        h2 { font-size: 1.75rem; font-weight: 800; color: #111827; margin: 3rem 0 1rem; padding-top: 1rem; }
+        h3 { font-size: 1.25rem; font-weight: 700; color: #1f2937; margin: 2rem 0 0.75rem; }
+        p { color: #374151; font-size: 1rem; margin-bottom: 1.25rem; line-height: 1.9; }
+        ul, ol { color: #374151; padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        li { margin-bottom: 0.5rem; line-height: 1.8; }
+        .danger-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+        .danger-list li { background: #fef2f2; border-left: 4px solid #ef4444; padding: 0.75rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 0.75rem; color: #7f1d1d; }
+        .warning-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+        .warning-list li { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 0.75rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 0.75rem; color: #78350f; }
+        .safe-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+        .safe-list li { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 0.75rem 1.25rem; border-radius: 0 8px 8px 0; margin-bottom: 0.75rem; color: #14532d; }
+        .layer-card { background: #f9fafb; border: 2px solid #e5e7eb; border-radius: 20px; padding: 2rem; margin: 1.5rem 0; }
+        .layer-card h4 { font-size: 1.125rem; font-weight: 800; color: #111827; margin-bottom: 0.75rem; }
+        .layer-num { display: inline-block; width: 32px; height: 32px; background: linear-gradient(135deg, #635BFF, #00D4FF); color: white; border-radius: 50%; text-align: center; line-height: 32px; font-weight: 800; font-size: 0.9375rem; margin-right: 0.5rem; }
+        .timeline { position: relative; padding-left: 2rem; margin: 2rem 0; }
+        .timeline::before { content: ''; position: absolute; left: 0.5rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: linear-gradient(180deg, #635BFF, #00D4FF); }
+        .timeline-item { position: relative; margin-bottom: 1.5rem; }
+        .timeline-item::before { content: ''; position: absolute; left: -1.5rem; top: 0.5rem; width: 12px; height: 12px; border-radius: 50%; background: #635BFF; border: 3px solid white; box-shadow: 0 0 0 2px #635BFF; }
+        .timeline-day { font-weight: 800; color: #635BFF; font-size: 0.9375rem; margin-bottom: 0.25rem; }
+        .data-table { width: 100%; border-collapse: collapse; margin: 2rem 0; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .data-table th { background: linear-gradient(135deg, #635BFF, #00D4FF); color: white; padding: 0.875rem 1.25rem; text-align: left; font-weight: 700; font-size: 0.875rem; }
+        .data-table td { padding: 0.75rem 1.25rem; border-bottom: 1px solid #f3f4f6; font-size: 0.9375rem; color: #374151; }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:nth-child(even) td { background: #f9fafb; }
+        blockquote { background: linear-gradient(135deg, rgba(99,91,255,0.06), rgba(0,212,255,0.06)); border-left: 4px solid #635BFF; padding: 1.25rem 1.5rem; border-radius: 0 12px 12px 0; margin: 2rem 0; }
+        blockquote p { color: #1f2937; font-size: 1.0625rem; margin: 0; font-style: italic; }
+        .cta-box { background: linear-gradient(135deg, #635BFF 0%, #00D4FF 100%); border-radius: 20px; padding: 2.5rem; text-align: center; margin: 3rem 0; }
+        .cta-box h3 { color: white; font-size: 1.5rem; font-weight: 800; margin-bottom: 0.75rem; }
+        .cta-box p { color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 1.5rem; }
+        .cta-btn { display: inline-block; background: white; color: #635BFF; padding: 0.875rem 2rem; border-radius: 100px; font-weight: 700; text-decoration: none; font-size: 1rem; transition: transform 0.2s; }
+        .cta-btn:hover { transform: scale(1.05); }
+        .footer { background: #0a0a1a; color: rgba(255,255,255,0.4); padding: 3rem 2rem; text-align: center; font-size: 0.875rem; }
+        .footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 1.75rem; }
+            .article-body { padding: 2rem 1.25rem 4rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">FB聊单实战</a>
+        <div class="nav-links">
+            <a href="index.html">首页</a>
+            <a href="cases.html">案例</a>
+            <a href="articles.html">教程</a>
+            <a href="about.html">关于</a>
+        </div>
+        <a href="weixin://contacts/profile/zhangcha909" class="nav-cta">免费咨询</a>
+    </nav>
+
+    <header class="hero">
+        <span class="hero-badge">🔒 风控必读 · 2026年最新版</span>
+        <h1>Facebook广告账户防封完整指南：<br>4层隔离 + BM架构 + 养号SOP</h1>
+        <p class="hero-subtitle">Meta风控全面升级，从"查广告"变成"查全家桶"。这篇文章让你从根本上降低封号风险</p>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-num">4层</div>
+                <div class="hero-stat-label">资产完全隔离</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-num">30天</div>
+                <div class="hero-stat-label">稳定消耗周期</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-num">0封号</div>
+                <div class="hero-stat-label">矩阵案例记录</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-num">7天</div>
+                <div class="hero-stat-label">完整养号周期</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-body">
+        <div class="article-meta">
+            <span class="article-tag">账户安全</span>
+            <span class="article-tag2">风控防封</span>
+            <span class="article-date">2026年8月28日</span>
+            <span class="article-reading">约14分钟阅读</span>
+        </div>
+
+        <p>2026年的 Facebook 广告投放，账户安全已经成了比广告优化更重要的事。</p>
+        <p>Meta 的风控逻辑发生了根本变化——不再是"单条广告违规就封广告"，而是<strong>把你营业执照、BM、广告账户、主页、像素、IP、设备指纹全部绑定在一起评估</strong>。任何一个环节出问题，整套资产全部连坐。</p>
+        <p>这篇文章给你一套可以直接落地的防封体系：<strong>4层资产隔离 + 正确BM架构 + 7天养号SOP + 申诉正确姿势</strong>。</p>
+
+        <h2>一、2026年封号的6大核心原因</h2>
+        <p>在搭建防御体系之前，先搞清楚"敌人是谁"。2026年最常见的封号原因：</p>
+
+        <ul class="danger-list">
+            <li><strong>❌ IP 不干净：</strong>频繁换 VPN、用机房 IP，或同一台电脑登录多个账号，Meta 一查一个准</li>
+            <li><strong>❌ 操作太像机器人：</strong>新号上来就大量投放广告、频繁调预算，系统判断是批量操作的机器</li>
+            <li><strong>❌ 身份信息虚假：</strong>虚假信息注册、主页全是广告没有日常内容</li>
+            <li><strong>❌ 素材踩红线：</strong>夸大宣传、Before & After 对比图、落地页货不对板</li>
+            <li><strong>❌ 资产混用：</strong>不同账户共用同一个支付方式或落地页，一个出事全部被关联</li>
+            <li><strong>❌ 新号直接投广告：</strong>账号没养过就直接跑转化广告，基本等于送人头</li>
+        </ul>
+
+        <div class="layer-card">
+            <h4>⚠️ 特别提醒：Meta 现在是"查全家桶"</h4>
+            <p style="margin:0;">2026年的风控已经从"单点评估"升级到"关联评估"。Meta 会同时审查你的：营业执照信息 + BM架构 + 广告账户 + 主页 + 像素 + IP + 设备指纹 + 支付信息。任何一项高风险，整个资产包被标记。</p>
+        </div>
+
+        <h2>二、4层完全隔离架构（最关键部分）</h2>
+        <p>这是业内经过大量验证的防封核心架构。做好这 4 层隔离，即使一个账户被封，其他资产完全不受影响。</p>
+
+        <div class="layer-card">
+            <h4><span class="layer-num">1</span>第一层：主体隔离</h4>
+            <p>不同的域名或产品线，用不同的公司主体开户。一个主体先开 1–2 个 BM，不要一开始就开太多。</p>
+            <ul>
+                <li>做女装 → A 主体 + 对应 BM</li>
+                <li>做家居 → B 主体 + 对应 BM</li>
+                <li>做 3C → C 主体 + 对应 BM</li>
+            </ul>
+            <p style="margin-bottom:0;color:#dc2626;font-weight:600;">完全隔离，互不影响。一个主体出问题，其他业务继续跑。</p>
+        </div>
+
+        <div class="layer-card">
+            <h4><span class="layer-num">2</span>第二层：BM 隔离</h4>
+            <p>一个 BM，只对应一个主体的账户。不要在一个 BM 里放多个主体的广告账户。</p>
+            <p><strong>每个 BM 的标准配置：</strong></p>
+            <ul>
+                <li>1 个广告账户（主力）</li>
+                <li>1 个公共主页</li>
+                <li>1 个独立管理员个人号（不要用一个个人号管理所有 BM）</li>
+                <li>独立支付方式</li>
+            </ul>
+            <p style="margin-bottom:0;">个人号被封会导致所有管理的 BM 失联——所以每个 BM 用不同的个人号管理。</p>
+        </div>
+
+        <div class="layer-card">
+            <h4><span class="layer-num">3</span>第三层：流量入口隔离</h4>
+            <p>一个域名，对应一个公共主页。不要一个域名绑多个主页、多个账户。</p>
+            <p><strong>提前准备的备用资源：</strong></p>
+            <ul>
+                <li>每个产品线准备 <strong>3–5 个备用域名</strong></li>
+                <li>提前做好合规落地页（包含隐私政策、联系方式、退款政策）</li>
+                <li>主域名出问题，立刻切换备用域名，不影响正常投放</li>
+            </ul>
+        </div>
+
+        <div class="layer-card">
+            <h4><span class="layer-num">4</span>第四层：设备与 IP 隔离</h4>
+            <p>这是最基础也是最重要的隔离。</p>
+            <p><strong>标准配置：</strong>一个个人号 + 一台固定设备 + 一条固定专线 IP</p>
+            <ul>
+                <li>不要一个设备登录多个号</li>
+                <li>不要一个 IP 登录多个账户</li>
+                <li>推荐使用指纹浏览器（Adspower / HubStudio / 比特浏览器）</li>
+                <li>必须使用纯净住宅 IP，拒绝机房 IP</li>
+            </ul>
+            <p style="margin-bottom:0;">即使其中一个号被封，其他号完全不受影响。</p>
+        </div>
+
+        <blockquote>
+            <p>"我们团队在应对 BM 大面积风控时的首选方案：直接使用海外企业户（如北美户、欧洲户）。这类账户自带极高的 BM 权重，抗风控与抗投诉能力远超常规账户，配合指纹浏览器和纯净住宅 IP，能有效绕过 Meta 对底层设备指纹的追踪。"<br>— 青云出海，2026年实操数据</p>
+        </blockquote>
+
+        <h2>三、BM 架构最佳实践：主 BM + 投放 BM</h2>
+        <p>成熟的 BM 架构是把"资产存储"和"广告执行"分开：</p>
+        <table class="data-table">
+            <thead>
+                <tr><th>BM类型</th><th>作用</th><th>包含资产</th><th>重要性</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>主 BM（资产管理）</strong></td>
+                    <td>存储核心资产，安全第一</td>
+                    <td>像素 + 自定义受众 + 主页</td>
+                    <td style="color:#dc2626;font-weight:700;">⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>数据 BM</strong></td>
+                    <td>专门存放像素，供所有投放 BM 共享</td>
+                    <td>像素（通过 Partner 模式共享）</td>
+                    <td style="color:#dc2626;font-weight:700;">⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>投放 BM（1-N个）</strong></td>
+                    <td>实际跑广告，被封了资产不受影响</td>
+                    <td>广告账户 + 主页</td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td><strong>备用 BM</strong></td>
+                    <td>提前养好，旺季随时顶上</td>
+                    <td>广告账户 + 主页</td>
+                    <td>⭐⭐⭐</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>核心逻辑：<strong>投放 BM 被封，核心资产（像素、主页、受众数据）依然在主 BM 中安全留存</strong>。这是专业投手最重要的资产保护习惯。</p>
+
+        <h2>四、7天养号完整 SOP</h2>
+        <p>新账户到手的第一件事不是上传广告，而是养号。让 Meta 认为你是一个"真实、正常、可信"的用户。</p>
+        <p><strong>核心原则：像正常人一样用，不要机械重复。</strong>系统对固定操作顺序极度敏感，保持随机性。</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-day">Day 1–2：账号注册与环境配置</div>
+                <p style="margin-bottom:0;">用真实手机号注册（不要虚拟号），绑定 Gmail/Outlook 长期使用邮箱。设置真实的头像和封面照片，完善个人简介（真实姓名、所在地、教育和工作经历）。开启双重验证（2FA）。<strong>不要建 BM，不要绑广告账户。</strong></p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-day">Day 3–4：模拟日常社交行为</div>
+                <p style="margin-bottom:0;">每天在线 1–2 小时，浏览信息流，像正常用户一样点赞、评论、关注一些感兴趣的主页。不要发广告，不要加陌生人，不要搜索敏感内容。<strong>登录时间要稳定</strong>（如每天上午一次、傍晚一次），不要突然凌晨3点登录。</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-day">Day 5–6：加入群组，轻度互动</div>
+                <p style="margin-bottom:0;">加入 2–3 个与你的业务相关的公开群组，发一条日常生活状态帖子。不要发产品广告。可以给别人的帖子点个赞或留个言，保持自然互动。</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-day">Day 7：建立 BM 和广告账户</div>
+                <p style="margin-bottom:0;">第 7 天开始建 BM 和申请广告账户。首次广告预算控制在 <strong>$3–$5/天</strong>，广告目标选"品牌认知"或"互动"（不要直接选转化目标）。<strong>前 72 小时的消耗记录比转化数据更重要。</strong></p>
+            </div>
+        </div>
+
+        <h3>新账户首周"绝对不要做"清单</h3>
+        <ul class="danger-list">
+            <li>❌ 一天内大量发广告或频繁调预算</li>
+            <li>❌ 频繁切换 IP 或设备</li>
+            <li>❌ 用同一张信用卡绑定多个账户</li>
+            <li>❌ 落地页使用未备案域名</li>
+            <li>❌ 素材中出现夸大承诺或 Before/After 对比</li>
+            <li>❌ 在多个账户重复使用同一套广告文案</li>
+        </ul>
+
+        <h2>五、高权重 BM 养号：防止再次被封</h2>
+        <p>刚申诉回来或新买的高权重 BM，拿到手第一件事不是大预算跑转化，而是<strong>继续养号</strong>。Meta 的 AI 对刚经历过风控或新建立的 BM 会进入"重点观察期"。</p>
+
+        <ul class="safe-list">
+            <li>✅ <strong>强制全员 2FA：</strong>在 BM 安全中心，将双重验证设置为"所有人"，挡掉异地登录触发风控</li>
+            <li>✅ <strong>备用管理员：</strong>每个 BM 必须配置至少 2 个活跃管理员账号（不同网络/地理位置），主号被灰掉时备份号能止损</li>
+            <li>✅ <strong>主页权重保护：</strong>提前准备 2–3 个备用主页，跑一点小额互动广告(Post Engagement)积累正面反馈，主页挂掉立即切换备用</li>
+            <li>✅ <strong>每月清理失效资产：</strong>已经挂掉的个人号、广告账户及时从 BM 中移除，"尸体"会拉低 BM 健康度评分</li>
+            <li>✅ <strong>主页定期发内容：</strong>保持非广告内容更新，维持互动，不要全是卖货广告</li>
+        </ul>
+
+        <h2>六、账户被封后的正确申诉姿势</h2>
+        <p>万一被封了，申诉要注意以下原则，否则只会越申越糟：</p>
+
+        <table class="data-table">
+            <thead>
+                <tr><th>封号类型</th><th>严重程度</th><th>建议操作</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>单个广告账户被封</td>
+                    <td style="color:#f59e0b;">⚠️ 中度</td>
+                    <td>去账户帮助中心提交申诉，内容简洁真实，不要反复提交</td>
+                </tr>
+                <tr>
+                    <td>个人号被封（未限制BM）</td>
+                    <td style="color:#f59e0b;">⚠️ 中度</td>
+                    <td>尝试申诉，同时激活备用个人号，确保 BM 管理权限不丢失</td>
+                </tr>
+                <tr>
+                    <td>BM 被限制/封禁</td>
+                    <td style="color:#dc2626;">🔴 重度</td>
+                    <td>优先转移资产（像素、主页、广告账户），不要强行申诉，可能污染新号</td>
+                </tr>
+                <tr>
+                    <td>主页被封</td>
+                    <td style="color:#dc2626;">🔴 重度</td>
+                    <td>先申诉，失败后换备用主页，不要在空号上直接跑广告（秒封）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>申诉通过的黄金法则：</strong></p>
+        <ul class="warning-list">
+            <li>⚠️ 内容要简洁真实，提供营业执照、产品真实信息</li>
+            <li>⚠️ 不要写"误判"、"系统错误"这类话（等于承认你看不懂规则）</li>
+            <li>⚠️ 不要反复提交相同材料，会触发二次风控</li>
+            <li>⚠️ 轻度问题（限额降低）先停手别操作，稳定几天可能自己恢复</li>
+        </ul>
+
+        <div class="layer-card">
+            <h4>💡 更好的选择：海外企业户</h4>
+            <p style="margin-bottom:0;">目前业内应对 Meta 风控最主流的方案是直接使用海外企业户（北美户、欧洲户）。这类账户自带极高 BM 权重，<strong>抗风控能力远超国内户，配合指纹浏览器和纯净住宅 IP，能有效降低封号风险</strong>。有需要可以扫码咨询具体方案。</p>
+        </div>
+
+        <div class="cta-box">
+            <h3>账户被封？或者还没被封但想提前做好防护？</h3>
+            <p>我们可以帮你：评估现有 BM 架构风险、制定隔离方案、推荐海外企业户渠道。<br>扫码加微信，说明你的情况，免费给出防护建议。</p>
+            <a href="weixin://contacts/profile/zhangcha909" class="cta-btn">💬 加微信咨询</a>
+            <p style="font-size:0.875rem;margin-top:1rem;color:rgba(255,255,255,0.7);">微信号：zhangcha909 · 备注"账户防护"</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 FB聊单实战 · <a href="index.html">facebookads.help</a> · Facebook广告聊单转化专家</p>
+    </footer>
+</body>
+</html>
