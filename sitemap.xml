@@ -109,6 +109,16 @@
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://facebookads.help/article-cro-guide-2026.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://facebookads.help/article-checkout-abandoned-cart.html</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
   <!-- 教程文章 -->
   <url>
     <loc>https://facebookads.help/article-click-to-whatsapp-guide.html</loc>
