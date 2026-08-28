@@ -239,27 +239,7 @@
             .stat-grid { grid-template-columns: 1fr; }
         }
     </style>
-    <style>/* ===== HEADER / NAVIGATION ===== */
-    .nav-link:hover { color: #635BFF; background: rgba(99,91,255,0.06); }
-    .nav-link.active { color: #635BFF; background: rgba(99,91,255,0.1); font-weight: 600; }
-    .header-cta:hover { opacity: 0.9; transform: scale(1.03); }
-    .mobile-menu-btn span {
-        display: block;
-        height: 2px;
-        background: white;
-        border-radius: 2px;
-        transition: all 0.3s;
-    }
-    .mobile-nav.open { display: flex; }
-    .mobile-nav-link:last-child { border-bottom: none; }
-    .mobile-nav-link:hover { color: #635BFF; background: rgba(99,91,255,0.05); }
-    .mobile-nav-link.accent { color: #635BFF; font-weight: 700; border-bottom: none; margin-top: 0.25rem; padding-top: 1rem; }
-    @media (max-width: 768px) {
-        .header-nav,
-    }
-    @media (max-width: 480px) {
-    }
-    </style>
+    
 
     <script type="application/ld+json">
     {
@@ -299,122 +279,65 @@
     margin: 0 auto;
     padding: 0 2rem;
     height: 52px;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    display: flex; align-items: center; gap: 2rem;
 }
-.header-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    flex-shrink: 0;
-}
+.header-logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; flex-shrink: 0; }
 .logo-icon {
     width: 28px; height: 28px;
     background: linear-gradient(135deg, #4F46E5, #7C3AED);
     border-radius: 7px;
     display: flex; align-items: center; justify-content: center;
-    color: white; font-weight: 700; font-size: 0.8125rem;
-    flex-shrink: 0;
-    letter-spacing: 0;
+    color: white; font-weight: 700; font-size: 0.8125rem; flex-shrink: 0;
 }
-.logo-text {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1a1a2e;
-    letter-spacing: -0.015em;
-}
-.header-nav {
-    display: flex;
-    align-items: center;
-    gap: 0.125rem;
-    margin-left: auto;
-}
+.logo-text { font-size: 1rem; font-weight: 600; color: #1a1a2e; letter-spacing: -0.015em; }
+.header-nav { display: flex; align-items: center; gap: 0.125rem; margin-left: auto; }
 .nav-link {
-    color: #555;
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 500;
-    padding: 0.375rem 0.875rem;
-    border-radius: 6px;
+    color: #555; text-decoration: none; font-size: 0.875rem; font-weight: 500;
+    padding: 0.375rem 0.875rem; border-radius: 6px;
     transition: color 0.15s, background 0.15s, transform 0.15s;
-    white-space: nowrap;
-    letter-spacing: 0.005em;
-    position: relative;
+    white-space: nowrap; letter-spacing: 0.005em; position: relative;
 }
 .nav-link:hover {
-    color: #1a1a2e;
-    background: rgba(79,70,229,0.06);
-    transform: scale(1.04);
+    color: #1a1a2e; background: rgba(79,70,229,0.06); transform: scale(1.04);
 }
-.nav-link.active {
-    color: #4F46E5;
-    background: rgba(79,70,229,0.08);
-    font-weight: 600;
-}
+.nav-link.active { color: #4F46E5; background: rgba(79,70,229,0.08); font-weight: 600; }
 .header-cta {
     display: flex; align-items: center; gap: 0.375rem;
-    background: #1a1a2e;
-    color: white;
-    text-decoration: none;
-    font-size: 0.8125rem;
-    font-weight: 600;
-    padding: 0.4375rem 1rem;
-    border-radius: 100px;
-    flex-shrink: 0;
+    background: #1a1a2e; color: white; text-decoration: none;
+    font-size: 0.8125rem; font-weight: 600; padding: 0.4375rem 1rem;
+    border-radius: 100px; flex-shrink: 0;
     transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    letter-spacing: 0.01em;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    letter-spacing: 0.01em; box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 .header-cta:hover {
-    background: #4F46E5;
-    transform: scale(1.04);
+    background: #4F46E5; transform: scale(1.04);
     box-shadow: 0 3px 10px rgba(79,70,229,0.35);
 }
 .header-cta:active { transform: scale(0.97); }
-
 .mobile-menu-btn {
-    display: none;
-    flex-direction: row; align-items: center;
-    width: auto; height: 32px;
-    background: #f4f4f7;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    padding: 0 10px;
+    display: none; flex-direction: row; align-items: center;
+    width: auto; height: 32px; background: #f4f4f7; border: none;
+    border-radius: 7px; cursor: pointer; padding: 0 10px;
     margin-left: auto; flex-shrink: 0;
-    font-size: 0.8125rem; font-weight: 600;
-    color: #1a1a2e;
-    letter-spacing: 0.01em;
-    transition: background 0.15s;
+    font-size: 0.8125rem; font-weight: 600; color: #1a1a2e;
+    letter-spacing: 0.01em; transition: background 0.15s;
 }
 .mobile-menu-btn:hover { background: #e8e8ed; }
-.mobile-menu-btn span { display: none; }
 .menu-text { font-weight: 600; }
-
 .mobile-nav {
-    display: none;
-    flex-direction: column;
-    background: #ffffff;
+    display: none; flex-direction: column; background: #ffffff;
     border-top: 1px solid rgba(0,0,0,0.06);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    padding: 0.5rem 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 0.5rem 0;
 }
 .mobile-nav.open { display: flex; }
 .mobile-nav-link {
-    color: #333;
-    text-decoration: none;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    padding: 0.75rem 1.5rem;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: #333; text-decoration: none; font-size: 0.9375rem; font-weight: 500;
+    padding: 0.75rem 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.05);
     transition: color 0.15s, background 0.15s;
 }
 .mobile-nav-link:last-child { border-bottom: none; }
 .mobile-nav-link:hover { color: #4F46E5; background: rgba(79,70,229,0.04); }
-.mobile-nav-link.accent { color: #4F46E5; font-weight: 600; border-bottom: none; margin-top: 0.25rem; }
-
+.mobile-nav-link.accent { color: #4F46E5; font-weight: 600; border-bottom: none; }
 @media (max-width: 768px) {
     .header-nav, .header-cta { display: none; }
     .mobile-menu-btn { display: flex; }
@@ -441,9 +364,7 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                 加微信
             </a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单"><span class="menu-text">菜单</span>
-                <span></span><span></span><span></span>
-            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单"><span class="menu-text">菜单</span><span></span><span></span><span></span></button>
         </div>
         <div class="mobile-nav" id="mobileNav">
             <a href="index.html" class="mobile-nav-link">首页</a>
