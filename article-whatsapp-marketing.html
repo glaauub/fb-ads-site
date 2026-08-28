@@ -157,6 +157,60 @@
             border-radius: 8px;
         }
         .highlight-box strong { color: var(--whatsapp-green); }
+        /* ── 案例卡片 ── */
+        .case-study-card {
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 2rem 0;
+            background: white;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+        .case-card-header {
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .case-card-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; }
+        .case-card-meta { flex: 1; }
+        .case-card-title { font-size: 1.1rem; font-weight: 700; color: var(--gray-900); margin-bottom: 0.25rem; }
+        .case-card-tag {
+            display: inline-block; padding: 0.2rem 0.6rem;
+            border-radius: 100px; font-size: 0.7rem; font-weight: 600;
+        }
+        .tag-green  { background: #f0fdf4; color: #15803d; }
+        .tag-blue   { background: #eff6ff; color: #1d4ed8; }
+        .tag-orange { background: #fff7ed; color: #c2410c; }
+        .tag-purple { background: #faf5ff; color: #7e22ce; }
+        .case-card-body { padding: 1.25rem 1.5rem; }
+        .case-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem; }
+        .case-col-label {
+            font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.06em; color: var(--gray-400); margin-bottom: 0.5rem;
+        }
+        .case-col-value { font-size: 0.9rem; color: var(--gray-700); line-height: 1.6; }
+        .case-col-value strong { color: var(--gray-900); }
+        .case-divider { border: none; border-top: 1px solid var(--gray-100); margin: 1.25rem 0; }
+        .case-result-bar { margin-bottom: 1rem; }
+        .case-result-label {
+            display: flex; justify-content: space-between; font-size: 0.8rem;
+            color: var(--gray-600); margin-bottom: 0.35rem;
+        }
+        .case-result-label span:last-child { font-weight: 700; }
+        .case-bar-track { height: 8px; background: var(--gray-100); border-radius: 100px; overflow: hidden; }
+        .case-bar-fill { height: 100%; border-radius: 100px; }
+        .bar-green  { background: linear-gradient(90deg, #10b981, #34d399); }
+        .bar-blue   { background: linear-gradient(90deg, #0066ff, #60a5fa); }
+        .bar-orange { background: linear-gradient(90deg, #f97316, #fdba74); }
+        .case-tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+        .case-tag {
+            display: inline-flex; align-items: center; gap: 0.25rem;
+            padding: 0.3rem 0.75rem; background: var(--gray-50);
+            border: 1px solid var(--gray-200); border-radius: 100px;
+            font-size: 0.78rem; color: var(--gray-600);
+        }
         .warning-box {
             background: rgba(239, 68, 68, 0.1);
             border-left: 4px solid #ef4444;
@@ -595,28 +649,147 @@
             </ol>
             
             <h2>七、真实案例拆解</h2>
-            
-            <h3>案例1：独立站卖家3个月沉淀9000用户</h3>
-            <ul>
-                <li><strong>渠道</strong>：Facebook广告+独立站浮动按钮</li>
-                <li><strong>获客成本</strong>：$2.8/条线索</li>
-                <li><strong>转化路径</strong>：广告→WhatsApp咨询→人工跟进→下单</li>
-                <li><strong>复购率</strong>：48%（通过定期推送新品和专属优惠）</li>
-            </ul>
-            
-            <h3>案例2：美妆品牌A/B测试</h3>
-            <ul>
-                <li><strong>A组</strong>：传统邮件营销 → 打开率18%，转化率2%</li>
-                <li><strong>B组</strong>：WhatsApp消息 → 打开率95%，转化率12%</li>
-                <li><strong>结论</strong>：WhatsApp转化效率是邮件的6倍</li>
-            </ul>
-            
-            <h3>案例3：禾与家居8万人私域池</h3>
-            <ul>
-                <li><strong>获客方式</strong>：线下门店引流+WhatsApp群裂变</li>
-                <li><strong>运营策略</strong>：每周分享家居搭配干货，每月举办线上直播</li>
-                <li><strong>变现效果</strong>：私域贡献总营收的65%</li>
-            </ul>
+
+            <!-- 案例1：独立站卖家 -->
+            <div class="case-study-card">
+                <div class="case-card-header">
+                    <div class="case-card-icon">🏪</div>
+                    <div class="case-card-meta">
+                        <div class="case-card-title">独立站卖家：3个月沉淀 9,000 私域用户</div>
+                        <span class="case-card-tag tag-green">跨境电商</span>
+                    </div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-row">
+                        <div>
+                            <div class="case-col-label">📍 获客渠道</div>
+                            <div class="case-col-value">Facebook广告引流 + 独立站浮动WhatsApp按钮，访客直接跳转会话。</div>
+                        </div>
+                        <div>
+                            <div class="case-col-label">🔄 转化路径</div>
+                            <div class="case-col-value">广告点击 → WhatsApp咨询 → 人工跟进 → 下单成交</div>
+                        </div>
+                    </div>
+                    <hr class="case-divider">
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>获客成本</span>
+                            <span style="color:#10b981">$2.8 / 条线索</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:28%"></div>
+                        </div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>复购率</span>
+                            <span style="color:#10b981">48%</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:48%"></div>
+                        </div>
+                    </div>
+                    <div class="case-tag-list">
+                        <span class="case-tag">✅ 浮动按钮引流</span>
+                        <span class="case-tag">✅ 定期推送优惠</span>
+                        <span class="case-tag">✅ 48% 复购率</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 案例2：美妆品牌 A/B 测试 -->
+            <div class="case-study-card">
+                <div class="case-card-header">
+                    <div class="case-card-icon">💄</div>
+                    <div class="case-card-meta">
+                        <div class="case-card-title">美妆品牌：WhatsApp vs 邮件 效率大比拼</div>
+                        <span class="case-card-tag tag-blue">A/B 测试</span>
+                    </div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-row">
+                        <div>
+                            <div class="case-col-label">📧 A组：传统邮件营销</div>
+                            <div class="case-col-value">打开率 <strong>18%</strong>，转化率 <strong>2%</strong></div>
+                        </div>
+                        <div>
+                            <div class="case-col-label">💬 B组：WhatsApp 消息</div>
+                            <div class="case-col-value">打开率 <strong>95%</strong>，转化率 <strong>12%</strong></div>
+                        </div>
+                    </div>
+                    <hr class="case-divider">
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>打开率对比</span>
+                            <span>18% → 95%</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:95%"></div>
+                        </div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>转化率对比</span>
+                            <span>2% → 12%（6倍）</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:60%"></div>
+                        </div>
+                    </div>
+                    <div class="case-tag-list">
+                        <span class="case-tag">✅ 打开率 95%</span>
+                        <span class="case-tag">✅ 转化率 6倍</span>
+                        <span class="case-tag">✅ 即时触达</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 案例3：禾与家居 -->
+            <div class="case-study-card">
+                <div class="case-card-header">
+                    <div class="case-card-icon">🏠</div>
+                    <div class="case-card-meta">
+                        <div class="case-card-title">禾与家居：线下+线上打造 8万 人私域池</div>
+                        <span class="case-card-tag tag-orange">家居零售</span>
+                    </div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-row">
+                        <div>
+                            <div class="case-col-label">📍 获客方式</div>
+                            <div class="case-col-value">线下门店扫码引流 + WhatsApp群裂变，双渠道同时推进。</div>
+                        </div>
+                        <div>
+                            <div class="case-col-label">📣 运营策略</div>
+                            <div class="case-col-value">每周家居搭配干货 + 每月线上直播 + 专属优惠激活复购</div>
+                        </div>
+                    </div>
+                    <hr class="case-divider">
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>私域用户规模</span>
+                            <span style="color:#10b981">80,000+</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:80%"></div>
+                        </div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>私域贡献营收占比</span>
+                            <span style="color:#10b981">65%</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:65%"></div>
+                        </div>
+                    </div>
+                    <div class="case-tag-list">
+                        <span class="case-tag">✅ 线下门店引流</span>
+                        <span class="case-tag">✅ 群裂变增长</span>
+                        <span class="case-tag">✅ 65% 营收贡献</span>
+                    </div>
+                </div>
+            </div>
             
             <div class="cta-section">
                 <h3>想要系统化学习WhatsApp私域营销？</h3>

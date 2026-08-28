@@ -52,6 +52,33 @@
         table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.875rem;}
         td,th{padding:.75rem 1rem;border:1px solid #eee;text-align:left;}
         th{background:#f4f4f7;font-weight:600;color:var(--dark);}
+        /* ── 案例卡片 ── */
+        .case-study-card{border:1px solid #eee;border-radius:16px;overflow:hidden;margin:2rem 0;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+        .case-card-header{padding:1.25rem 1.5rem;display:flex;align-items:center;gap:.875rem;border-bottom:1px solid #f5f5f5;}
+        .case-card-icon{font-size:2rem;line-height:1;flex-shrink:0;}
+        .case-card-meta{flex:1;}
+        .case-card-title{font-size:1.1rem;font-weight:700;color:var(--dark);margin-bottom:.25rem;}
+        .case-card-tag{display:inline-block;padding:.2rem .6rem;border-radius:100px;font-size:.7rem;font-weight:600;}
+        .tag-green{background:#f0fdf4;color:#15803d;}
+        .tag-blue{background:#eff6ff;color:#1d4ed8;}
+        .tag-orange{background:#fff7ed;color:#c2410c;}
+        .tag-purple{background:#faf5ff;color:#7e22ce;}
+        .case-card-body{padding:1.25rem 1.5rem;}
+        .case-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;}
+        .case-col-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#999;margin-bottom:.5rem;}
+        .case-col-value{font-size:.9rem;color:#555;line-height:1.6;}
+        .case-col-value strong{color:var(--dark);}
+        .case-divider{border:none;border-top:1px solid #f5f5f5;margin:1.25rem 0;}
+        .case-result-bar{margin-bottom:1rem;}
+        .case-result-label{display:flex;justify-content:space-between;font-size:.8rem;color:#666;margin-bottom:.35rem;}
+        .case-result-label span:last-child{font-weight:700;}
+        .case-bar-track{height:8px;background:#f0f0f0;border-radius:100px;overflow:hidden;}
+        .case-bar-fill{height:100%;border-radius:100px;}
+        .bar-green{background:linear-gradient(90deg,#10b981,#34d399);}
+        .bar-blue{background:linear-gradient(90deg,#6366f1,#818cf8);}
+        .bar-orange{background:linear-gradient(90deg,#f97316,#fdba74);}
+        .case-tag-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem;}
+        .case-tag{display:inline-flex;align-items:center;gap:.25rem;padding:.3rem .75rem;background:#f9f9f9;border:1px solid #eee;border-radius:100px;font-size:.78rem;color:#666;}
     </style>
     <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?2b69f3997a86e5bbc310aa059305285e";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
 </head>
@@ -151,60 +178,126 @@
 </ul>
 
 <h2>真实案例数据</h2>
-<h3>香港健康餐配送公司Peak 21</h3>
-<p>通过CTWA广告收集潜在客户，个性化餐食推荐：</p>
-<ul>
-<li>广告CTR提升18%</li>
-<li>加购成本降低36%</li>
-<li>80%以上的WhatsApp对话最终转化为销售</li>
-</ul>
 
-<h3>马来西亚EcoWorld房地产</h3>
-<p>Facebook+Instagram双渠道CTWA广告：</p>
-<ul>
-<li>15,000次点击</li>
-<li>21%高质量潜在客户（值得销售跟进）</li>
-<li>广告ROI达6.5倍</li>
-</ul>
-
-<h3>$200预算7天测试（肯尼亚生态旅馆Kwenia）</h3>
-<ul>
-<li>3,500+条线索</li>
-<li>每天500+条线索，单条成本$0.05</li>
-<li>1,800+个WhatsApp对话</li>
-<li>3-5%最终预订转化率</li>
-</ul>
-
-<h2>新手最容易犯的5个错误</h2>
-<ul>
-<li><strong>没有企业验证就开广告</strong>：个人号做CTWA会被封号，损失广告费</li>
-<li><strong>用自动回复处理一切</strong>：复杂问题用AI会激怒客户，87%消费者要真人客服</li>
-<li><strong>回复太慢</strong>：响应延迟每小时，转化概率降8%；5分钟内回复转化率提升9倍</li>
-<li><strong>只发广告不建关系</strong>：WhatsApp是私域，不是群发工具，需要真正的对话</li>
-<li><strong>忽视消息模板合规</strong>：违规内容会触发封号，所有商业消息必须走审核模板</li>
-</ul>
-
-<h2>起步建议</h2>
-<p>先用$10-20/天测试3-5个受众组合，跑3-5天收集数据：</p>
-<ul>
-<li>哪个受众组合点击率高？</li>
-<li>哪类素材CTR最高？</li>
-<li>客户主要问什么问题？</li>
-</ul>
-<p>找到胜出组合后，逐步放量（每次增加20-30%预算）。记住：CTWA广告的核心不是广告本身，是广告后面的聊单系统。系统跑顺了，ROI自然上来。</p>
-
-        </div>
-        <div class="cta-box">
-            <h3>想系统学习Facebook广告和WhatsApp聊单？</h3>
-            <p>扫码加微信，获取专属学习方案</p>
-            <div class="cta-double">
-                <div><img src="xc.jpg" alt="张老师"><div class="name">张老师</div><div class="id">zhangcha909</div></div>
-                <div><img src="sam.jpg" alt="Sam"><div class="name">Sam</div><div class="id">samtoo168</div></div>
-            </div>
+<!-- 案例1：香港健康餐 Peak 21 -->
+<div class="case-study-card">
+    <div class="case-card-header">
+        <div class="case-card-icon">🥗</div>
+        <div class="case-card-meta">
+            <div class="case-card-title">香港 Peak 21：健康餐配送 CTWA 实战</div>
+            <span class="case-card-tag tag-green">餐饮行业</span>
         </div>
     </div>
-    <footer>
-        <p>© 2026 FB聊单实战 · <a href="index.html">facebookads.help</a> · 专注 Facebook 广告聊单转化</p>
-    </footer>
-</body>
-</html>
+    <div class="case-card-body">
+        <div class="case-row">
+            <div>
+                <div class="case-col-label">📍 投放策略</div>
+                <div class="case-col-value">通过 CTWA 广告收集潜在客户，用 WhatsApp 进行<strong>个性化餐食推荐</strong>和跟进。</div>
+            </div>
+            <div>
+                <div class="case-col-label">💬 转化方式</div>
+                <div class="case-col-value">WhatsApp 对话中直接完成咨询、选餐、下单全流程，降低流失率。</div>
+            </div>
+        </div>
+        <hr class="case-divider">
+        <div class="case-result-bar">
+            <div class="case-result-label"><span>广告 CTR</span><span style="color:#10b981">+18%</span></div>
+            <div class="case-bar-track"><div class="case-bar-fill bar-green" style="width:36%"></div></div>
+        </div>
+        <div class="case-result-bar">
+            <div class="case-result-label"><span>加购成本</span><span style="color:#10b981">-36%</span></div>
+            <div class="case-bar-track"><div class="case-bar-fill bar-green" style="width:36%"></div></div>
+        </div>
+        <div class="case-result-bar">
+            <div class="case-result-label"><span>WhatsApp 对话转销售率</span><span style="color:#10b981">80%+</span></div>
+            <div class="case-bar-track"><div class="case-bar-fill bar-green" style="width:80%"></div></div>
+        </div>
+        <div class="case-tag-list">
+            <span class="case-tag">✅ 个性化推荐</span>
+            <span class="case-tag">✅ CTR +18%</span>
+            <span class="case-tag">✅ 80%+ 转化</span>
+        </div>
+    </div>
+</div>
+
+<!-- 案例2：马来西亚 EcoWorld 房地产 -->
+<div class="case-study-card">
+    <div class="case-card-header">
+        <div class="case-card-icon">🏘️</div>
+        <div class="case-card-meta">
+            <div class="case-card-title">马来西亚 EcoWorld：房地产双渠道 CTWA</div>
+            <span class="case-card-tag tag-blue">房地产</span>
+        </div>
+    </div>
+    <div class="case-card-body">
+        <div class="case-row">
+            <div>
+                <div class="case-col-label">📍 渠道策略</div>
+                <div class="case-col-value">Facebook + Instagram 双渠道同步投放 CTWA 广告，触达高净值购房人群。</div>
+            </div>
+            <div>
+                <div class="case-col-label">💬 跟进方式</div>
+                <div class="case-col-value">WhatsApp 预约看房 + 专属顾问1对1服务，提升信任感和到场率。</div>
+            </div>
+        </div>
+        <hr class="case-divider">
+        <div class="case-result-bar">
+            <div class="case-result-label"><span>广告点击量</span><span style="color:#6366f1">15,000+</span></div>
+            <div class="case-bar-track"><div class="case-bar-fill bar-blue" style="width:75%"></div></div>
+        </div>
+        <div class="case-result-bar">
+            <div class="case-result-label"><span>高质量潜客占比</span><span style="color:#6366f1">21%</span></div>
+            <div class="case-bar-track"><div class="case-bar-fill bar-blue" style="width:42%"></div></div>
+        </div>
+        <div class="case-result-bar">
+            <div class="case-result-label"><span>广告 ROI</span><span style="color:#10b981">6.5倍</span></div>
+            <div class="case-bar-track"><div class="case-bar-fill bar-green" style="width:65%"></div></div>
+        </div>
+        <div class="case-tag-list">
+            <span class="case-tag">✅ 双渠道投放</span>
+            <span class="case-tag">✅ 21% 高质量潜客</span>
+            <span class="case-tag">✅ ROI 6.5倍</span>
+        </div>
+    </div>
+</div>
+
+<!-- 案例3：肯尼亚 Kwenia 生态旅馆 -->
+<div class="case-study-card">
+    <div class="case-card-header">
+        <div class="case-card-icon">🌿</div>
+        <div class="case-card-meta">
+            <div class="case-card-title">肯尼亚 Kwenia：$200 预算 7 天狂揽 3,500+ 线索</div>
+            <span class="case-card-tag tag-orange">旅游行业</span>
+        </div>
+    </div>
+    <div class="case-card-body">
+        <div class="case-row">
+            <div>
+                <div class="case-col-label">💰 投入产出</div>
+                <div class="case-col-value">$200 预算 / 7天测试，每天仅 $28.5，获客成本极低。</div>
+            </div>
+            <div>
+                <div class="case-col-label">🔄 转化漏斗</div>
+                <div class="case-col-value">广告点击 → WhatsApp 对话 → 咨询 → 预订，3-5% 最终成交。</div>
+            </div>
+        </div>
+        <hr class="case-divider">
+        <div class="case-result-bar">
+            <div class="case-result-label"><span>收集线索</span><span style="color:#f97316">3,500+</span></div>
+            <div class="case-bar-track"><div class="case-bar-fill bar-orange" style="width:88%"></div></div>
+        </div>
+        <div class="case-result-bar">
+            <div class="case-result-label"><span>单条线索成本</span><span style="color:#10b981">$0.05</span></div>
+            <div class="case-bar-track"><div class="case-bar-fill bar-green" style="width:5%"></div></div>
+        </div>
+        <div class="case-result-bar">
+            <div class="case-result-label"><span>WhatsApp 对话量</span><span style="color:#f97316">1,800+</span></div>
+            <div class="case-bar-track"><div class="case-bar-fill bar-orange" style="width:60%"></div></div>
+        </div>
+        <div class="case-tag-list">
+            <span class="case-tag">✅ $0.05 单条成本</span>
+            <span class="case-tag">✅ 3,500+ 线索</span>
+            <span class="case-tag">✅ 3-5% 预订转化</span>
+        </div>
+    </div>
+</div>

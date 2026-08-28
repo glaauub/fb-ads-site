@@ -234,6 +234,83 @@
             color: var(--orange);
             margin-bottom: 0.25rem;
         }
+        /* ── 案例卡片 ── */
+        .case-study-card {
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 2rem 0;
+            background: white;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+        .case-card-header {
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .case-card-icon {
+            font-size: 2rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .case-card-meta { flex: 1; }
+        .case-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 0.25rem;
+        }
+        .case-card-tag {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        .tag-orange { background: #fff7ed; color: #c2410c; }
+        .tag-blue   { background: #eff6ff; color: #1d4ed8; }
+        .tag-green  { background: #f0fdf4; color: #15803d; }
+        .case-card-body { padding: 1.25rem 1.5rem; }
+        .case-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        .case-col-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--gray-400);
+            margin-bottom: 0.5rem;
+        }
+        .case-col-value { font-size: 0.9rem; color: var(--gray-700); line-height: 1.6; }
+        .case-col-value strong { color: var(--gray-900); }
+        .case-divider { border: none; border-top: 1px solid var(--gray-100); margin: 1.25rem 0; }
+        .case-result-bar { margin-bottom: 1rem; }
+        .case-result-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--gray-600);
+            margin-bottom: 0.35rem;
+        }
+        .case-result-label span:last-child { font-weight: 700; }
+        .case-bar-track { height: 8px; background: var(--gray-100); border-radius: 100px; overflow: hidden; }
+        .case-bar-fill { height: 100%; border-radius: 100px; }
+        .bar-green  { background: linear-gradient(90deg, #10b981, #34d399); }
+        .bar-blue   { background: linear-gradient(90deg, var(--orange), #fdba74); }
+        .case-tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+        .case-tag {
+            display: inline-flex; align-items: center; gap: 0.25rem;
+            padding: 0.3rem 0.75rem; background: var(--gray-50);
+            border: 1px solid var(--gray-200); border-radius: 100px;
+            font-size: 0.78rem; color: var(--gray-600);
+        }
+        /* ── 原有 stat-grid ── */
         .stat-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -534,8 +611,50 @@
             <h3>1. 开启游客结账</h3>
             <p>这是最简单、最有效的优化。取消强制注册，让用户可以直接以游客身份下单。多个案例验证，这一项就能让结账放弃率下降<strong>40-42%</strong>。</p>
             
-            <div class="success-box">
-                <strong>真实案例：</strong>某美妆独立站初期强制用户注册才能下单，结账转化率仅0.3%。优化后取消强制注册，默认游客结账，添加地址自动填充功能，仅保留4个核心填写字段，结账转化率直接提升至<strong>1.8%</strong>。
+            <div class="case-study-card">
+                <div class="case-card-header">
+                    <div class="case-card-icon">💄</div>
+                    <div class="case-card-meta">
+                        <div class="case-card-title">美妆站：游客结账让转化率×6</div>
+                        <span class="case-card-tag tag-blue">结账优化</span>
+                    </div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-row">
+                        <div>
+                            <div class="case-col-label">🔍 优化前</div>
+                            <div class="case-col-value">强制注册才能下单，结账转化率仅 <strong>0.3%</strong>，大量用户直接离开。</div>
+                        </div>
+                        <div>
+                            <div class="case-col-label">✅ 优化动作</div>
+                            <div class="case-col-value">取消强制注册 → 默认游客结账 → 添加地址自动填充 → 保留仅 <strong>4个核心字段</strong></div>
+                        </div>
+                    </div>
+                    <hr class="case-divider">
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>结账转化率</span>
+                            <span>0.3% → 1.8%</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:36%"></div>
+                        </div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>结账放弃率下降</span>
+                            <span>40-42%</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-blue" style="width:42%"></div>
+                        </div>
+                    </div>
+                    <div class="case-tag-list">
+                        <span class="case-tag">✅ 游客结账</span>
+                        <span class="case-tag">✅ 地址自动填充</span>
+                        <span class="case-tag">✅ 4字段极简表单</span>
+                    </div>
+                </div>
             </div>
             
             <h3>2. 简化表单字段</h3>
@@ -662,8 +781,50 @@
                 <li><strong>邮箱捕获</strong>：如果用户不愿购买，至少获取邮箱以便后续营销</li>
             </ul>
             
-            <div class="highlight-box">
-                <strong>真实案例：</strong>某护肤品牌在退出弹窗中提供"免费旅行装"而非10%折扣，成功挽回18%的退出用户，同时保持了利润率（旅行装成本远低于折扣）。
+            <div class="case-study-card">
+                <div class="case-card-header">
+                    <div class="case-card-icon">🧴</div>
+                    <div class="case-card-meta">
+                        <div class="case-card-title">护肤品牌：退出弹窗的聪明玩法</div>
+                        <span class="case-card-tag tag-green">弃购挽回</span>
+                    </div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-row">
+                        <div>
+                            <div class="case-col-label">🔍 常规思路</div>
+                            <div class="case-col-value">直接给 <strong>10% 折扣券</strong>，效果一般，利润受损，用户等折扣成习惯。</div>
+                        </div>
+                        <div>
+                            <div class="case-col-label">💡 聪明玩法</div>
+                            <div class="case-col-value">提供<strong>"免费旅行装"</strong>——价值感强，成本远低于折扣利润率损失，还制造了新品试用机会。</div>
+                        </div>
+                    </div>
+                    <hr class="case-divider">
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>退出用户挽回率</span>
+                            <span style="color:#10b981">18%</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:36%"></div>
+                        </div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>利润率保护</span>
+                            <span>✅ 旅行装成本 &lt; 折扣让利</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:75%"></div>
+                        </div>
+                    </div>
+                    <div class="case-tag-list">
+                        <span class="case-tag">✅ 旅行装 > 折扣</span>
+                        <span class="case-tag">✅ 18% 挽回报酬</span>
+                        <span class="case-tag">✅ 创造二次购买机会</span>
+                    </div>
+                </div>
             </div>
             
             <h3>频率控制</h3>

@@ -200,6 +200,118 @@
             font-weight: 600;
             font-size: 0.875rem;
         }
+        /* ── 案例卡片 ── */
+        .case-study-card {
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 2rem 0;
+            background: white;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+        .case-card-header {
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .case-card-icon {
+            font-size: 2rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .case-card-meta {
+            flex: 1;
+        }
+        .case-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 0.25rem;
+        }
+        .case-card-tag {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        .tag-orange { background: #fff7ed; color: #c2410c; }
+        .tag-blue   { background: #eff6ff; color: #1d4ed8; }
+        .tag-green  { background: #f0fdf4; color: #15803d; }
+        .tag-purple { background: #faf5ff; color: #7e22ce; }
+        .case-card-body {
+            padding: 1.25rem 1.5rem;
+        }
+        .case-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        .case-col-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--gray-400);
+            margin-bottom: 0.5rem;
+        }
+        .case-col-value {
+            font-size: 0.9rem;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+        .case-col-value strong { color: var(--gray-900); }
+        .case-divider {
+            border: none;
+            border-top: 1px solid var(--gray-100);
+            margin: 1.25rem 0;
+        }
+        .case-result-bar {
+            margin-bottom: 1rem;
+        }
+        .case-result-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--gray-600);
+            margin-bottom: 0.35rem;
+        }
+        .case-result-label span:last-child { font-weight: 700; }
+        .case-bar-track {
+            height: 8px;
+            background: var(--gray-100);
+            border-radius: 100px;
+            overflow: hidden;
+        }
+        .case-bar-fill {
+            height: 100%;
+            border-radius: 100px;
+            transition: width 0.8s ease;
+        }
+        .bar-green  { background: linear-gradient(90deg, #10b981, #34d399); }
+        .bar-blue   { background: linear-gradient(90deg, #0066ff, #60a5fa); }
+        .bar-orange { background: linear-gradient(90deg, #f97316, #fdba74); }
+        .case-tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        .case-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.3rem 0.75rem;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 100px;
+            font-size: 0.78rem;
+            color: var(--gray-600);
+        }
+        /* ── 原有 stat-grid ── */
         .stat-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -652,30 +764,149 @@
             </ul>
             
             <h2>八、真实案例拆解</h2>
-            
-            <h3>案例1：家具独立站转化率翻倍</h3>
-            <ul>
-                <li><strong>问题</strong>：页面设计、文案都好，但转化率卡在1.2%</li>
-                <li><strong>原因</strong>：竞品都有免费退货、包邮、质保，这个客户一样都没有</li>
-                <li><strong>解决</strong>：添加"30天无理由退货"保障</li>
-                <li><strong>结果</strong>：转化率从1.2%提升至<strong>2.4%</strong>，退货率仅增加2.5%</li>
-            </ul>
-            
-            <h3>案例2：美妆独立站6个月从$3000到$50000</h3>
-            <ul>
-                <li><strong>简化结账</strong>：取消强制注册，结账转化率从0.3%→1.8%</li>
-                <li><strong>产品页打磨</strong>：高清图+短视频+敏感肌专属标签</li>
-                <li><strong>社群运营</strong>：Facebook社群+用户晒单奖励，复购率从8%→25%</li>
-                <li><strong>结果</strong>：月销从$3000突破$50000，转化率从0.5%→2.2%</li>
-            </ul>
-            
-            <h3>案例3：宠物用品独立站精准人群策略</h3>
-            <ul>
-                <li><strong>人群定位</strong>：只服务"养宠精致家庭"，页面高级干净</li>
-                <li><strong>稀缺感营造</strong>：限量上新+限时折扣，"手慢无"</li>
-                <li><strong>信任前置</strong>：大量带图评价置顶</li>
-                <li><strong>结果</strong>：转化率稳定在<strong>2.3%</strong>，不打价格战也能盈利</li>
-            </ul>
+
+            <!-- 案例1：家具独立站 -->
+            <div class="case-study-card">
+                <div class="case-card-header">
+                    <div class="case-card-icon">🪑</div>
+                    <div class="case-card-meta">
+                        <div class="case-card-title">家具独立站：信任升级转化翻倍</div>
+                        <span class="case-card-tag tag-orange">家居类目</span>
+                    </div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-row">
+                        <div>
+                            <div class="case-col-label">🔍 核心问题</div>
+                            <div class="case-col-value">页面设计、文案都不错，<strong>但转化率卡在 1.2%</strong>，对比竞品（免费退货+包邮+质保）完全没有说服力。</div>
+                        </div>
+                        <div>
+                            <div class="case-col-label">💡 关键突破口</div>
+                            <div class="case-col-value">竞品标配的保障一个都没有，用户没有下单理由。添加<strong>"30天无理由退货"</strong>后立刻形成差异化。</div>
+                        </div>
+                    </div>
+                    <hr class="case-divider">
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>优化前 转化率</span>
+                            <span style="color:#ef4444">1.2%</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-orange" style="width:12%"></div>
+                        </div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>优化后 转化率</span>
+                            <span style="color:#10b981">2.4% ↑</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:24%"></div>
+                        </div>
+                    </div>
+                    <div class="case-tag-list">
+                        <span class="case-tag">✅ 30天退货保障</span>
+                        <span class="case-tag">✅ 首屏信任凭证</span>
+                        <span class="case-tag">✅ 退货率仅+2.5%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 案例2：美妆独立站 -->
+            <div class="case-study-card">
+                <div class="case-card-header">
+                    <div class="case-card-icon">💄</div>
+                    <div class="case-card-meta">
+                        <div class="case-card-title">美妆独立站：6个月从 $3K → $50K</div>
+                        <span class="case-card-tag tag-blue">美妆类目</span>
+                    </div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-row">
+                        <div>
+                            <div class="case-col-label">🔍 核心问题</div>
+                            <div class="case-col-value">强制注册才能下单，<strong>结账转化率仅 0.3%</strong>；产品页缺图缺视频；复购靠自然流量毫无运营。</div>
+                        </div>
+                        <div>
+                            <div class="case-col-label">💡 三步破局</div>
+                            <div class="case-col-value">① 游客结账<br>② 高清图+短视频+敏感肌标签<br>③ FB社群晒单奖励复购</div>
+                        </div>
+                    </div>
+                    <hr class="case-divider">
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>月销额</span>
+                            <span>$3,000 → $50,000</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:100%"></div>
+                        </div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>结账转化率</span>
+                            <span>0.3% → 1.8%</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-blue" style="width:36%"></div>
+                        </div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>复购率</span>
+                            <span>8% → 25%</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:50%"></div>
+                        </div>
+                    </div>
+                    <div class="case-tag-list">
+                        <span class="case-tag">✅ 游客结账</span>
+                        <span class="case-tag">✅ 短视频展示</span>
+                        <span class="case-tag">✅ 社群运营</span>
+                        <span class="case-tag">✅ 复购率3倍增长</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 案例3：宠物用品 -->
+            <div class="case-study-card">
+                <div class="case-card-header">
+                    <div class="case-card-icon">🐾</div>
+                    <div class="case-card-meta">
+                        <div class="case-card-title">宠物用品独立站：精准人群不打价格战</div>
+                        <span class="case-card-tag tag-purple">宠物类目</span>
+                    </div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-row">
+                        <div>
+                            <div class="case-col-label">🎯 人群策略</div>
+                            <div class="case-col-value">只服务<strong>"养宠精致家庭"</strong>，页面干净高级，强调品质而非价格，避免与平台卖家正面竞争。</div>
+                        </div>
+                        <div>
+                            <div class="case-col-label">⚡ 增长飞轮</div>
+                            <div class="case-col-value">限量上新+"手慢无"稀缺感 → 带图评价置顶 → 口碑传播 → 复购稳定</div>
+                        </div>
+                    </div>
+                    <hr class="case-divider">
+                    <div class="case-result-bar">
+                        <div class="case-result-label">
+                            <span>转化率（稳定值）</span>
+                            <span style="color:#10b981">2.3%</span>
+                        </div>
+                        <div class="case-bar-track">
+                            <div class="case-bar-fill bar-green" style="width:23%"></div>
+                        </div>
+                    </div>
+                    <div class="case-tag-list">
+                        <span class="case-tag">✅ 精准人群定位</span>
+                        <span class="case-tag">✅ 稀缺感运营</span>
+                        <span class="case-tag">✅ 口碑带图评价</span>
+                        <span class="case-tag">✅ 稳定盈利不内卷</span>
+                    </div>
+                </div>
+            </div>
             
             <h2>九、CRO测试工具推荐</h2>
             

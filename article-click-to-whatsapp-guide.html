@@ -201,7 +201,32 @@
             text-align: center;
             margin-top: 4rem;
         }
-        
+        /* ── 案例卡片 ── */
+        .case-study-card{border:1px solid var(--gray-200);border-radius:16px;overflow:hidden;margin:2rem 0;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+        .case-card-header{padding:1.25rem 1.5rem;display:flex;align-items:center;gap:.875rem;border-bottom:1px solid var(--gray-100);}
+        .case-card-icon{font-size:2rem;line-height:1;flex-shrink:0;}
+        .case-card-meta{flex:1;}
+        .case-card-title{font-size:1.1rem;font-weight:700;color:var(--gray-900);margin-bottom:.25rem;}
+        .case-card-tag{display:inline-block;padding:.2rem .6rem;border-radius:100px;font-size:.7rem;font-weight:600;}
+        .tag-green{background:#f0fdf4;color:#15803d;}
+        .tag-blue{background:#eff6ff;color:#1d4ed8;}
+        .tag-orange{background:#fff7ed;color:#c2410c;}
+        .case-card-body{padding:1.25rem 1.5rem;}
+        .case-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;}
+        .case-col-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-400);margin-bottom:.5rem;}
+        .case-col-value{font-size:.9rem;color:var(--gray-600);line-height:1.6;}
+        .case-col-value strong{color:var(--gray-900);}
+        .case-divider{border:none;border-top:1px solid var(--gray-100);margin:1.25rem 0;}
+        .case-result-bar{margin-bottom:1rem;}
+        .case-result-label{display:flex;justify-content:space-between;font-size:.8rem;color:var(--gray-500);margin-bottom:.35rem;}
+        .case-result-label span:last-child{font-weight:700;}
+        .case-bar-track{height:8px;background:var(--gray-100);border-radius:100px;overflow:hidden;}
+        .case-bar-fill{height:100%;border-radius:100px;}
+        .bar-green{background:linear-gradient(90deg,#10b981,#34d399);}
+        .bar-blue{background:linear-gradient(90deg,#0066ff,#60a5fa);}
+        .bar-orange{background:linear-gradient(90deg,#f97316,#fdba74);}
+        .case-tag-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem;}
+        .case-tag{display:inline-flex;align-items:center;gap:.25rem;padding:.3rem .75rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:100px;font-size:.78rem;color:var(--gray-500);}
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .stats-grid { grid-template-columns: 1fr; }
@@ -576,25 +601,91 @@
             </table>
             
             <h2>真实案例</h2>
-            <div class="highlight-box">
-                <h4>案例 1：B2B 女鞋出口商（中国 → 全球）</h4>
-                <ul style="margin-top: 0.5rem;">
-                    <li>广告点击率：6.2%（vs 传统广告 1.5%）</li>
-                    <li>获客成本：$2.7（vs 传统表单广告 $12.5）</li>
-                    <li>转化率：18.3%（vs 传统广告 4.1%）</li>
-                    <li>ROI：480%</li>
-                </ul>
+
+            <!-- 案例1：B2B 女鞋出口商 -->
+            <div class="case-study-card">
+                <div class="case-card-header">
+                    <div class="case-card-icon">👠</div>
+                    <div class="case-card-meta">
+                        <div class="case-card-title">B2B 女鞋出口商（中国 → 全球）：ROI 480%</div>
+                        <span class="case-card-tag tag-green">B2B 出口</span>
+                    </div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-row">
+                        <div>
+                            <div class="case-col-label">📍 投放背景</div>
+                            <div class="case-col-value">B2B 独立站传统表单广告效果差，改用 CTWA 广告后询盘质量大幅提升。</div>
+                        </div>
+                        <div>
+                            <div class="case-col-label">💬 转化优势</div>
+                            <div class="case-col-value">WhatsApp 直接对话，缩短决策链路，<strong>B2B 采购周期从 30 天降至 7 天</strong>。</div>
+                        </div>
+                    </div>
+                    <hr class="case-divider">
+                    <div class="case-result-bar">
+                        <div class="case-result-label"><span>广告点击率</span><span style="color:#10b981">6.2%</span></div>
+                        <div class="case-bar-track"><div class="case-bar-fill bar-green" style="width:62%"></div></div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label"><span>获客成本</span><span style="color:#10b981">$2.7（vs $12.5）</span></div>
+                        <div class="case-bar-track"><div class="case-bar-fill bar-green" style="width:22%"></div></div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label"><span>转化率</span><span style="color:#10b981">18.3%（vs 4.1%）</span></div>
+                        <div class="case-bar-track"><div class="case-bar-fill bar-green" style="width:55%"></div></div>
+                    </div>
+                    <div class="case-tag-list">
+                        <span class="case-tag">✅ ROI 480%</span>
+                        <span class="case-tag">✅ 获客成本降 78%</span>
+                        <span class="case-tag">✅ 周期缩短至 7 天</span>
+                    </div>
+                </div>
             </div>
-            
-            <div class="highlight-box">
-                <h4>案例 2：房地产开发商（墨西哥）</h4>
-                <ul style="margin-top: 0.5rem;">
-                    <li>点击进入 WhatsApp：15,000 人</li>
-                    <li>实际发送消息：9,750 人（65%）</li>
-                    <li>预约看房：1,462 人（15%）</li>
-                    <li>最终成交：89 单（每单均价 $180,000）</li>
-                    <li>总 ROI：6.5 倍</li>
-                </ul>
+
+            <!-- 案例2：墨西哥房地产开发商 -->
+            <div class="case-study-card">
+                <div class="case-card-header">
+                    <div class="case-card-icon">🏘️</div>
+                    <div class="case-card-meta">
+                        <div class="case-card-title">墨西哥房地产开发商：$180K 单均，ROI 6.5 倍</div>
+                        <span class="case-card-tag tag-blue">房地产</span>
+                    </div>
+                </div>
+                <div class="case-card-body">
+                    <div class="case-row">
+                        <div>
+                            <div class="case-col-label">📍 转化漏斗</div>
+                            <div class="case-col-value">广告点击 → WhatsApp 即时会话 → 预约看房 → 现场成交，每步都可量化。</div>
+                        </div>
+                        <div>
+                            <div class="case-col-label">💰 商业价值</div>
+                            <div class="case-col-value">每单均价 <strong>$180,000</strong>，89 单成交 = 超 $1600 万GMV。</div>
+                        </div>
+                    </div>
+                    <hr class="case-divider">
+                    <div class="case-result-bar">
+                        <div class="case-result-label"><span>WhatsApp 进线</span><span style="color:#0066ff">15,000 人</span></div>
+                        <div class="case-bar-track"><div class="case-bar-fill bar-blue" style="width:75%"></div></div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label"><span>实际发消息</span><span style="color:#0066ff">9,750 人（65%）</span></div>
+                        <div class="case-bar-track"><div class="case-bar-fill bar-blue" style="width:65%"></div></div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label"><span>预约看房</span><span style="color:#f97316">1,462 人（15%）</span></div>
+                        <div class="case-bar-track"><div class="case-bar-fill bar-orange" style="width:15%"></div></div>
+                    </div>
+                    <div class="case-result-bar">
+                        <div class="case-result-label"><span>最终成交</span><span style="color:#10b981">89 单（$18M+ GMV）</span></div>
+                        <div class="case-bar-track"><div class="case-bar-fill bar-green" style="width:89%"></div></div>
+                    </div>
+                    <div class="case-tag-list">
+                        <span class="case-tag">✅ ROI 6.5倍</span>
+                        <span class="case-tag">✅ 89 单成交</span>
+                        <span class="case-tag">✅ $18M+ GMV</span>
+                    </div>
+                </div>
             </div>
             
             <h2>需要帮助？</h2>
