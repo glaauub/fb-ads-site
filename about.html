@@ -16,7 +16,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --purple: #635BFF; --gradient: linear-gradient(135deg, #635BFF 0%, #00D4FF 100%); }
         body { font-family: 'Inter', -apple-system, sans-serif; background: #ffffff; color: #111827; line-height: 1.7; }
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(99,91,255,0.1); padding: 0 2rem; height: 64px; display: flex; align-items: center; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.95); }
         .logo { font-size: 1.5rem; font-weight: 700; color: var(--purple); text-decoration: none; }
         .nav-links { margin-left: auto; display: flex; gap: 2rem; list-style: none; }
         .nav-links a { color: #4b5563; text-decoration: none; font-weight: 500; font-size: 0.9375rem; }
@@ -52,10 +52,7 @@
         right: 0;
         z-index: 1000;
         background: rgba(10, 10, 26, 0.85);
-        backdrop-filter: blur(20px) saturate(180%);
-        -webkit-backdrop-filter: blur(20px) saturate(180%);
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+        }
     .header-inner {
         max-width: 1200px;
         margin: 0 auto;
