@@ -93,20 +93,170 @@
             .hero-stats { gap: 1.5rem; }
         }
     </style>
+    <style>/* ===== HEADER / NAVIGATION ===== */
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(10, 10, 26, 0.85);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .header-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    .header-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        flex-shrink: 0;
+    }
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, #635BFF, #00D4FF);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 800;
+        font-size: 0.875rem;
+        flex-shrink: 0;
+    }
+    .logo-text {
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+        letter-spacing: -0.01em;
+    }
+    .header-nav {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        margin-left: auto;
+    }
+    .nav-link {
+        color: rgba(255,255,255,0.6);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.375rem 0.875rem;
+        border-radius: 8px;
+        transition: all 0.2s;
+        white-space: nowrap;
+    }
+    .nav-link:hover { color: white; background: rgba(255,255,255,0.08); }
+    .nav-link.active { color: white; background: rgba(99,91,255,0.25); }
+    .header-cta {
+        display: flex;
+        align-items: center;
+        gap: 0.375rem;
+        background: linear-gradient(135deg, #635BFF, #00D4FF);
+        color: white;
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 600;
+        padding: 0.5rem 1.125rem;
+        border-radius: 100px;
+        flex-shrink: 0;
+        transition: opacity 0.2s, transform 0.2s;
+    }
+    .header-cta:hover { opacity: 0.9; transform: scale(1.03); }
+    .mobile-menu-btn {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 36px;
+        height: 36px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+    .mobile-menu-btn span {
+        display: block;
+        height: 2px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+    .mobile-nav {
+        display: none;
+        flex-direction: column;
+        background: rgba(10,10,26,0.97);
+        border-top: 1px solid rgba(255,255,255,0.06);
+        padding: 0.75rem 1.5rem 1rem;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-link {
+        color: rgba(255,255,255,0.7);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        transition: color 0.2s;
+    }
+    .mobile-nav-link:hover { color: white; }
+    .mobile-nav-link.accent { color: #635BFF; font-weight: 700; border: none; margin-top: 0.5rem; }
+    @media (max-width: 768px) {
+        .header-nav, .header-cta { display: none; }
+        .mobile-menu-btn { display: flex; }
+        .site-header { position: fixed; }
+    }
+    @media (max-width: 480px) {
+        .logo-text { display: none; }
+    }
+    </style>
 </head>
 <body>
-    <nav class="nav">
-        <a href="index.html" class="nav-logo">FB聊单实战</a>
-        <div class="nav-links">
-            <a href="index.html">首页</a>
-            <a href="cases.html">案例</a>
-            <a href="articles.html">教程</a>
-            <a href="about.html">关于</a>
+        <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo">
+                <span class="logo-icon">F</span>
+                <span class="logo-text">FB聊单实战</span>
+            </a>
+            <nav class="header-nav" id="mainNav">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="cases.html" class="nav-link">实战案例</a>
+                <a href="articles.html" class="nav-link">知识库</a>
+                <a href="tools.html" class="nav-link">工具</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="about.html" class="nav-link">关于</a>
+            </nav>
+            <a href="weixin://contacts/profile/zhangcha909" class="header-cta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                加微信
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <a href="weixin://contacts/profile/zhangcha909" class="nav-cta">免费咨询</a>
-    </nav>
-
-    <header class="hero">
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="mobile-nav-link">首页</a>
+            <a href="cases.html" class="mobile-nav-link">实战案例</a>
+            <a href="articles.html" class="mobile-nav-link">知识库</a>
+            <a href="tools.html" class="mobile-nav-link">工具</a>
+            <a href="faq.html" class="mobile-nav-link">FAQ</a>
+            <a href="about.html" class="mobile-nav-link">关于</a>
+            <a href="weixin://contacts/profile/zhangcha909" class="mobile-nav-link accent">加微信咨询</a>
+        </div>
+    </header>
+<header class="hero">
         <span class="hero-badge">🔥 选品实战 · 2026年最新</span>
         <h1>独立站选品实战：<br>2026年Facebook广告爆款选品方法论</h1>
         <p class="hero-subtitle">选品不对，努力白费。找到CTR超1.5%、ROAS超3x的产品，是独立站赚钱的第一步</p>
