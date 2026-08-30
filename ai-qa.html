@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 问答大厅 - Facebook广告 / WhatsApp私域 / 防封 / 收款常见问题 - FB聊单实战</title>
+    <meta name="geo.region" content="CN-GD">
+    <meta name="geo.placename" content="深圳">
+    <meta name="geo.position" content="22.543096;114.057865">
+    <meta name="ICBM" content="22.543096,114.057865">
+    <meta name="description" content="AI 问答大厅：聚焦 Facebook 广告投放、WhatsApp 私域、账号防封、跨境收款、选品建站的长尾问题，AI 整理的常见疑问与实操解答，覆盖新手到进阶。">
+    <meta name="keywords" content="Facebook广告,WhatsApp私域,账号防封,跨境收款,独立站选品,CTWA广告,广告账户被封,PayPal冻结">
+    <link rel="canonical" href="https://facebookads.help/ai-qa.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --purple: #635BFF; --gradient: linear-gradient(135deg, #635BFF 0%, #00D4FF 100%); }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: #ffffff; color: #111827; line-height: 1.7; }
+        .hero { padding: 8rem 2rem 4rem; background: linear-gradient(135deg, rgba(99,91,255,0.06) 0%, rgba(0,212,255,0.06) 100%); text-align: center; }
+        .container { max-width: 860px; margin: 0 auto; }
+        h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { font-size: 1.2rem; color: #6b7280; max-width: 640px; margin: 0 auto; }
+        .readbox { max-width: 860px; margin: 2.5rem auto 0; background: #f5f3ff; border: 1px solid rgba(99,91,255,0.2); border-left: 4px solid var(--purple); border-radius: 12px; padding: 1.25rem 1.5rem; font-size: 0.95rem; color: #374151; text-align: left; }
+        .readbox b { color: var(--purple); }
+        .content { max-width: 860px; margin: 0 auto; padding: 3rem 2rem; }
+        .faq-category { margin-bottom: 2.5rem; }
+        .faq-category h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--purple); border-bottom: 2px solid rgba(99,91,255,0.2); padding-bottom: 0.5rem; }
+        .faq-item { border: 1px solid #e5e7eb; border-radius: 12px; margin-bottom: 0.85rem; overflow: hidden; }
+        .faq-q { padding: 1.1rem 1.4rem; font-weight: 600; cursor: pointer; background: #f9fafb; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; gap: 1rem; }
+        .faq-q:hover { background: #f3f4f6; }
+        .faq-a { padding: 1.1rem 1.4rem; color: #4b5563; font-size: 0.9375rem; display: none; border-top: 1px solid #e5e7eb; }
+        .faq-item.open .faq-a { display: block; }
+        .faq-item.open .faq-q::after { content: "−"; }
+        .faq-q::after { content: "+"; color: var(--purple); font-weight: 700; font-size: 1.25rem; }
+        .related-box { max-width: 860px; margin: 1rem auto 3rem; padding: 1.5rem 2rem; background: #fafafa; border-radius: 16px; }
+        .related-box h2 { font-size: 1.25rem; color: var(--purple); margin-bottom: 1rem; }
+        .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+        .related-card { display: block; padding: 1rem 1.25rem; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; text-decoration: none; color: #111827; transition: border-color .15s, transform .15s; }
+        .related-card:hover { border-color: var(--purple); transform: translateY(-2px); }
+        .related-card b { color: var(--purple); display: block; margin-bottom: 0.25rem; }
+        .related-card span { font-size: 0.85rem; color: #6b7280; }
+        .cta-box { background: var(--gradient); border-radius: 20px; padding: 3.5rem 2rem; text-align: center; color: white; max-width: 860px; margin: 0 auto 3rem; }
+        .cta-box h2 { color: white; font-size: 1.8rem; margin-bottom: 0.75rem; }
+        .cta-box p { opacity: 0.92; margin-bottom: 1.5rem; }
+        .cta-btn { background: white; color: var(--purple); padding: 0.85rem 2.2rem; border-radius: 12px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; }
+        footer { background: #111827; color: #9ca3af; padding: 3rem 2rem; text-align: center; font-size: 0.875rem; }
+        footer a { color: #9ca3af; text-decoration: none; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .related-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <style>
+        .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #ffffff; border-bottom: 1px solid rgba(0,0,0,0.08); box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+        .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; height: 56px; display: flex; align-items: center; justify-content: center; gap: 2rem; }
+        .header-nav { display: flex; align-items: center; justify-content: center; gap: 2.5rem; flex: 1; }
+        .nav-link { color: #1a1a2e; text-decoration: none; font-size: 0.9375rem; font-weight: 500; padding: 0.5rem 0.25rem; transition: color 0.15s, transform 0.15s; white-space: nowrap; }
+        .nav-link:hover { color: #4F46E5; transform: scale(1.08); }
+        .nav-link.active { color: #4F46E5; font-weight: 600; }
+        .mobile-menu-btn { display: none; flex-direction: row; align-items: center; width: auto; height: 32px; background: #f4f4f7; border: none; border-radius: 8px; cursor: pointer; padding: 0 12px; font-size: 0.8rem; font-weight: 600; color: #1a1a2e; transition: background 0.15s; }
+        .mobile-menu-btn:hover { background: #e8e8ed; }
+        .mobile-nav { display: none; flex-direction: column; background: #ffffff; border-top: 1px solid rgba(0,0,0,0.07); box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 0.5rem 0; }
+        .mobile-nav.open { display: flex; }
+        .mobile-nav-link { color: #333; text-decoration: none; font-size: 0.9375rem; font-weight: 500; padding: 0.75rem 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.05); transition: color 0.15s, background 0.15s; }
+        .mobile-nav-link:last-child { border-bottom: none; }
+        .mobile-nav-link:hover { color: #4F46E5; background: rgba(79,70,229,0.05); }
+        @media (max-width: 768px) {
+            .header-nav { display: none; }
+            .header-inner { justify-content: flex-end; }
+            .mobile-menu-btn { display: flex; }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Facebook 个人号、公共主页、广告账户三者是什么关系？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "个人号（Profile）是你的登录身份；公共主页（Page）是商家对外展示的门面；广告账户挂在商务管理平台（BM）下，由 BM 授权给个人号管理。三者相互独立又彼此关联，封号风险会沿授权链传导，所以不要把所有资产绑在同一个个人号上。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "新广告账户为什么容易被封？怎么预防？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "常见触发点：新号直接上大预算、IP 不稳定或多人共用、素材违反广告政策、支付方式有风险、受众过窄还频繁改。预防措施：先养号再投放、固定干净的 IP、预算渐进式增加、素材合规、绑定真实支付方式与公司信息。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "BM（商务管理平台）应该怎么架构才安全？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "建议一个营业执照主体对应 1 个 BM，BM 下先开 1-2 个广告账户，跑稳后再扩到 3-5 个。不要把所有账户绑同一张卡或同一个 IP，通过 BM 的资产授权把风险隔离，单个账号出问题不至于拖累全盘。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "广告账户被封后申诉成功率高吗？怎么提高？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "首次因误判或素材问题被封，申诉成功率较高；多次违规或触碰政策红线（仿牌、虚假宣传等）很难恢复。申诉时准备好：落地页截图、产品合规证明、公司资质、广告内容说明，走商务支持平台提交，周期通常 1-7 个工作日。核心还是预防大于治疗。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "一个营业执照能开几个广告账户？多账户会关联吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一个主体能开多个账户，但建议 1 主体 1-2 个 BM、每 BM 3-5 个账户。同主体下如果还共用同 IP、同张卡、同套素材，系统会判定关联，一旦一个被封容易牵连其他。分散IP、分散支付、差异化素材能降低关联风险。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "WhatsApp 个人号和 Business API 号有什么区别？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "个人号免费，但大量群发和营销行为极易被封，且只能单设备单卡操作。WhatsApp Business API 需企业认证、按会话计费，可合规批量发送模板消息、支持多客服同时登录、封号率极低。营销量大、要稳定触达，建议直接用 API 号。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "新 WhatsApp 号怎么养号才不容易被封？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "新号前 7-14 天只做正常通讯：用真实手机号接码注册、完善头像和资料、加少量真实联系人、发几条正常聊天。一机一卡一号，固定 IP，不要一上来就导入大量陌生号码群发。养出信誉分后再逐步开始营销。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "WhatsApp 群发消息为什么容易被封？安全频率多少？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "个人号在短时间内大量主动发起对话、又被多名用户举报，就会被判定垃圾营销而封号。安全做法：新号每天主动发起不超过 30-50 条，老号视信誉分而定；批量营销走 Business API 的模板消息通道，合规且稳定。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "一个手机号能注册几个 WhatsApp？换设备登录有风险吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一个手机号对应一个 WhatsApp 账号。频繁换设备或异地登录会触发风控，WhatsApp 网页版/多设备功能要求主设备保持在线。养号期尤其要避免多设备交叉登录，否则容易被临时封禁要求验证。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "WhatsApp 被封了能解封吗？需要什么材料？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "轻量风控可在 App 内点“支持”申诉，提供手机号和注册信息即可。被判定为垃圾营销的，往往要等待冷却或更换新号；严重违规基本无法恢复。预防的关键是正常互动、控制群发频率、不碰敏感内容。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "跨境独立站收款有哪些主流方案？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "常见组合：PayPal（必备、覆盖广）+ Stripe（欧美信用卡）+ 2-3 个本地化支付（如 Klarna、iDEAL、GCash、OXXO）+ 第三方收款（PingPong、万里汇、WorldFirst）+ COD 货到付款 + USDT 加密货币。按目标市场和品类组合，别把鸡蛋放一个篮子里。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "PayPal 新账户为什么容易被冻结？怎么规避？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "新账户风控最严。前 30 天控制日收款不超过 2000 美元、争议率低于 0.5%、单笔不超过 5000 美元；尽早完成企业认证；提前备好营业执照、采购发票和物流凭证。已冻结就在 Resolution Center 第一时间提交材料，一般 5-10 个工作日处理。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Stripe 账户被风控（封户）常见原因有哪些？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "高退款率、高争议率（Chargeback 超标）、交易量突然暴涨、销售高风险品类、KYC 资料不全、网站信息与实际不符。规避办法：保持交易平稳、卖合规品、完成企业认证、争议率压到最低，别一夜之间把流水拉太高。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "USDT / 加密货币收款适合什么场景？有什么风险？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "适合传统通道不愿接的高风险或敏感品类、以及想绕开银行卡限制的场景。风险在于币价波动、合规与法律风险、对账麻烦、依赖自有钱包和交易所出金。务必评估所在司法辖区政策，别当成唯一收款方式。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "万里汇、PingPong、WorldFirst 怎么选？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "三家都是主流跨境收款，差异在费率、到账速度、支持的平台和目标国、风控松紧。选的时候看：是否支持你的独立站平台、目标国本地账户覆盖、提现费率、以及对你品类的风控态度。多对比再开户，别只看一家。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "新手做跨境独立站选什么品类起步最稳？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "优先选客单价适中（30-80 美元）、轻小件、非敏感、痛点明显或有话题性的品类，最好有复购潜力。避开仿牌、黑五类、医疗功效宣称等高风险类目。可借助选品工具看趋势，但别盲目追爆品，冷启动最怕物流和合规踩坑。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Shopify 和 Shoplaza 这类 SaaS 建站怎么选？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Shopify 生态成熟、插件多、全球通用，但月费加交易费、国内访问偶尔偏慢。Shoplaza 等面向中国卖家的平台，中文客服、模板更贴合投放、对 COD 和广告链路更友好。按目标市场和团队习惯选，COD 重的市场可优先考虑后者。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "独立站落地页转化率上不去，常见原因有哪些？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "高频问题：页面加载慢、移动端没适配、缺信任元素（评价、保障、资质）、CTA 按钮不显眼、价格和运费不透明、广告素材与落地页货不对板、表单太长。先抓加载速度和移动端体验，再补信任背书，转化率往往能明显回升。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "COD（货到付款）模式适合哪些市场？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "东南亚（菲律宾、泰国、马来西亚）、中东、拉美等信用卡渗透率低、用户更信任货到付款的市场最适合 COD。优点是转化高、信任门槛低；缺点是回款周期长、拒收率高，需要可靠的本地物流和回款渠道来控损。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Click-to-WhatsApp（CTWA）广告怎么搭建？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "流程：准备好 Facebook / Instagram 公共主页 → 在 BM 里绑定 WhatsApp 号码（个人号或 Business API）→ 创建广告时目标选“消息”→ 消息平台选 WhatsApp → 配置欢迎语和快捷回复 → 投放。用户点广告直接进 WA 对话，靠聊单完成转化，省掉落地页跳失。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "新广告账户预算应该怎么加才安全？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "新户前 3 天建议 10-20 美元/天，观察 3 天无拒审再提额，每次提额不超过前一天的 50%，连续稳定后再按目标 ROI 倒推放量。猛加预算会触发风控，也容易在没学完受众前烧钱。稳步放量比一夜暴富靠谱。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "素材审核被拒最常见的 5 个原因？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "一、图片文字占比超过 20%；二、虚假或夸大承诺（如“ guaranteed 100%”）；三、成人或敏感内容；四、未经授权使用品牌词或 LOGO；五、落地页与广告不符或本身违规。改完重提，频率别超过每天 2 次，否则会拉低账户权重。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "怎么判断一个广告系列该不该关？该看哪些指标？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "重点看 CTR、CPC、CVR、CPA、频次（Frequency）和 ROAS。学习期结束后仍无转化、频次超过 3 还跑不动、CPA 长期高于目标且无下降趋势，就该关或重构素材和受众。别凭感觉硬扛，用数据说话。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "投东南亚 / 拉美市场有什么特别要注意的？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "多语言（英语、西语、葡语、当地语）要本地化文案；支付方式必须本地化（COD、GCash、OXXO 等）；物流普遍偏慢、回款周期长；平台风控严、客单价低，要严控获客成本。还要注意宗教文化敏感，素材别踩雷。"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <nav class="header-nav" id="mainNav">
+                <a href="index.html" class="nav-link">首页</a>
+                <a href="cases.html" class="nav-link">实战案例</a>
+                <a href="articles.html" class="nav-link">知识库</a>
+                <a href="tools.html" class="nav-link">工具</a>
+                <a href="ai-qa.html" class="nav-link active">AI问答</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="about.html" class="nav-link">关于</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单"><span class="menu-text">菜单</span><span></span><span></span><span></span></button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="index.html" class="mobile-nav-link">首页</a>
+            <a href="cases.html" class="mobile-nav-link">实战案例</a>
+            <a href="articles.html" class="mobile-nav-link">知识库</a>
+            <a href="tools.html" class="mobile-nav-link">工具</a>
+            <a href="ai-qa.html" class="mobile-nav-link active">AI问答</a>
+            <a href="faq.html" class="mobile-nav-link">FAQ</a>
+            <a href="about.html" class="mobile-nav-link">关于</a>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>AI 问答大厅</h1>
+            <p class="subtitle">Facebook 广告 · WhatsApp 私域 · 账号防封 · 跨境收款 · 选品建站，长尾问题一站解答</p>
+        </div>
+        <div class="readbox">
+            <b>3 秒速读：</b>这里汇总了跨境卖家在 Facebook 投流与 WhatsApp 聊单中最常卡住的问题——从广告账户防封、BM 架构，到 WhatsApp 养号、PayPal/Stripe 风控，再到 CTWA 搭建和东南亚/拉美投放要点。点击任意问题展开答案，所有内容均基于一线实操经验整理。
+        </div>
+    </section>
+    <section class="content">
+        <div class="faq-category">
+            <h2>🏦 Facebook 广告账户与防封</h2>
+            <div class="faq-item"><div class="faq-q">Facebook 个人号、公共主页、广告账户三者是什么关系？</div><div class="faq-a">个人号（Profile）是你的登录身份；公共主页（Page）是商家对外展示的门面；广告账户挂在商务管理平台（BM）下，由 BM 授权给个人号管理。三者相互独立又彼此关联，封号风险会沿授权链传导，所以不要把所有资产绑在同一个个人号上。</div></div>
+            <div class="faq-item"><div class="faq-q">新广告账户为什么容易被封？怎么预防？</div><div class="faq-a">常见触发点：新号直接上大预算、IP 不稳定或多人共用、素材违反广告政策、支付方式有风险、受众过窄还频繁改。预防措施：先养号再投放、固定干净的 IP、预算渐进式增加、素材合规、绑定真实支付方式与公司信息。</div></div>
+            <div class="faq-item"><div class="faq-q">BM（商务管理平台）应该怎么架构才安全？</div><div class="faq-a">建议一个营业执照主体对应 1 个 BM，BM 下先开 1-2 个广告账户，跑稳后再扩到 3-5 个。不要把所有账户绑同一张卡或同一个 IP，通过 BM 的资产授权把风险隔离，单个账号出问题不至于拖累全盘。</div></div>
+            <div class="faq-item"><div class="faq-q">广告账户被封后申诉成功率高吗？怎么提高？</div><div class="faq-a">首次因误判或素材问题被封，申诉成功率较高；多次违规或触碰政策红线（仿牌、虚假宣传等）很难恢复。申诉时准备好：落地页截图、产品合规证明、公司资质、广告内容说明，走商务支持平台提交，周期通常 1-7 个工作日。核心还是预防大于治疗。</div></div>
+            <div class="faq-item"><div class="faq-q">一个营业执照能开几个广告账户？多账户会关联吗？</div><div class="faq-a">一个主体能开多个账户，但建议 1 主体 1-2 个 BM、每 BM 3-5 个账户。同主体下如果还共用同 IP、同张卡、同套素材，系统会判定关联，一旦一个被封容易牵连其他。分散IP、分散支付、差异化素材能降低关联风险。</div></div>
+        </div>
+        <div class="faq-category">
+            <h2>💬 WhatsApp 私域与防封</h2>
+            <div class="faq-item"><div class="faq-q">WhatsApp 个人号和 Business API 号有什么区别？</div><div class="faq-a">个人号免费，但大量群发和营销行为极易被封，且只能单设备单卡操作。WhatsApp Business API 需企业认证、按会话计费，可合规批量发送模板消息、支持多客服同时登录、封号率极低。营销量大、要稳定触达，建议直接用 API 号。</div></div>
+            <div class="faq-item"><div class="faq-q">新 WhatsApp 号怎么养号才不容易被封？</div><div class="faq-a">新号前 7-14 天只做正常通讯：用真实手机号接码注册、完善头像和资料、加少量真实联系人、发几条正常聊天。一机一卡一号，固定 IP，不要一上来就导入大量陌生号码群发。养出信誉分后再逐步开始营销。</div></div>
+            <div class="faq-item"><div class="faq-q">WhatsApp 群发消息为什么容易被封？安全频率多少？</div><div class="faq-a">个人号在短时间内大量主动发起对话、又被多名用户举报，就会被判定垃圾营销而封号。安全做法：新号每天主动发起不超过 30-50 条，老号视信誉分而定；批量营销走 Business API 的模板消息通道，合规且稳定。</div></div>
+            <div class="faq-item"><div class="faq-q">一个手机号能注册几个 WhatsApp？换设备登录有风险吗？</div><div class="faq-a">一个手机号对应一个 WhatsApp 账号。频繁换设备或异地登录会触发风控，WhatsApp 网页版/多设备功能要求主设备保持在线。养号期尤其要避免多设备交叉登录，否则容易被临时封禁要求验证。</div></div>
+            <div class="faq-item"><div class="faq-q">WhatsApp 被封了能解封吗？需要什么材料？</div><div class="faq-a">轻量风控可在 App 内点“支持”申诉，提供手机号和注册信息即可。被判定为垃圾营销的，往往要等待冷却或更换新号；严重违规基本无法恢复。预防的关键是正常互动、控制群发频率、不碰敏感内容。</div></div>
+        </div>
+        <div class="faq-category">
+            <h2>💰 收款与资金安全</h2>
+            <div class="faq-item"><div class="faq-q">跨境独立站收款有哪些主流方案？</div><div class="faq-a">常见组合：PayPal（必备、覆盖广）+ Stripe（欧美信用卡）+ 2-3 个本地化支付（如 Klarna、iDEAL、GCash、OXXO）+ 第三方收款（PingPong、万里汇、WorldFirst）+ COD 货到付款 + USDT 加密货币。按目标市场和品类组合，别把鸡蛋放一个篮子里。</div></div>
+            <div class="faq-item"><div class="faq-q">PayPal 新账户为什么容易被冻结？怎么规避？</div><div class="faq-a">新账户风控最严。前 30 天控制日收款不超过 2000 美元、争议率低于 0.5%、单笔不超过 5000 美元；尽早完成企业认证；提前备好营业执照、采购发票和物流凭证。已冻结就在 Resolution Center 第一时间提交材料，一般 5-10 个工作日处理。</div></div>
+            <div class="faq-item"><div class="faq-q">Stripe 账户被风控（封户）常见原因有哪些？</div><div class="faq-a">高退款率、高争议率（Chargeback 超标）、交易量突然暴涨、销售高风险品类、KYC 资料不全、网站信息与实际不符。规避办法：保持交易平稳、卖合规品、完成企业认证、争议率压到最低，别一夜之间把流水拉太高。</div></div>
+            <div class="faq-item"><div class="faq-q">USDT / 加密货币收款适合什么场景？有什么风险？</div><div class="faq-a">适合传统通道不愿接的高风险或敏感品类、以及想绕开银行卡限制的场景。风险在于币价波动、合规与法律风险、对账麻烦、依赖自有钱包和交易所出金。务必评估所在司法辖区政策，别当成唯一收款方式。</div></div>
+            <div class="faq-item"><div class="faq-q">万里汇、PingPong、WorldFirst 怎么选？</div><div class="faq-a">三家都是主流跨境收款，差异在费率、到账速度、支持的平台和目标国、风控松紧。选的时候看：是否支持你的独立站平台、目标国本地账户覆盖、提现费率、以及对你品类的风控态度。多对比再开户，别只看一家。</div></div>
+        </div>
+        <div class="faq-category">
+            <h2>🛒 选品与建站</h2>
+            <div class="faq-item"><div class="faq-q">新手做跨境独立站选什么品类起步最稳？</div><div class="faq-a">优先选客单价适中（30-80 美元）、轻小件、非敏感、痛点明显或有话题性的品类，最好有复购潜力。避开仿牌、黑五类、医疗功效宣称等高风险类目。可借助选品工具看趋势，但别盲目追爆品，冷启动最怕物流和合规踩坑。</div></div>
+            <div class="faq-item"><div class="faq-q">Shopify 和 Shoplaza 这类 SaaS 建站怎么选？</div><div class="faq-a">Shopify 生态成熟、插件多、全球通用，但月费加交易费、国内访问偶尔偏慢。Shoplaza 等面向中国卖家的平台，中文客服、模板更贴合投放、对 COD 和广告链路更友好。按目标市场和团队习惯选，COD 重的市场可优先考虑后者。</div></div>
+            <div class="faq-item"><div class="faq-q">独立站落地页转化率上不去，常见原因有哪些？</div><div class="faq-a">高频问题：页面加载慢、移动端没适配、缺信任元素（评价、保障、资质）、CTA 按钮不显眼、价格和运费不透明、广告素材与落地页货不对板、表单太长。先抓加载速度和移动端体验，再补信任背书，转化率往往能明显回升。</div></div>
+            <div class="faq-item"><div class="faq-q">COD（货到付款）模式适合哪些市场？</div><div class="faq-a">东南亚（菲律宾、泰国、马来西亚）、中东、拉美等信用卡渗透率低、用户更信任货到付款的市场最适合 COD。优点是转化高、信任门槛低；缺点是回款周期长、拒收率高，需要可靠的本地物流和回款渠道来控损。</div></div>
+        </div>
+        <div class="faq-category">
+            <h2>📈 投流策略与优化</h2>
+            <div class="faq-item"><div class="faq-q">Click-to-WhatsApp（CTWA）广告怎么搭建？</div><div class="faq-a">流程：准备好 Facebook / Instagram 公共主页 → 在 BM 里绑定 WhatsApp 号码（个人号或 Business API）→ 创建广告时目标选“消息”→ 消息平台选 WhatsApp → 配置欢迎语和快捷回复 → 投放。用户点广告直接进 WA 对话，靠聊单完成转化，省掉落地页跳失。</div></div>
+            <div class="faq-item"><div class="faq-q">新广告账户预算应该怎么加才安全？</div><div class="faq-a">新户前 3 天建议 10-20 美元/天，观察 3 天无拒审再提额，每次提额不超过前一天的 50%，连续稳定后再按目标 ROI 倒推放量。猛加预算会触发风控，也容易在没学完受众前烧钱。稳步放量比一夜暴富靠谱。</div></div>
+            <div class="faq-item"><div class="faq-q">素材审核被拒最常见的 5 个原因？</div><div class="faq-a">一、图片文字占比超过 20%；二、虚假或夸大承诺（如“ guaranteed 100%”）；三、成人或敏感内容；四、未经授权使用品牌词或 LOGO；五、落地页与广告不符或本身违规。改完重提，频率别超过每天 2 次，否则会拉低账户权重。</div></div>
+            <div class="faq-item"><div class="faq-q">怎么判断一个广告系列该不该关？该看哪些指标？</div><div class="faq-a">重点看 CTR、CPC、CVR、CPA、频次（Frequency）和 ROAS。学习期结束后仍无转化、频次超过 3 还跑不动、CPA 长期高于目标且无下降趋势，就该关或重构素材和受众。别凭感觉硬扛，用数据说话。</div></div>
+            <div class="faq-item"><div class="faq-q">投东南亚 / 拉美市场有什么特别要注意的？</div><div class="faq-a">多语言（英语、西语、葡语、当地语）要本地化文案；支付方式必须本地化（COD、GCash、OXXO 等）；物流普遍偏慢、回款周期长；平台风控严、客单价低，要严控获客成本。还要注意宗教文化敏感，素材别踩雷。</div></div>
+        </div>
+    </section>
+    <div class="related-box">
+        <h2>📚 延伸阅读</h2>
+        <div class="related-grid">
+            <a class="related-card" href="articles.html"><b>知识库</b><span>27 篇 FB 广告 / WhatsApp 私域实战长文</span></a>
+            <a class="related-card" href="tools.html"><b>工具箱</b><span>指纹浏览器、广告、收款、私域工具清单</span></a>
+            <a class="related-card" href="faq.html"><b>常见问题 FAQ</b><span>开户、代投、课程高频疑问</span></a>
+            <a class="related-card" href="cases.html"><b>实战案例</b><span>真实投放与聊单转化案例</span></a>
+        </div>
+    </div>
+    <div class="cta-box">
+        <h2>还有更具体的问题？</h2>
+        <p>加微信直接问，不收费</p>
+        <a class="cta-btn" href="about.html">联系我们 →</a>
+    </div>
+    <footer>
+        <p>© 2026 FB聊单实战 · <a href="/">facebookads.help</a></p>
+    </footer>
+    <script>
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => { q.parentElement.classList.toggle('open'); });
+        });
+    </script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var btn = document.getElementById("mobileMenuBtn");
+        var nav = document.getElementById("mobileNav");
+        if (!btn || !nav) return;
+        btn.addEventListener("click", function(e) { e.stopPropagation(); nav.classList.toggle("open"); });
+        document.addEventListener("click", function(e) {
+            if (!btn.contains(e.target) && !nav.contains(e.target)) nav.classList.remove("open");
+        });
+        nav.querySelectorAll("a").forEach(function(link) { link.addEventListener("click", function() { nav.classList.remove("open"); }); });
+    });
+    </script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2b69f3997a86e5bbc310aa059305285e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+</body>
+</html>
