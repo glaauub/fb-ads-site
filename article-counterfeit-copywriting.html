@@ -115,6 +115,21 @@
 }
 
 </style>
+
+<style>
+.geo-readbox{max-width:760px;margin:2.5rem auto 0;background:linear-gradient(135deg,rgba(99,91,255,.07),rgba(0,212,255,.07));border:1px solid rgba(99,91,255,.25);border-radius:16px;padding:1.5rem 1.75rem;}
+.geo-readbox-head{font-weight:800;color:#635BFF;font-size:1rem;margin-bottom:.75rem;letter-spacing:.04em;}
+.geo-readbox-lead{color:#374151;font-size:1rem;line-height:1.8;margin-bottom:1rem;}
+.geo-readbox-list{list-style:none;padding:0;margin:0;}
+.geo-readbox-list li{color:#1f2937;font-size:.95rem;padding:.35rem 0 .35rem 1.5rem;position:relative;line-height:1.6;}
+.geo-readbox-list li::before{content:"▸";position:absolute;left:0;color:#635BFF;font-weight:800;}
+.geo-faq{max-width:760px;margin:3.5rem auto 0;padding:0 1rem;}
+.geo-faq-head{font-weight:800;color:#111827;font-size:1.5rem;margin-bottom:1.25rem;}
+.geo-faq-item{border:1px solid #e5e7eb;border-radius:14px;padding:1.1rem 1.4rem;margin-bottom:1rem;background:#fff;}
+.geo-faq-q{font-weight:700;color:#111827;font-size:1.05rem;margin-bottom:.5rem;}
+.geo-faq-a{color:#374151;font-size:.97rem;line-height:1.85;}
+@media(max-width:768px){.geo-readbox,.geo-faq{padding-left:1.1rem;padding-right:1.1rem;}}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -144,6 +159,12 @@
 
 <p>仿牌广告最核心的问题不是"能不能投"，而是"怎么表达才能过审"。文案是关键。</p>
 <p>Facebook的内容政策明确禁止"假冒产品"——但"相似设计"、"风格借鉴"是可以接受的。区别在哪里？就在于你的文案怎么写。</p>
+
+<div class="geo-readbox">
+  <div class="geo-readbox-head">⚡ 3秒速读</div>
+  <p class="geo-readbox-lead">品牌词→替代词对照表、文案结构公式、Meta CVS识别规避方法</p>
+  <ul class="geo-readbox-list"><li>品牌词的替代逻辑</li><li>文案结构公式</li><li>Meta CVS 3.0 识别逻辑与规避</li><li>落地页文案注意事项</li><li>国家/地区策略</li></ul>
+</div>
 <h2>一、品牌词的替代逻辑</h2>
 <p>最基础的原则是：<strong>把品牌名称替换成产品特性描述</strong>。不是去"冒充"某个品牌，而是描述产品本身的特征。</p>
 <table class="data-table"><thead><tr><th>品牌/敏感词</th><th>替代表达方式</th><th>示例</th></tr></thead>
@@ -240,4 +261,50 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+
+<div class="geo-faq">
+  <div class="geo-faq-head">❓ 常见问题</div>
+  <div class="geo-faq-item">
+    <div class="geo-faq-q">品牌词的替代逻辑？</div>
+    <div class="geo-faq-a">最基础的原则是：把品牌名称替换成产品特性描述。不是去&quot;冒充&quot;某个品牌，而是描述产品本身的特征。</div>
+  </div>
+  <div class="geo-faq-item">
+    <div class="geo-faq-q">文案结构公式？</div>
+    <div class="geo-faq-a">好的仿牌文案，遵循这个结构： 材质/工艺 + 产品类型 + 风格描述 + 价格锚点 + CTA 示例（以包为例）： ❌ 错误：&quot;Gucci同款手提包，$89，原价$1200&quot; ✅ 正确：&quot;意大利头层牛皮经典老花风格手提包，$89 · 官方价$1200的精致平替 · 现在下单送原装防尘袋&quot; 关键词技巧：&quot;风格&quot;、&quot;设计灵感&quot;、&quot;工艺平替&quot;、&quot;某某同款风格&quot;——这些词都是在表达&quot;和某品牌相似&quot;的同时，…</div>
+  </div>
+  <div class="geo-faq-item">
+    <div class="geo-faq-q">Meta CVS 3.0 识别逻辑与规避？</div>
+    <div class="geo-faq-a">Meta的计算机视觉系统CVS 3.0可以识别： Logo（无论大小、颜色、透明度） 产品外观专利特征（包型、手表表盘） 广告主提交的已注册品牌清单 所以，文案写得再好，如果素材里有Logo，一样过不了。 ❌ 所有产品图片/视频中，彻底去除任何品牌Logo ❌ 包装、吊牌上的品牌信息要在发货前拆除 ❌ 不要在视频背景里出现任何品牌元素 ✅ 用&quot;无Logo裸图&quot;作为广告素材基础 ✅ 同一款产品，准备…</div>
+  </div>
+  <div class="geo-faq-item">
+    <div class="geo-faq-q">落地页文案注意事项？</div>
+    <div class="geo-faq-a">落地页（独立站）的文案同样要谨慎： 产品标题不要包含品牌名称 产品描述用&quot;适用于&quot;、&quot;兼容于&quot;、&quot;同款风格&quot;等词 不要使用任何品牌的官方图片 FAQ页面不要出现&quot;这是正品吗？&quot;这样的Q&amp;A 有些卖家会把落地页的域名做得和被封域名高度相似，试图&quot;蹭&quot;老域名的权重——这个做法适得其反，Facebook会识别域名关联。</div>
+  </div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "品牌词的替代逻辑？",
+      "acceptedAnswer": { "@type": "Answer", "text": "最基础的原则是：把品牌名称替换成产品特性描述。不是去\"冒充\"某个品牌，而是描述产品本身的特征。" }
+    },    {
+      "@type": "Question",
+      "name": "文案结构公式？",
+      "acceptedAnswer": { "@type": "Answer", "text": "好的仿牌文案，遵循这个结构： 材质/工艺 + 产品类型 + 风格描述 + 价格锚点 + CTA 示例（以包为例）： ❌ 错误：\"Gucci同款手提包，$89，原价$1200\" ✅ 正确：\"意大利头层牛皮经典老花风格手提包，$89 · 官方价$1200的精致平替 · 现在下单送原装防尘袋\" 关键词技巧：\"风格\"、\"设计灵感\"、\"工艺平替\"、\"某某同款风格\"——这些词都是在表达\"和某品牌相似\"的同时，…" }
+    },    {
+      "@type": "Question",
+      "name": "Meta CVS 3.0 识别逻辑与规避？",
+      "acceptedAnswer": { "@type": "Answer", "text": "Meta的计算机视觉系统CVS 3.0可以识别： Logo（无论大小、颜色、透明度） 产品外观专利特征（包型、手表表盘） 广告主提交的已注册品牌清单 所以，文案写得再好，如果素材里有Logo，一样过不了。 ❌ 所有产品图片/视频中，彻底去除任何品牌Logo ❌ 包装、吊牌上的品牌信息要在发货前拆除 ❌ 不要在视频背景里出现任何品牌元素 ✅ 用\"无Logo裸图\"作为广告素材基础 ✅ 同一款产品，准备…" }
+    },    {
+      "@type": "Question",
+      "name": "落地页文案注意事项？",
+      "acceptedAnswer": { "@type": "Answer", "text": "落地页（独立站）的文案同样要谨慎： 产品标题不要包含品牌名称 产品描述用\"适用于\"、\"兼容于\"、\"同款风格\"等词 不要使用任何品牌的官方图片 FAQ页面不要出现\"这是正品吗？\"这样的Q&A 有些卖家会把落地页的域名做得和被封域名高度相似，试图\"蹭\"老域名的权重——这个做法适得其反，Facebook会识别域名关联。" }
+    }
+  ]
+}
+</script>
+<!--GEO-INJECTED-v1-->
 </body></html>

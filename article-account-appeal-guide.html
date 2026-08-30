@@ -115,6 +115,21 @@
 }
 
 </style>
+
+<style>
+.geo-readbox{max-width:760px;margin:2.5rem auto 0;background:linear-gradient(135deg,rgba(99,91,255,.07),rgba(0,212,255,.07));border:1px solid rgba(99,91,255,.25);border-radius:16px;padding:1.5rem 1.75rem;}
+.geo-readbox-head{font-weight:800;color:#635BFF;font-size:1rem;margin-bottom:.75rem;letter-spacing:.04em;}
+.geo-readbox-lead{color:#374151;font-size:1rem;line-height:1.8;margin-bottom:1rem;}
+.geo-readbox-list{list-style:none;padding:0;margin:0;}
+.geo-readbox-list li{color:#1f2937;font-size:.95rem;padding:.35rem 0 .35rem 1.5rem;position:relative;line-height:1.6;}
+.geo-readbox-list li::before{content:"▸";position:absolute;left:0;color:#635BFF;font-weight:800;}
+.geo-faq{max-width:760px;margin:3.5rem auto 0;padding:0 1rem;}
+.geo-faq-head{font-weight:800;color:#111827;font-size:1.5rem;margin-bottom:1.25rem;}
+.geo-faq-item{border:1px solid #e5e7eb;border-radius:14px;padding:1.1rem 1.4rem;margin-bottom:1rem;background:#fff;}
+.geo-faq-q{font-weight:700;color:#111827;font-size:1.05rem;margin-bottom:.5rem;}
+.geo-faq-a{color:#374151;font-size:.97rem;line-height:1.85;}
+@media(max-width:768px){.geo-readbox,.geo-faq{padding-left:1.1rem;padding-right:1.1rem;}}
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -144,6 +159,12 @@
 
 <p>账户被封后，申诉是最后的防线。但申诉失败率高的原因，大部分不是"运气不好"，而是"方法不对"。</p>
 <p>不同类型的被封，申诉策略完全不同。</p>
+
+<div class="geo-readbox">
+  <div class="geo-readbox-head">⚡ 3秒速读</div>
+  <p class="geo-readbox-lead">4类申诉判断标准、正确申诉步骤、文案写法、避免加重风控</p>
+  <ul class="geo-readbox-list"><li>先判断被封类型</li><li>各类型申诉步骤</li><li>申诉文案怎么写？</li><li>避免申诉加重风控</li></ul>
+</div>
 <h2>一、先判断被封类型</h2>
 <p>申诉前最重要的一步，是搞清楚"你被封的是什么"：</p>
 <table class="data-table"><thead><tr><th>被封类型</th><th>识别特征</th><th>处理优先级</th><th>成功率</th></tr></thead>
@@ -235,4 +256,50 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+
+<div class="geo-faq">
+  <div class="geo-faq-head">❓ 常见问题</div>
+  <div class="geo-faq-item">
+    <div class="geo-faq-q">先判断被封类型？</div>
+    <div class="geo-faq-a">申诉前最重要的一步，是搞清楚&quot;你被封的是什么&quot;：</div>
+  </div>
+  <div class="geo-faq-item">
+    <div class="geo-faq-q">各类型申诉步骤？</div>
+    <div class="geo-faq-a">步骤： 在广告管理工具中，点击被拒登的广告，查看具体拒登原因（Facebook会给出违规条款） 根据原因修改广告素材/文案/落地页 重新提交，不要在修改前反复提交（每次拒登都会留下记录） 如认为误判，可在拒登通知页面找到&quot;申请复审&quot;按钮，附上说明 步骤： 访问 facebook.com/login/identify，按提示提交身份证明（身份证/护照/驾照） 清晰拍摄证件照片，确保信息可读 提交后等…</div>
+  </div>
+  <div class="geo-faq-item">
+    <div class="geo-faq-q">申诉文案怎么写？</div>
+    <div class="geo-faq-a">❌ 错误示例：&quot;请重新开通我的账户，我们希望能继续投放广告。谢谢。&quot; ✅ 正确示例：&quot;关于广告账户被禁用的通知，我们认真审查了被拒内容。经检查，我们认为原广告中的[具体描述]可能存在[模糊表述]问题。现已将[具体修改]更正，并确保后续所有广告内容严格遵守Meta的广告政策。希望贵方重新审核。&quot;</div>
+  </div>
+  <div class="geo-faq-item">
+    <div class="geo-faq-q">避免申诉加重风控？</div>
+    <div class="geo-faq-a">一个被严重低估的事实：频繁申诉本身会增加风控等级。 Facebook的系统会记录申诉行为。如果同一个账户在30天内申诉超过3次，系统会认为这个账户&quot;持续违规但坚持投放&quot;——这时候申诉成功率会大幅下降。 ❌ 同一原因被拒3次后，不要再申诉，先整改 ❌ 不要同时提交多个申诉（会触发批量申诉风控） ❌ 申诉理由不要每次都一样（&quot;请重新审核&quot;连说3次，系统会直接拒绝） ✅ 每次申诉前，先整改违规内容，再申…</div>
+  </div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "先判断被封类型？",
+      "acceptedAnswer": { "@type": "Answer", "text": "申诉前最重要的一步，是搞清楚\"你被封的是什么\"：" }
+    },    {
+      "@type": "Question",
+      "name": "各类型申诉步骤？",
+      "acceptedAnswer": { "@type": "Answer", "text": "步骤： 在广告管理工具中，点击被拒登的广告，查看具体拒登原因（Facebook会给出违规条款） 根据原因修改广告素材/文案/落地页 重新提交，不要在修改前反复提交（每次拒登都会留下记录） 如认为误判，可在拒登通知页面找到\"申请复审\"按钮，附上说明 步骤： 访问 facebook.com/login/identify，按提示提交身份证明（身份证/护照/驾照） 清晰拍摄证件照片，确保信息可读 提交后等…" }
+    },    {
+      "@type": "Question",
+      "name": "申诉文案怎么写？",
+      "acceptedAnswer": { "@type": "Answer", "text": "❌ 错误示例：\"请重新开通我的账户，我们希望能继续投放广告。谢谢。\" ✅ 正确示例：\"关于广告账户被禁用的通知，我们认真审查了被拒内容。经检查，我们认为原广告中的[具体描述]可能存在[模糊表述]问题。现已将[具体修改]更正，并确保后续所有广告内容严格遵守Meta的广告政策。希望贵方重新审核。\"" }
+    },    {
+      "@type": "Question",
+      "name": "避免申诉加重风控？",
+      "acceptedAnswer": { "@type": "Answer", "text": "一个被严重低估的事实：频繁申诉本身会增加风控等级。 Facebook的系统会记录申诉行为。如果同一个账户在30天内申诉超过3次，系统会认为这个账户\"持续违规但坚持投放\"——这时候申诉成功率会大幅下降。 ❌ 同一原因被拒3次后，不要再申诉，先整改 ❌ 不要同时提交多个申诉（会触发批量申诉风控） ❌ 申诉理由不要每次都一样（\"请重新审核\"连说3次，系统会直接拒绝） ✅ 每次申诉前，先整改违规内容，再申…" }
+    }
+  ]
+}
+</script>
+<!--GEO-INJECTED-v1-->
 </body></html>
