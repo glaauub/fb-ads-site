@@ -829,9 +829,42 @@
 
 
 @media (max-width: 768px) {
-
-
-}
+        /* 全局：图片防横向溢出 */
+        img { max-width: 100%; height: auto; }
+        /* 各 section 大 padding 收敛 */
+        .why-section, .cases-section, .process-section, .cta-section {
+            padding-left: 1.25rem !important; padding-right: 1.25rem !important;
+        }
+        .why-section { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+        .cta-section { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+        /* 课程收费区块（覆盖内联 style） */
+        .course-section { padding: 4rem 1.25rem !important; }
+        .course-section h2 { font-size: 1.75rem !important; line-height: 1.25; }
+        .course-section .section-container { max-width: 100% !important; }
+        .course-section > div[style*="text-align: center"] { margin-bottom: 2.5rem !important; }
+        .course-section > div[style*="grid"] {
+            grid-template-columns: 1fr !important; gap: 1.25rem !important; max-width: 100% !important;
+        }
+        .course-section .section-container > div > div { padding: 1.75rem !important; }
+        /* 二维码行：窄屏缩小、间距收敛 */
+        .qr-row { gap: 1rem !important; margin-top: 1.25rem !important; }
+        .qr-row > div { padding: 1rem !important; }
+        .qr-row img { width: 120px !important; height: 120px !important; }
+        /* CTA 二维码 */
+        .cta-section > div[style*="flex"] { gap: 1.5rem !important; }
+        .cta-section img { width: 130px !important; height: 130px !important; }
+        /* hero 补充收敛 */
+        .hero { padding: 5rem 1.25rem 3rem !important; min-height: auto !important; }
+        .hero-container { padding: 0 0.25rem !important; }
+        /* 标题与间距收敛 */
+        h2 { font-size: 1.75rem !important; line-height: 1.25; }
+        .section-header { margin-bottom: 2.5rem !important; }
+        .section-subtitle { font-size: 1rem !important; padding: 0 0.5rem !important; }
+        .comparison-grid { gap: 1rem !important; }
+        .comparison-card { padding: 1.5rem !important; }
+        .stat-value { font-size: 2rem !important; }
+        .hero-subtitle { font-size: 1.0625rem !important; padding: 0 0.25rem !important; }
+    }
 </style>
 
 
@@ -1612,7 +1645,7 @@
 
 
     <!-- 课程收费 -->
-    <section style="padding: 6rem 2rem; background: white;">
+    <section class="course-section" style="padding: 6rem 2rem; background: white;">
         <div class="section-container" style="max-width: 1000px; margin: 0 auto;">
             <div style="text-align: center; margin-bottom: 4rem;">
                 <h2 style="font-size: 2.5rem; font-weight: 800; color: #111827; margin-bottom: 1rem;">训练营课程收费</h2>
@@ -1634,7 +1667,7 @@
                         <li>✓ 案例拆解与实操练习</li>
                         <li>✓ 永久答疑群</li>
                     </ul>
-                    <div style="display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
+                    <div class="qr-row" style="display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
             <div style="background:#fff;border-radius:16px;padding:1.25rem;box-shadow:0 4px 20px rgba(0,0,0,0.12);text-align:center;">
                 <img src="xc.jpg" alt="张老师微信" style="width:140px;height:140px;border-radius:8px;display:block;margin:0 auto;">
                 <p style="color:#4F46E5;font-weight:700;font-size:0.9375rem;margin:0.75rem 0 0.25rem;">张老师</p>
@@ -1662,7 +1695,7 @@
                         <li>✓ 学员群长期交流</li>
                         <li>✓ 复训权益（1年内免费）</li>
                     </ul>
-                    <div style="display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
+                    <div class="qr-row" style="display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;">
             <div style="background:#fff;border-radius:16px;padding:1.25rem;box-shadow:0 4px 20px rgba(0,0,0,0.12);text-align:center;">
                 <img src="xc.jpg" alt="张老师微信" style="width:140px;height:140px;border-radius:8px;display:block;margin:0 auto;">
                 <p style="color:#4F46E5;font-weight:700;font-size:0.9375rem;margin:0.75rem 0 0.25rem;">张老师</p>
@@ -1685,7 +1718,7 @@
     <section class="cta-section" id="contact">
         <h2>开始你的聊单转化之旅</h2>
         <p>扫码加微信，备注"聊单"，直接沟通 Facebook 广告和 WhatsApp 私域搭建</p>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin-top: 2rem;">
+        <div class="qr-row" style="display: flex; align-items: center; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin-top: 2rem;">
             <div style="background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 24px rgba(0,0,0,0.12); text-align: center;">
                 <img src="xc.jpg" alt="张老师微信二维码" style="width: 160px; height: 160px; display: block; border-radius: 8px; margin: 0 auto;">
                 <p style="color: #4F46E5; font-weight: 700; font-size: 0.9375rem; margin: 0.75rem 0 0.25rem;">张老师（主客服）</p>
