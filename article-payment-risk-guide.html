@@ -62,7 +62,16 @@
         footer a { color: #9ca3af; text-decoration: none; }
         @media (max-width: 768px) { h1 { font-size: 1.875rem; }
  }
-    </style>
+    
+.related-box{max-width:760px;margin:3rem auto 0;background:#f8f9ff;border:1px solid #e5e7ff;border-radius:16px;padding:1.5rem 1.75rem;}
+.related-head{font-weight:800;color:#635BFF;font-size:1.1rem;margin-bottom:.9rem;}
+.related-list{list-style:none;padding:0;margin:0;}
+.related-list li{padding:.4rem 0 .4rem 1.4rem;position:relative;}
+.related-list li::before{content:"→";position:absolute;left:0;color:#635BFF;font-weight:800;}
+.related-list a{color:#374151;text-decoration:none;font-size:.95rem;}
+.related-list a:hover{color:#635BFF;text-decoration:underline;}
+<!--GEO-RELATED-CSS-->
+</style>
     
 
     <script type="application/ld+json">
@@ -365,7 +374,16 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 
-<div class="geo-faq">
+
+<div class="related-box">
+  <div class="related-head">📚 相关阅读</div>
+  <ul class="related-list">
+      <li><a href="article-usdt-payment-guide.html">跨境收款方案：USDT稳定收款与多通道分散风险</a></li>
+      <li><a href="article-checkout-abandoned-cart.html">结账流程优化与弃购挽回：70%弃购率的逆袭策略</a></li>
+      <li><a href="article-cro-guide-2026.html">独立站转化率优化完整指南：从2%到6%的数据驱动方法论</a></li>
+  </ul>
+</div>
+    <div class="geo-faq">
   <div class="geo-faq-head">❓ 常见问题</div>
   <div class="geo-faq-item">
     <div class="geo-faq-q">PayPal 收款：国内卖家的双刃剑？</div>
@@ -410,5 +428,6 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 </script>
 <!--GEO-INJECTED-v1-->
+<!--GEO-RELATED-v1-->
 </body>
 </html>

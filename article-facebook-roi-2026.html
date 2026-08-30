@@ -82,7 +82,16 @@
             .article-body { padding: 2rem 1.25rem 4rem; }
             .data-table { font-size: 0.8125rem; }
         }
-    </style>
+    
+.related-box{max-width:760px;margin:3rem auto 0;background:#f8f9ff;border:1px solid #e5e7ff;border-radius:16px;padding:1.5rem 1.75rem;}
+.related-head{font-weight:800;color:#635BFF;font-size:1.1rem;margin-bottom:.9rem;}
+.related-list{list-style:none;padding:0;margin:0;}
+.related-list li{padding:.4rem 0 .4rem 1.4rem;position:relative;}
+.related-list li::before{content:"→";position:absolute;left:0;color:#635BFF;font-weight:800;}
+.related-list a{color:#374151;text-decoration:none;font-size:.95rem;}
+.related-list a:hover{color:#635BFF;text-decoration:underline;}
+<!--GEO-RELATED-CSS-->
+</style>
     
 
 <style>
@@ -511,7 +520,16 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 
-<div class="geo-faq">
+
+<div class="related-box">
+  <div class="related-head">📚 相关阅读</div>
+  <ul class="related-list">
+      <li><a href="article-cro-guide-2026.html">独立站转化率优化完整指南：从2%到6%的数据驱动方法论</a></li>
+      <li><a href="article-facebook-ctr-optimization.html">Facebook广告CTR从0.8%提升到3.2%的7个实战技巧</a></li>
+      <li><a href="article-ctwa-advanced-2026.html">2026年Click-to-WhatsApp广告进阶指南：$200预算如何做到6x ROI</a></li>
+  </ul>
+</div>
+    <div class="geo-faq">
   <div class="geo-faq-head">❓ 常见问题</div>
   <div class="geo-faq-item">
     <div class="geo-faq-q">2026年 Facebook 广告 ROI 基准数据？</div>
@@ -556,5 +574,6 @@ document.addEventListener("DOMContentLoaded", function() {
 }
 </script>
 <!--GEO-INJECTED-v1-->
+<!--GEO-RELATED-v1-->
 </body>
 </html>
