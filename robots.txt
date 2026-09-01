@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://facebookads.help/sitemap.xml
+Sitemap: https://www.facebookads.help/sitemap.xml
 
 # Crawl-delay (optional, for some search engines)
 Crawl-delay: 1
