@@ -430,6 +430,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.facebookads.help/article-chargeback-defense-2026.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.facebookads.help/article-payment-compliance-2026.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.facebookads.help/article-meta-roas-cpc-system-2026.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
